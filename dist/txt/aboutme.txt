@@ -1,0 +1,6 @@
+Hello, I'm Maulana Surya Negara, a fifth-semester Informatic Engineering student at Mataram University, born on March 19, 2003, in Mataram, West Nusa Tenggara. I'm passionate about web development and machine learning.
+My interest in web development sparked during a university web programming course. I've since dived into HTML, CSS, and JavaScript through online tutorials and courses on platforms like Dicoding, eager to create engaging web applications.
+Simultaneously, I've started exploring machine learning through independent studies in the Bangkit Machine Learning program, focusing on TensorFlow and deep learning.
+I've successfully completed various web development projects, both personal and coursework-related, and I'm excited to kick off my first machine learning project.
+My goal is to deepen my expertise in both areas and contribute to innovative technology by merging web development with artificial intelligence.
+Beyond tech, I enjoy jogging, playing chess, and relish in adventurous activities like mountain hiking.

@@ -14,3 +14,16 @@ $("#hamburger").click(function () {
     $("#nav-menu").toggleClass("hidden");
 });
 
+fetch("dist/txt/aboutme.txt")
+    .then(response => response.text())
+    .then(data => {
+        document.querySelector("#about-content").innerHTML = data;
+    });
+
+fetch("dist/txt/socialmedia.txt")
+    .then(response => response.text())
+    .then(data => {
+        document.querySelector("#social-media").innerHTML = data;
+    });
+
+

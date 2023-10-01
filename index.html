@@ -13,7 +13,7 @@
         <div class="container">
             <div class="flex items-center justify-between relative"> 
                 <div class="px-4">
-                    <a href="#home" class="block py-6 font-bold text-lg">
+                    <a href="#home" class="block py-6 font-bold text-lg md:text-2xl">
                         MyPortfolio<span class="text-primary text-2xl">+</span>
                     </a>
                 </div>
@@ -47,9 +47,9 @@
                 <div class="w-full self-center px-4 lg:w-1/2">
                     <h1 class="text-base font-semibold text-primary md:text-xl ">Hello World 👋, I'm <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl">Maulana Surya Negara</span></h1>
                     <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">Student from Mataram University</h2>
-                    <p class="font-medium text-secondary mb-10 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque saepe praesentium voluptatibus laboriosam, sequi veniam voluptatum minus expedita quidem ducimus, a perferendis unde asperiores voluptates et fugit cum natus eos?</p>
+                    <p class="font-medium text-secondary mb-10 leading-relaxed">Never Stop Exploring, Life Is Way Too Short to Take It Slow.</p>
 
-                    <a href="" class="text-base font-semibold text-white bg-primary py-3 px-4 rounded-full hover:opacity-80 hover:shadow-lg transition duration-300 ease-in-out">Contact Me</a>
+                    <a href="#about" class="text-base font-semibold text-white bg-primary py-3 px-4 rounded-full hover:opacity-80 hover:shadow-lg transition duration-300 ease-in-out">Contact Me</a>
                 </div>
                 <div class="w-full self-end px-4 lg:w-1/2">
                     <div class="mt-10 relative lg:mt-9 lg:right-0">
@@ -71,11 +71,11 @@
                 <div class="w-full px-4 mb-10 lg:w-1/2 ">
                     <h4 class="font-bold uppercase text-primary text-lg mb-3">About Me</h4>
                     <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl">Learn About Me Here</h2>
-                    <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt praesentium suscipit sunt, dignissimos eveniet numquam ea quisquam veritatis. Beatae culpa voluptates nesciunt voluptas harum. In voluptate alias itaque reiciendis non?</p>
+                    <p id="about-content" class="font-medium text-base text-secondary max-w-xl lg:text-lg text-justify"></p>
                 </div>
                 <div class="w-full px-4 lg:w-1/2">
                     <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10">Explore My Background</h3>
-                    <p class="font-medium text-base text-secondary mb-6 lg:text-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa quibusdam similique natus, voluptatem placeat necessitatibus est commodi iste?</p>
+                    <p id="social-media" class="font-medium text-base text-secondary mb-6 lg:text-lg text-justify"></p>
                     <div class="flex items-center">
                         <a href="https://www.instagram.com/mausneg" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
                             <i class="fa-brands fa-instagram text-2xl"></i>
@@ -103,23 +103,32 @@
                 <div class="max-width-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2 uppercase">Portfolio</h4>
                     <h2 class="font-bold text-dark text-3xl mb-4">Recent Project</h2>
-                    <p class="font-medium text-md text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error fuga ea amet? Ea repellendus neque, at sed minima ad facere, rem, voluptate tempora quisquam id? Aspernatur nisi facilis harum architecto?</p>
+                    <p class="font-medium text-md text-secondary text-justify">Here, you'll find a showcase of my recent web development work, highlighting my commitment to creating websites that are both functional and aesthetically pleasing.</p>
                 </div>
             </div>
-            <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
-                <div class="mb-12 p-4 md:w-1/2">
+            <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto md:gap-10">
+                <div class="mb-12 p-4 md:w-2/5 border border-slate-200 shadow-lg rounded-lg">
                     <div class="rounded-md shadow-md overflow-hidden ">
                         <img src="dist/img/portfolio/1.png" alt="BookShelf+" width="w-full">
                     </div>
                     <h3 class="font-semibold text-xl text-dark mt-5 mb-3">BookShelf+</h3>
-                    <p class="font-medium  text-base text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat nihil consectetur ipsam!</p>
+                    <p class="font-medium  text-base text-secondary text-justify">Bookshelf+ is a user-friendly website that simplifies book collection organization. You can effortlessly add new books and sort them into two shelves: "To Be Read" and "Completed," making it easy to track your reading progress and move books between shelves as needed. Deleting unnecessary books is straightforward. Importantly, Bookshelf+ secures your book data with localStorage, even when the webpage is closed. Developed using HTML, CSS, and JavaScript, this site is one of my projects completed during a Dicoding course.</p>
+                    
+                    <div class="w-full flex gap-3 mt-7">
+                        <a href="https://github.com/mausneg/Bookshelf-" class="text-sm text-primary border border-primary py-3 px-4 rounded-full hover:bg-primary hover:text-white hover:shadow-lg transition duration-300 ease-in-out" target="_blank">Repository</a>
+                        <a href="https://mausneg.github.io/Bookshelf-" class="text-sm text-primary border border-primary py-3 px-4 rounded-full hover:bg-primary hover:text-white hover:shadow-lg transition duration-300 ease-in-out mr-3" target="_blank">Live Demo</a>
+                    </div>
+
                 </div>
-                <div class="mb-12 p-4 md:w-1/2">
+                <div class="mb-12 p-4 md:w-2/5 border border-slate-200 shadow-lg rounded-lg">
                     <div class="rounded-md shadow-md overflow-hidden ">
                         <img src="dist/img/portfolio/2.png" alt="Sistem Informasi Futsal" width="w-full">
                     </div>
                     <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Sistem Informasi Futsal</h3>
-                    <p class="font-medium  text-base text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat nihil consectetur ipsam!</p>
+                    <p class="font-medium  text-base text-secondary text-justify">The Futsal Information System website is a modern solution for futsal field rental businesses. Built using HTML, CSS, jQuery, and PHP technologies, this system simplifies the management of field bookings and schedules. Customers can also book fields online without the need to visit in person. With secure data storage features, this system aims to enhance operational efficiency and provide a better experience in the futsal field rental business. On this website, I played a dual role as both the frontend and backend developer.</p>
+                    <div class="w-full flex gap-3 mt-7">
+                        <a href="https://github.com/mausneg/Sistem-Informasi-Futsal" class="text-sm text-primary border border-primary py-3 px-4 rounded-full hover:bg-primary hover:text-white hover:shadow-lg transition duration-300 ease-in-out" target="_blank">Repository</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -40,7 +40,7 @@
                                 <a class="menu" href="#portfolio">Portfolio</a>
                             </li>
                             <li class="group">
-                                <a class="menu" href="#published-journal">Published Journal</a>
+                                <a class="menu" href="#achievements">Achievements</a>
                             </li>
                         </ul>
                     </nav>
@@ -55,7 +55,7 @@
                 <div class="w-full self-center px-4 lg:w-1/2">
                     <h1 class="text-base font-semibold text-primary md:text-xl ">Hello World 👋, I'm <span
                             class="block font-bold text-dark text-4xl mt-1 lg:text-5xl">Maulana Surya Negara</span></h1>
-                    <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">Student from Mataram University</h2>
+                    <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">Machine Learning Engineer</h2>
                     <p class="font-medium text-secondary mb-10 leading-relaxed">Never Stop Exploring, Life Is Way Too
                         Short to Take It Slow.</p>
 
@@ -69,9 +69,9 @@
                         <span
                             class="absolute bottom-0 -z-10 left-1/2 -translate-x-1/2 md:scale-125 sm:scale-250 sm:-bottom-10">
                             <svg widht="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="#2563eb"
+                                <path fill="#f87171"
                                     d="M30.1,-52.3C36.7,-42.6,38.1,-30.3,42.1,-19.7C46.2,-9.1,52.9,-0.3,55.2,10.4C57.5,21.1,55.4,33.7,49.9,47.2C44.3,60.7,35.3,75.2,21.8,83.3C8.2,91.4,-9.8,93.3,-18,81.6C-26.2,69.9,-24.4,44.8,-34,31C-43.5,17.2,-64.3,14.7,-72.4,6C-80.4,-2.7,-75.8,-17.6,-67.8,-29.2C-59.7,-40.7,-48.2,-49,-36.4,-56.3C-24.5,-63.5,-12.3,-69.8,-0.2,-69.4C11.8,-69,23.5,-62,30.1,-52.3Z"
-                                    transform="translate(100 100) scale(1)" />
+                                    transform="translate(110 90) scale(1.2)" />
                             </svg>
                         </span>
                     </div>
@@ -117,91 +117,265 @@
         </div>
     </section>
 
-    <section id="portfolio" class="pt-36 pb-16 bg-slate-100">
+    <section id="portfolio" class="pt-36 pb-32 bg-slate-50">
         <div class="container">
             <div class="w-full px-4">
-                <div class="max-width-xl mx-auto text-center mb-16">
-                    <h4 class="font-semibold text-lg text-primary mb-2 uppercase">Portfolio</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-4">Recent Project</h2>
-                    <p class="font-medium text-md text-secondary text-justify">Here, you'll find a showcase of my recent
-                                            machine learning projects, highlighting my commitment to developing intelligent systems that are both innovative
-                                            and impactful.</p>
+                <div class="max-w-4xl mx-auto text-center mb-20">
+                    <h4 class="font-bold text-lg text-primary mb-3 uppercase tracking-wide">Portfolio</h4>
+                    <h2 class="font-bold text-dark text-4xl mb-6 lg:text-5xl">Featured Projects</h2>
+                    <p class="font-medium text-lg text-secondary leading-relaxed max-w-2xl mx-auto">
+                        Explore my collection of machine learning and software development projects, showcasing innovative solutions 
+                        and cutting-edge technologies in artificial intelligence and data science.
+                    </p>
                 </div>
             </div>
-            <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto md:gap-10">
-                <div class="mb-12 p-4 md:w-2/5 border border-slate-200 shadow-lg rounded-lg">
-                    <div class="rounded-md shadow-md overflow-hidden ">
-                        <img src="dist/img/portfolio/1.png" alt="MovieLens Recommendation System" width="w-full">
+            
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- TinyLlama AI Assistant -->
+                    <div class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+                        <div class="relative overflow-hidden bg-slate-100">
+                            <img src="dist/img/portfolio/1.png" alt="TinyLlama AI Assistant" class="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full">AI Assistant</span>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm font-semibold rounded-full">Fine-Tuning</span>
+                                <span class="px-3 py-1 bg-orange-100 text-orange-700 text-sm font-semibold rounded-full">LLM</span>
+                            </div>
+                            <h3 class="font-bold text-2xl text-dark mb-4 group-hover:text-primary transition-colors duration-300">
+                                TinyLlama AI Assistant
+                            </h3>
+                            <p class="text-secondary mb-6 leading-relaxed">
+                                Advanced conversational AI powered by TinyLlama-1.1B model with fine-tuning capabilities. 
+                                Features FastAPI backend, conversation memory, PEFT support, and Docker deployment with 
+                                8-bit quantization for optimized performance.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex gap-2 text-sm text-slate-500">
+                                    <span class="flex items-center gap-1">
+                                        <i class="fab fa-python"></i> FastAPI
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-robot"></i> LLM
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <i class="fab fa-docker"></i> Docker
+                                    </span>
+                                </div>
+                                <a href="https://github.com/mausneg/Tiny-LLAMA-Chatbot-Fine-Tuning" target="_blank"
+                                   class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-primary/90 hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                                    <i class="fab fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">PSTI Service Chatbot</h3>
-                    <p class="font-medium  text-base text-secondary text-justify">This project is a chatbot implementation for PSTI information services, developed as part of the Internet Programming course. This project utilizes Java for the main application, Flask for the backend server that serves the machine learning model, and Docker for model deployment. The machine learning model is developed using TensorFlow and managed through the TensorFlow Extended (TFX) pipeline. The application communication system implements Socket Programming, where the server is responsible for connecting the client with the model.</p>
 
-                    <div class="w-full flex gap-3 mt-7">
-                        <a href="https://github.com/mausneg/Prognet-Chatbot"
-                            class="text-sm text-primary border border-primary py-3 px-4 rounded-full hover:bg-primary hover:text-white hover:shadow-lg transition duration-300 ease-in-out"
-                            target="_blank">Repository</a>
+                    <!-- GAN-Based Image Enhancement -->
+                    <div class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+                        <div class="relative overflow-hidden bg-slate-100">
+                            <img src="dist/img/portfolio/2.png" alt="GAN-Based Image Enhancement" class="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full">Computer Vision</span>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm font-semibold rounded-full">GAN</span>
+                                <span class="px-3 py-1 bg-cyan-100 text-cyan-700 text-sm font-semibold rounded-full">Medical AI</span>
+                            </div>
+                            <h3 class="font-bold text-2xl text-dark mb-4 group-hover:text-primary transition-colors duration-300">
+                                GAN-Based Image Enhancement
+                            </h3>
+                            <p class="text-secondary mb-6 leading-relaxed">
+                                Advanced image enhancement model using Attention U-Net generator and PatchGAN discriminator 
+                                for endoscopic image quality improvement. Achieved exceptional PSNR of 26 and SSIM of 0.80 
+                                for medical imaging applications.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex gap-2 text-sm text-slate-500">
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-brain"></i> GAN
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <i class="fab fa-python"></i> TensorFlow
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-eye"></i> U-Net
+                                    </span>
+                                </div>
+                                <div class="inline-flex items-center gap-2 bg-slate-400 text-white px-6 py-3 rounded-full font-semibold cursor-not-allowed">
+                                    <i class="fas fa-lock"></i>
+                                    Private Repository
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="mb-12 p-4 md:w-2/5 border border-slate-200 shadow-lg rounded-lg">
-                    <div class="rounded-md shadow-md overflow-hidden ">
-                        <img src="dist/img/portfolio/2.png" alt="MovieLens Recommendation System" width="w-full">
-                    </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">DestiMate (Bangkit Academy)</h3>
-                    <p class="font-medium  text-base text-secondary text-justify">I developed "DestiMate," an Android-based travel recommender system using machine learning techniques. This system applies collaborative filtering and content-based filtering to suggest tourist destinations and accommodations tailored to user preferences. The project involved data collection, preprocessing, and the implementation of cosine similarity and bag of words methods for content-based recommendations. The collaborative filtering model was built using TensorFlow and achieved a training error of 0.1162 and a test error of 0.1215, indicating good prediction accuracy.</p>
 
-                    <div class="w-full flex gap-3 mt-7">
-                        <a href="https://github.com/mausneg/DestiMate"
-                            class="text-sm text-primary border border-primary py-3 px-4 rounded-full hover:bg-primary hover:text-white hover:shadow-lg transition duration-300 ease-in-out"
-                            target="_blank">Repository</a>
+                    <!-- MLOps Pipeline -->
+                    <div class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+                        <div class="relative overflow-hidden bg-slate-100">
+                            <img src="dist/img/portfolio/4.png" alt="End-to-End MLOps Pipeline" class="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="px-3 py-1 bg-green-100 text-green-700 text-sm font-semibold rounded-full">MLOps</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full">Production</span>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm font-semibold rounded-full">Pipeline</span>
+                            </div>
+                            <h3 class="font-bold text-2xl text-dark mb-4 group-hover:text-primary transition-colors duration-300">
+                                End-to-End MLOps Pipeline
+                            </h3>
+                            <p class="text-secondary mb-6 leading-relaxed">
+                                Production-ready MLOps pipeline built at PT Hizrian Bersaudara Sukses featuring 
+                                automated orchestration, experiment tracking, and containerized deployment. 
+                                Integrates seamlessly with medical devices for real-time AI inference capabilities.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex gap-2 text-sm text-slate-500">
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-cogs"></i> Airflow
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <i class="fab fa-docker"></i> Docker
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-chart-line"></i> MLflow
+                                    </span>
+                                </div>
+                                <div class="inline-flex items-center gap-2 bg-slate-400 text-white px-6 py-3 rounded-full font-semibold cursor-not-allowed">
+                                    <i class="fas fa-lock"></i>
+                                    Private Repository
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="mb-12 p-4 md:w-2/5 border border-slate-200 shadow-lg rounded-lg">
-                    <div class="rounded-md shadow-md overflow-hidden ">
-                        <img src="dist/img/portfolio/3.png" alt="MovieLens Recommendation System" width="w-full">
+
+                    <!-- MovieLens Recommendation System -->
+                    <div class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+                        <div class="relative overflow-hidden bg-slate-100">
+                            <img src="dist/img/portfolio/3.png" alt="MovieLens Recommendation System" class="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-sm font-semibold rounded-full">Recommendation</span>
+                                <span class="px-3 py-1 bg-red-100 text-red-700 text-sm font-semibold rounded-full">Neural Network</span>
+                            </div>
+                            <h3 class="font-bold text-2xl text-dark mb-4 group-hover:text-primary transition-colors duration-300">
+                                MovieLens Recommendation System
+                            </h3>
+                            <p class="text-secondary mb-6 leading-relaxed">
+                                Advanced movie recommendation engine combining content-based filtering and neural networks. 
+                                Processes millions of ratings with cosine similarity and achieves 0.15 MSE for personalized 
+                                movie suggestions.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex gap-2 text-sm text-slate-500">
+                                    <span class="flex items-center gap-1">
+                                        <i class="fab fa-python"></i> Python
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-network-wired"></i> Neural Network
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-database"></i> Big Data
+                                    </span>
+                                </div>
+                                <a href="https://github.com/mausneg/Movie-Lens-Recommendation-System" target="_blank"
+                                   class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-primary/90 hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                                    <i class="fab fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">MovieLens Recommendation System</h3>
-                    <p class="font-medium  text-base text-secondary text-justify">I developed a movie recommendation system using content-based filtering and neural network algorithms to provide personalized movie suggestions. The system was trained on the MovieLens dataset, which contains millions of movie ratings and genres. The cosine similarity approach recommends movies based on genre and tag similarity, while the neural network learns from user interaction patterns. Evaluation results showed the neural network model achieved a Mean Squared Error (MSE) of 0.15, indicating accurate predictions and improved personalization.</p>
-                    <div class="w-full flex gap-3 mt-7">
-                        <a href="https://github.com/mausneg/Movie-Lens-Recommendation-System"
-                            class="text-sm text-primary border border-primary py-3 px-4 rounded-full hover:bg-primary hover:text-white hover:shadow-lg transition duration-300 ease-in-out"
-                            target="_blank">Repository</a>
-                    </div>
-                </div>
-                <div class="mb-12 p-4 md:w-2/5 border border-slate-200 shadow-lg rounded-lg">
-                    <div class="rounded-md shadow-md overflow-hidden ">
-                        <img src="dist/img/portfolio/4.png" alt="Name Entity Recognition" width="w-full">
-                    </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Name Entity Recognition</h3>
-                    <p class="font-medium  text-base text-secondary text-justify">This project demonstrates the use of Long Short-Term Memory (LSTM) networks for named entity recognition (NER). Achieving an impressive accuracy of 0.9663, the model effectively identifies and classifies entities within text. The high performance underscores the efficacy of LSTMs in handling sequential data and extracting meaningful information.</p>
-                    <div class="w-full flex gap-3 mt-7">
-                        <a href="https://github.com/mausneg/Name-Entity-Recognition"
-                            class="text-sm text-primary border border-primary py-3 px-4 rounded-full hover:bg-primary hover:text-white hover:shadow-lg transition duration-300 ease-in-out"
-                            target="_blank">Repository</a>
-                    </div>
+
                 </div>
             </div>
         </div>
     </section>
-    <section id="published-journal" class="pt-36 pb-32 bg-slate-600">
+    <section id="achievements" class="pt-36 pb-32 bg-dark">
         <div class="container">
             <div class="w-full px-4">
-                <div class="max-width-xl mx-auto text-center mb-16">
-                    <h4 class="font-semibold text-lg text-primary mb-2 uppercase">Published Journal</h4>
-                    <h2 class="font-bold text-white text-3xl mb-4">Latest Research</h2>
-                    <p class="font-medium text-md text-slate-400 text-justify">My latest published journal delves into the advancements in machine learning algorithms and their applications across various industries. This research highlights the innovative approaches we have developed to enhance predictive accuracy and efficiency. By leveraging large datasets and sophisticated models, we aim to push the boundaries of what is possible in the realm of artificial intelligence.</p>
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h4 class="font-semibold text-lg text-primary mb-2 uppercase">Achievements</h4>
+                    <h2 class="font-bold text-white text-3xl mb-4">Professional Certifications</h2>
+                    <p class="font-medium text-md text-slate-400 text-justify">My professional certifications showcase my commitment to continuous learning and expertise in various domains of technology and data science.</p>
                 </div>
             </div>
-            <div class="flex flex-wrap">
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-10">
-                        <img src="dist/img/journal/1.png" class="w-full"alt=""/>
-                        <div class="py-8 px-6">
-                            <a href="" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate"><h3>Multi-Label Face Classification</h3></a>
-                    
-                            <p class="font-medium text-base text-secondary mb-4">This research aims to improve multi-label human face classification (age, gender, and race) using CNNs, achieving accuracies of 82.98% for age, 90.36% for gender, and 79.48% for race with the UTKFace dataset. Data augmentation and increased CNN filters enhanced accuracy, though challenges remain for imbalanced categories like "teenager" age and "Indian" or "Others" races.</p>
-                            <a href="https://dielektrika.unram.ac.id/index.php/dielektrika/article/view/389" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80" target="_blank">Read More</a>
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+                <!-- TensorFlow Developer Certificate -->
+                <div class="bg-slate-700 rounded-lg p-6 text-center hover:bg-slate-600 transition duration-300">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgekNBpRHJFaIf-oczr-v0d515ii6zSP9hi3lqtKI2UkP_0wF7751u4kJRCug3EhZOSoyt4utFXgtnMDvTZZg9Z_fNWfDhgo-PIJ0H1RdJFf2N7xpT04Q2kbM2Ogql5xbjT4afjNzgDMjc/s1600/tf_badge_cert_tf_certified_developer.png" alt="TensorFlow" class="w-16 h-16 object-contain">
                     </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">TensorFlow Developer Certificate</h3>
+                    <p class="text-slate-300 text-sm mb-3">TensorFlow Certificate Program</p>
+                    <p class="text-slate-400 text-xs mb-4">Issued on: Jan 2024 • Expires: Jan 2027</p>
+                    <p class="text-slate-400 text-xs mb-4">ID Kredensial: 93488980</p>
+                    <button class="bg-slate-600 text-white text-xs px-4 py-2 rounded hover:bg-slate-500 transition duration-300">SEE CREDENTIAL</button>
+                </div>
+
+                <!-- Machine Learning Terapan -->
+                <div class="bg-slate-700 rounded-lg p-6 text-center hover:bg-slate-600 transition duration-300">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFdBNzCwzZYZZLvd6eyst4__z3g4W2EKUaaQ&s" alt="Dicoding" class="w-12 h-12 object-contain">
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Machine Learning Terapan</h3>
+                    <p class="text-slate-300 text-sm mb-3">Dicoding Indonesia</p>
+                    <p class="text-slate-400 text-xs mb-4">Issued on: Feb 2024 • Expires: Feb 2027</p>
+                    <p class="text-slate-400 text-xs mb-4">ID Kredensial: TRXYT73K9PVM</p>
+                    <button class="bg-slate-600 text-white text-xs px-4 py-2 rounded hover:bg-slate-500 transition duration-300">SEE CREDENTIAL</button>
+                </div>
+
+                <!-- DeepLearning.AI TensorFlow Developer Specialization -->
+                <div class="bg-slate-700 rounded-lg p-6 text-center hover:bg-slate-600 transition duration-300">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
+                        <img src="https://coursera-university-assets.s3.amazonaws.com/b4/5cb90bb92f420b99bf323a0356f451/Icon.png" alt="DeepLearning.AI" class="w-12 h-12 object-contain">
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">DeepLearning.AI TensorFlow Developer Specialization</h3>
+                    <p class="text-slate-300 text-sm mb-3">DeepLearning.AI</p>
+                    <p class="text-slate-400 text-xs mb-4">Issued on: Oct 2023</p>
+                    <p class="text-slate-400 text-xs mb-4">ID Kredensial: G2AEK2LMNUTE</p>
+                    <button class="bg-slate-600 text-white text-xs px-4 py-2 rounded hover:bg-slate-500 transition duration-300">SEE CREDENTIAL</button>
+                </div>
+
+                <!-- Google Data Analytics Certificate -->
+                <div class="bg-slate-700 rounded-lg p-6 text-center hover:bg-slate-600 transition duration-300">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="w-12 h-12 object-contain">
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Google Data Analytics Certificate</h3>
+                    <p class="text-slate-300 text-sm mb-3">Coursera</p>
+                    <p class="text-slate-400 text-xs mb-4">Issued on: Oct 2023</p>
+                    <button class="bg-slate-600 text-white text-xs px-4 py-2 rounded hover:bg-slate-500 transition duration-300">SEE CREDENTIAL</button>
+                </div>
+
+                <!-- Fine Tuning LLM with Hugging Face -->
+                <div class="bg-slate-700 rounded-lg p-6 text-center hover:bg-slate-600 transition duration-300">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAAiPkyk9wjoPdFW1WXya1UCFsFNw0ZYBDew&s" alt="Udemy" class="w-12 h-12 object-contain">
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Fine Tuning LLM with Hugging Face Transformers for NLP</h3>
+                    <p class="text-slate-300 text-sm mb-3">Udemy</p>
+                    <p class="text-slate-400 text-xs mb-4">Issued on: Sep 2025</p>
+                    <p class="text-slate-400 text-xs mb-4">ID Kredensial: UC-1f428563-3939-4bde-8def-edb1b75ce3f4</p>
+                    <button class="bg-slate-600 text-white text-xs px-4 py-2 rounded hover:bg-slate-500 transition duration-300">SEE CREDENTIAL</button>
+                </div>
+
+                <!-- Deploy ML Model in Production -->
+                <div class="bg-slate-700 rounded-lg p-6 text-center hover:bg-slate-600 transition duration-300">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAAiPkyk9wjoPdFW1WXya1UCFsFNw0ZYBDew&s" alt="Udemy" class="w-12 h-12 object-contain">
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Deploy ML Model in Production with FastAPI and Docker</h3>
+                    <p class="text-slate-300 text-sm mb-3">Udemy</p>
+                    <p class="text-slate-400 text-xs mb-4">Issued on: Jul 2025</p>
+                    <p class="text-slate-400 text-xs mb-4">ID Kredensial: UC-9c92120c-bb57-4f43-84de-84814efd61e3</p>
+                    <button class="bg-slate-600 text-white text-xs px-4 py-2 rounded hover:bg-slate-500 transition duration-300">SEE CREDENTIAL</button>
                 </div>
             </div>
         </div>
@@ -225,6 +399,9 @@
                         </li>
                         <li>
                             <a href="#portfolio" class="inline-block text-base hover:text-primary mb-3">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#achievements" class="inline-block text-base hover:text-primary mb-3">Achievements</a>
                         </li>
                     </ul>
                 </div>

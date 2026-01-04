@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Maulana Surya Negara - ML Engineer Portfolio</title>
     <link href="dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
@@ -12,23 +12,33 @@
 
 </head>
 
-<body>
+<body class="bg-white dark:bg-slate-900 transition-colors duration-300">
     <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
         <div class="container">
             <div class="flex items-center justify-between relative">
                 <div class="px-4">
-                    <a href="#home" class="block py-6 font-bold text-lg md:text-2xl">
-                        MyPortfolio<span class="text-primary text-2xl">+</span>
+                    <a href="#home" class="block py-6 font-bold text-lg md:text-2xl text-dark dark:text-white">
+                        MyPortfolio<span class="text-indigo-600 dark:text-indigo-400 text-2xl">+</span>
                     </a>
                 </div>
-                <div class="flex items-center px-4">
+                <div class="flex items-center gap-4 px-4">
+                    <!-- Dark Mode Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-slate-700 dark:text-slate-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-slate-700 dark:text-slate-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    
                     <button id="hamburger" class="block absolute right-4 lg:hidden">
-                        <span class="hamburger-line origin-top-left"></span>
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line origin-bottom-left"></span>
+                        <span class="hamburger-line origin-top-left transition-colors dark:bg-white"></span>
+                        <span class="hamburger-line transition-colors dark:bg-white"></span>
+                        <span class="hamburger-line origin-bottom-left transition-colors dark:bg-white"></span>
                     </button>
                     <nav id="nav-menu"
-                        class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                        class="hidden absolute py-5 bg-white dark:bg-slate-800 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:dark:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
                         <ul class="block lg:flex">
                             <li class="group">
                                 <a class="menu" href="#home">Home</a>
@@ -49,67 +59,82 @@
         </div>
     </header>
 
-    <section id="home" class="pt-36">
-        <div class="container">
+    <section id="home" class="pt-36 pb-20 bg-gradient-to-br from-indigo-600 via-purple-600 to-fuchsia-600 dark:from-indigo-950 dark:via-purple-950 dark:to-fuchsia-950 transition-colors duration-300 relative overflow-hidden">
+        <!-- Animated Particles -->
+        <div class="particle" style="width: 100px; height: 100px; top: 10%; left: 10%; animation-delay: 0s;"></div>
+        <div class="particle" style="width: 60px; height: 60px; top: 70%; left: 20%; animation-delay: 1s;"></div>
+        <div class="particle" style="width: 80px; height: 80px; top: 20%; right: 15%; animation-delay: 2s;"></div>
+        <div class="particle" style="width: 120px; height: 120px; bottom: 20%; right: 10%; animation-delay: 1.5s;"></div>
+        <div class="particle" style="width: 40px; height: 40px; top: 50%; left: 80%; animation-delay: 0.5s;"></div>
+        <div class="particle" style="width: 90px; height: 90px; bottom: 30%; left: 60%; animation-delay: 2.5s;"></div>
+        
+        <div class="container relative z-10">
             <div class="flex flex-wrap">
                 <div class="w-full self-center px-4 lg:w-1/2">
-                    <h1 class="text-base font-semibold text-primary md:text-xl ">Hello World 👋, I'm <span
-                            class="block font-bold text-dark text-4xl mt-1 lg:text-5xl">Maulana Surya Negara</span></h1>
-                    <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">Machine Learning Engineer</h2>
-                    <p class="font-medium text-secondary mb-10 leading-relaxed">Never Stop Exploring, Life Is Way Too
+                    <h1 class="text-base font-semibold text-white md:text-xl animate-fade-in drop-shadow-lg">Hello World 👋, I'm <span
+                            class="block font-bold text-white text-4xl mt-1 lg:text-5xl drop-shadow-2xl">Maulana Surya Negara</span></h1>
+                    <h2 class="font-medium text-white/90 text-lg mb-5 lg:text-2xl drop-shadow-md">Machine Learning Engineer</h2>
+                    <p class="font-medium text-white/80 mb-10 leading-relaxed drop-shadow-md">Never Stop Exploring, Life Is Way Too
                         Short to Take It Slow.</p>
 
                     <a href="#about"
-                        class="text-base font-semibold text-white bg-primary py-3 px-4 rounded-full hover:opacity-80 hover:shadow-lg transition duration-300 ease-in-out">Contact
-                        Me</a>
+                        class="group inline-flex items-center gap-2 text-base font-semibold text-white bg-white/10 backdrop-blur-md py-3 px-8 rounded-full border-2 border-white/30 hover:bg-white hover:text-indigo-600 hover:border-white hover:shadow-2xl hover:shadow-white/50 transition-all duration-300 ease-in-out">
+                        Contact Me
+                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </a>
                 </div>
                 <div class="w-full self-end px-4 lg:w-1/2">
                     <div class="mt-10 relative lg:mt-9 lg:right-0">
-                        <img src="dist/img/mausneg.png" alt="" class="max-w-full mx-auto">
-                        <span
-                            class="absolute bottom-0 -z-10 left-1/2 -translate-x-1/2 md:scale-125 sm:scale-250 sm:-bottom-10">
-                            <svg widht="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="#f87171"
-                                    d="M30.1,-52.3C36.7,-42.6,38.1,-30.3,42.1,-19.7C46.2,-9.1,52.9,-0.3,55.2,10.4C57.5,21.1,55.4,33.7,49.9,47.2C44.3,60.7,35.3,75.2,21.8,83.3C8.2,91.4,-9.8,93.3,-18,81.6C-26.2,69.9,-24.4,44.8,-34,31C-43.5,17.2,-64.3,14.7,-72.4,6C-80.4,-2.7,-75.8,-17.6,-67.8,-29.2C-59.7,-40.7,-48.2,-49,-36.4,-56.3C-24.5,-63.5,-12.3,-69.8,-0.2,-69.4C11.8,-69,23.5,-62,30.1,-52.3Z"
-                                    transform="translate(110 90) scale(1.2)" />
-                            </svg>
-                        </span>
+                        <img src="dist/img/mausneg.png" alt="" class="max-w-full mx-auto relative z-10">
+                        
+                        <!-- Glowing Gradient Circle Background -->
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
+                            <div class="w-[400px] h-[400px] rounded-full bg-gradient-to-br from-indigo-500/30 via-purple-500/30 to-fuchsia-500/30 blur-3xl animate-pulse-slow"></div>
+                        </div>
+                        
+                        <!-- Animated Rings -->
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
+                            <div class="w-[350px] h-[350px] rounded-full border-2 border-indigo-400/35 animate-ping-slow"></div>
+                        </div>
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
+                            <div class="w-[450px] h-[450px] rounded-full border-2 border-purple-400/25 animate-ping-slower"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="pt-36 pb-32">
+    <section id="about" class="pt-36 pb-32 bg-white dark:bg-slate-900 transition-colors duration-300">
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="w-full px-4 mb-10 lg:w-1/2 ">
-                    <h4 class="font-bold uppercase text-primary text-lg mb-3">About Me</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl">Learn About Me Here</h2>
-                    <p id="about-content" class="font-medium text-base text-secondary max-w-xl lg:text-lg text-justify">
+                    <h4 class="font-bold uppercase text-indigo-600 dark:text-indigo-400 text-lg mb-3 tracking-wider">About Me</h4>
+                    <h2 class="font-bold text-dark dark:text-white text-3xl mb-5 max-w-md lg:text-4xl">Learn About Me Here</h2>
+                    <p id="about-content" class="font-medium text-base text-secondary dark:text-slate-400 max-w-xl lg:text-lg text-justify">
                     </p>
                 </div>
                 <div class="w-full px-4 lg:w-1/2">
-                    <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10">Explore My Background</h3>
-                    <p id="social-media" class="font-medium text-base text-secondary mb-6 lg:text-lg text-justify"></p>
-                    <div class="flex items-center">
+                    <h3 class="font-semibold text-dark dark:text-white text-2xl mb-4 lg:text-3xl lg:pt-10">Explore My Background</h3>
+                    <p id="social-media" class="font-medium text-base text-secondary dark:text-slate-400 mb-6 lg:text-lg text-justify"></p>
+                    <div class="flex items-center gap-3">
                         <a href="https://www.instagram.com/mausneg" target="_blank"
-                            class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
-                            <i class="fa-brands fa-instagram text-2xl"></i>
+                            class="w-12 h-12 rounded-xl flex justify-center items-center bg-gradient-to-br from-purple-600 to-pink-600 text-white hover:scale-110 hover:shadow-xl hover:shadow-purple-500/50 transition-all duration-300">
+                            <i class="fa-brands fa-instagram text-xl"></i>
                         </a>
 
                         <a href="https://www.github.com/mausneg" target="_blank"
-                            class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
-                            <i class="fa-brands fa-github text-2xl"></i>
+                            class="w-12 h-12 rounded-xl flex justify-center items-center bg-gradient-to-br from-slate-800 to-slate-950 dark:from-slate-700 dark:to-slate-900 text-white hover:scale-110 hover:shadow-xl hover:shadow-slate-500/50 transition-all duration-300">
+                            <i class="fa-brands fa-github text-xl"></i>
                         </a>
 
                         <a href="https://www.linkedin.com/in/maulana-surya-negara-5b6a6b270/" target="_blank"
-                            class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
-                            <i class="fa-brands fa-linkedin text-2xl"></i>
+                            class="w-12 h-12 rounded-xl flex justify-center items-center bg-gradient-to-br from-blue-600 to-blue-800 text-white hover:scale-110 hover:shadow-xl hover:shadow-blue-500/50 transition-all duration-300">
+                            <i class="fa-brands fa-linkedin text-xl"></i>
                         </a>
                         <a href="https://steamcommunity.com/id/surya_1933" target="_blank"
-                            class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
-                            <i class="fa-brands fa-steam text-2xl"></i>
+                            class="w-12 h-12 rounded-xl flex justify-center items-center bg-gradient-to-br from-slate-700 to-slate-900 text-white hover:scale-110 hover:shadow-xl hover:shadow-slate-500/50 transition-all duration-300">
+                            <i class="fa-brands fa-steam text-xl"></i>
                         </a>
                     </div>
                 </div>
@@ -117,13 +142,13 @@
         </div>
     </section>
 
-    <section id="portfolio" class="pt-36 pb-32 bg-slate-50">
+    <section id="portfolio" class="pt-36 pb-32 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800 transition-colors duration-300">
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-4xl mx-auto text-center mb-20">
-                    <h4 class="font-bold text-lg text-primary mb-3 uppercase tracking-wide">Portfolio</h4>
-                    <h2 class="font-bold text-dark text-4xl mb-6 lg:text-5xl">Featured Projects</h2>
-                    <p class="font-medium text-lg text-secondary leading-relaxed max-w-2xl mx-auto">
+                    <h4 class="font-bold text-lg text-indigo-600 dark:text-indigo-400 mb-3 uppercase tracking-wider">Portfolio</h4>
+                    <h2 class="font-bold text-dark dark:text-white text-4xl mb-6 lg:text-5xl">Featured Projects</h2>
+                    <p class="font-medium text-lg text-secondary dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
                         Explore my collection of machine learning and software development projects, showcasing innovative solutions 
                         and cutting-edge technologies in artificial intelligence and data science.
                     </p>
@@ -133,8 +158,8 @@
             <div class="max-w-7xl mx-auto px-4">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <!-- Indonesian ID Card Auto-Capture & LLM OCR -->
-                    <div class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-                        <div class="relative overflow-hidden bg-slate-100">
+                    <div class="group bg-white dark:bg-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden border border-slate-200 dark:border-slate-700">
+                        <div class="relative overflow-hidden bg-slate-100 dark:bg-slate-700">
                             <img src="dist/img/portfolio/5.png" alt="Indonesian ID Card Auto-Capture & LLM OCR" class="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
@@ -144,10 +169,10 @@
                                 <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-sm font-semibold rounded-full">YOLOv5</span>
                                 <span class="px-3 py-1 bg-sky-100 text-sky-700 text-sm font-semibold rounded-full">LLM OCR</span>
                             </div>
-                            <h3 class="font-bold text-2xl text-dark mb-4 group-hover:text-primary transition-colors duration-300">
+                            <h3 class="font-bold text-2xl text-dark dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
                                 Indonesian ID Card Auto-Capture & LLM OCR
                             </h3>
-                            <p class="text-secondary mb-6 leading-relaxed">
+                            <p class="text-secondary dark:text-slate-400 mb-6 leading-relaxed">
                                 End-to-end Indonesian ID card (KTP/SIM) processing system with real-time auto-capture using 
                                 YOLOv5nu (TFJS) and LLM-based OCR extraction via Ministral-3 (Ollama). Features hierarchical 
                                 region normalization, structured JSON output, and Docker Compose deployment.
@@ -165,36 +190,37 @@
                                     </span>
                                 </div>
                                 <a href="https://github.com/mausneg/Indonesian-ID-Card-Extractor" target="_blank"
-                                   class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-primary/90 hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                                   class="group inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-indigo-700 hover:to-purple-700 hover:shadow-xl hover:shadow-indigo-500/50 transform hover:scale-105 transition-all duration-300">
                                     <i class="fab fa-github"></i>
                                     View Code
+                                    <i class="fas fa-external-link-alt text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- ENT Disease Classification with ViT -->
-                    <div class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-                        <div class="relative overflow-hidden bg-slate-100">
+                    <div class="group bg-white dark:bg-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden border border-slate-200 dark:border-slate-700">
+                        <div class="relative overflow-hidden bg-slate-100 dark:bg-slate-700">
                             <img src="dist/img/portfolio/7.png" alt="ENT Disease Classification" class="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <div class="p-8">
                             <div class="flex items-center gap-2 mb-4">
-                                <span class="px-3 py-1 bg-cyan-100 text-cyan-700 text-sm font-semibold rounded-full">Medical AI</span>
-                                <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm font-semibold rounded-full">Vision Transformer</span>
-                                <span class="px-3 py-1 bg-pink-100 text-pink-700 text-sm font-semibold rounded-full">FastAPI</span>
+                                <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 text-sm font-semibold rounded-full">Medical AI</span>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-semibold rounded-full">Vision Transformer</span>
+                                <span class="px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 text-sm font-semibold rounded-full">FastAPI</span>
                             </div>
-                            <h3 class="font-bold text-2xl text-dark mb-4 group-hover:text-primary transition-colors duration-300">
+                            <h3 class="font-bold text-2xl text-dark dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
                                 ENT Disease Classification with ViT
                             </h3>
-                            <p class="text-secondary mb-6 leading-relaxed">
+                            <p class="text-secondary dark:text-slate-400 mb-6 leading-relaxed">
                                 Automated ENT disease classification system using Vision Transformer (ViT-base) for ear disease 
                                 diagnosis. Achieved ~86% accuracy across 12 disease classes with FastAPI deployment, improving 
                                 10% over previous DenseNet169 implementation.
                             </p>
                             <div class="flex items-center justify-between">
-                                <div class="flex gap-2 text-sm text-slate-500">
+                                <div class="flex gap-2 text-sm text-slate-500 dark:text-slate-400">
                                     <span class="flex items-center gap-1">
                                         <i class="fas fa-brain"></i> ViT
                                     </span>
@@ -206,36 +232,37 @@
                                     </span>
                                 </div>
                                 <a href="https://github.com/mausneg/ent-disease-classification" target="_blank"
-                                   class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-primary/90 hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                                   class="group inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-indigo-700 hover:to-purple-700 hover:shadow-xl hover:shadow-indigo-500/50 transform hover:scale-105 transition-all duration-300">
                                     <i class="fab fa-github"></i>
                                     View Code
+                                    <i class="fas fa-external-link-alt text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Ollama RAG AI Assistant -->
-                    <div class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-                        <div class="relative overflow-hidden bg-slate-100">
+                    <div class="group bg-white dark:bg-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden border border-slate-200 dark:border-slate-700">
+                        <div class="relative overflow-hidden bg-slate-100 dark:bg-slate-700">
                             <img src="dist/img/portfolio/6.png" alt="Ollama RAG AI Assistant" class="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <div class="p-8">
                             <div class="flex items-center gap-2 mb-4">
-                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full">RAG System</span>
-                                <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm font-semibold rounded-full">LangChain</span>
-                                <span class="px-3 py-1 bg-orange-100 text-orange-700 text-sm font-semibold rounded-full">Ollama</span>
+                                <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light text-sm font-semibold rounded-full">RAG System</span>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-semibold rounded-full">LangChain</span>
+                                <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 text-sm font-semibold rounded-full">Ollama</span>
                             </div>
-                            <h3 class="font-bold text-2xl text-dark mb-4 group-hover:text-primary transition-colors duration-300">
+                            <h3 class="font-bold text-2xl text-dark dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
                                 Ollama RAG AI Assistant
                             </h3>
-                            <p class="text-secondary mb-6 leading-relaxed">
+                            <p class="text-secondary dark:text-slate-400 mb-6 leading-relaxed">
                                 Production-ready RAG-powered conversational AI with document processing capabilities. 
                                 Features FAISS vector store, multi-session chat history, ChatGPT-like interface, and 
                                 local LLM inference for complete privacy with zero cloud costs.
                             </p>
                             <div class="flex items-center justify-between">
-                                <div class="flex gap-2 text-sm text-slate-500">
+                                <div class="flex gap-2 text-sm text-slate-500 dark:text-slate-400">
                                     <span class="flex items-center gap-1">
                                         <i class="fas fa-database"></i> FAISS
                                     </span>
@@ -247,36 +274,37 @@
                                     </span>
                                 </div>
                                 <a href="https://github.com/mausneg/Ollama-AI-Asisstant" target="_blank"
-                                   class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-primary/90 hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                                   class="group inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-indigo-700 hover:to-purple-700 hover:shadow-xl hover:shadow-indigo-500/50 transform hover:scale-105 transition-all duration-300">
                                     <i class="fab fa-github"></i>
                                     View Code
+                                    <i class="fas fa-external-link-alt text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- TinyLlama AI Assistant -->
-                    <div class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-                        <div class="relative overflow-hidden bg-slate-100">
+                    <div class="group bg-white dark:bg-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden border border-slate-200 dark:border-slate-700">
+                        <div class="relative overflow-hidden bg-slate-100 dark:bg-slate-700">
                             <img src="dist/img/portfolio/1.png" alt="TinyLlama AI Assistant" class="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <div class="p-8">
                             <div class="flex items-center gap-2 mb-4">
-                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full">AI Assistant</span>
-                                <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm font-semibold rounded-full">Fine-Tuning</span>
-                                <span class="px-3 py-1 bg-orange-100 text-orange-700 text-sm font-semibold rounded-full">LLM</span>
+                                <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-semibold rounded-full">AI Assistant</span>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-semibold rounded-full">Fine-Tuning</span>
+                                <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 text-sm font-semibold rounded-full">LLM</span>
                             </div>
-                            <h3 class="font-bold text-2xl text-dark mb-4 group-hover:text-primary transition-colors duration-300">
+                            <h3 class="font-bold text-2xl text-dark dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
                                 TinyLlama AI Assistant
                             </h3>
-                            <p class="text-secondary mb-6 leading-relaxed">
+                            <p class="text-secondary dark:text-slate-400 mb-6 leading-relaxed">
                                 Advanced conversational AI powered by TinyLlama-1.1B model with fine-tuning capabilities. 
                                 Features FastAPI backend, conversation memory, PEFT support, and Docker deployment with 
                                 8-bit quantization for optimized performance.
                             </p>
                             <div class="flex items-center justify-between">
-                                <div class="flex gap-2 text-sm text-slate-500">
+                                <div class="flex gap-2 text-sm text-slate-500 dark:text-slate-400">
                                     <span class="flex items-center gap-1">
                                         <i class="fab fa-python"></i> FastAPI
                                     </span>
@@ -288,36 +316,37 @@
                                     </span>
                                 </div>
                                 <a href="https://github.com/mausneg/Tiny-LLAMA-Chatbot-Fine-Tuning" target="_blank"
-                                   class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-primary/90 hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                                   class="group inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-indigo-700 hover:to-purple-700 hover:shadow-xl hover:shadow-indigo-500/50 transform hover:scale-105 transition-all duration-300">
                                     <i class="fab fa-github"></i>
                                     View Code
+                                    <i class="fas fa-external-link-alt text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- GAN-Based Image Enhancement -->
-                    <div class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-                        <div class="relative overflow-hidden bg-slate-100">
+                    <div class="group bg-white dark:bg-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden border border-slate-200 dark:border-slate-700">
+                        <div class="relative overflow-hidden bg-slate-100 dark:bg-slate-700">
                             <img src="dist/img/portfolio/2.png" alt="GAN-Based Image Enhancement" class="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <div class="p-8">
                             <div class="flex items-center gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full">Computer Vision</span>
-                                <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm font-semibold rounded-full">GAN</span>
-                                <span class="px-3 py-1 bg-cyan-100 text-cyan-700 text-sm font-semibold rounded-full">Medical AI</span>
+                                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-semibold rounded-full">Computer Vision</span>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-semibold rounded-full">GAN</span>
+                                <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 text-sm font-semibold rounded-full">Medical AI</span>
                             </div>
-                            <h3 class="font-bold text-2xl text-dark mb-4 group-hover:text-primary transition-colors duration-300">
+                            <h3 class="font-bold text-2xl text-dark dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
                                 GAN-Based Image Enhancement
                             </h3>
-                            <p class="text-secondary mb-6 leading-relaxed">
+                            <p class="text-secondary dark:text-slate-400 mb-6 leading-relaxed">
                                 Advanced image enhancement model using Attention U-Net generator and PatchGAN discriminator 
                                 for endoscopic image quality improvement. Achieved exceptional PSNR of 26 and SSIM of 0.80 
                                 for medical imaging applications.
                             </p>
                             <div class="flex items-center justify-between">
-                                <div class="flex gap-2 text-sm text-slate-500">
+                                <div class="flex gap-2 text-sm text-slate-500 dark:text-slate-400">
                                     <span class="flex items-center gap-1">
                                         <i class="fas fa-brain"></i> GAN
                                     </span>
@@ -328,7 +357,7 @@
                                         <i class="fas fa-eye"></i> U-Net
                                     </span>
                                 </div>
-                                <div class="inline-flex items-center gap-2 bg-slate-400 text-white px-6 py-3 rounded-full font-semibold cursor-not-allowed">
+                                <div class="inline-flex items-center gap-2 bg-slate-400 dark:bg-slate-600 text-white px-6 py-3 rounded-full font-semibold cursor-not-allowed">
                                     <i class="fas fa-lock"></i>
                                     Private Repository
                                 </div>
@@ -337,27 +366,27 @@
                     </div>
 
                     <!-- MLOps Pipeline -->
-                    <div class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-                        <div class="relative overflow-hidden bg-slate-100">
+                    <div class="group bg-white dark:bg-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden border border-slate-200 dark:border-slate-700">
+                        <div class="relative overflow-hidden bg-slate-100 dark:bg-slate-700">
                             <img src="dist/img/portfolio/4.png" alt="End-to-End MLOps Pipeline" class="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <div class="p-8">
                             <div class="flex items-center gap-2 mb-4">
-                                <span class="px-3 py-1 bg-green-100 text-green-700 text-sm font-semibold rounded-full">MLOps</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full">Production</span>
-                                <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm font-semibold rounded-full">Pipeline</span>
+                                <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm font-semibold rounded-full">MLOps</span>
+                                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-semibold rounded-full">Production</span>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-semibold rounded-full">Pipeline</span>
                             </div>
-                            <h3 class="font-bold text-2xl text-dark mb-4 group-hover:text-primary transition-colors duration-300">
+                            <h3 class="font-bold text-2xl text-dark dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
                                 End-to-End MLOps Pipeline
                             </h3>
-                            <p class="text-secondary mb-6 leading-relaxed">
+                            <p class="text-secondary dark:text-slate-400 mb-6 leading-relaxed">
                                 Production-ready MLOps pipeline built at PT Hizrian Bersaudara Sukses featuring 
                                 automated orchestration, experiment tracking, and containerized deployment. 
                                 Integrates seamlessly with medical devices for real-time AI inference capabilities.
                             </p>
                             <div class="flex items-center justify-between">
-                                <div class="flex gap-2 text-sm text-slate-500">
+                                <div class="flex gap-2 text-sm text-slate-500 dark:text-slate-400">
                                     <span class="flex items-center gap-1">
                                         <i class="fas fa-cogs"></i> Airflow
                                     </span>
@@ -368,7 +397,7 @@
                                         <i class="fas fa-chart-line"></i> MLflow
                                     </span>
                                 </div>
-                                <div class="inline-flex items-center gap-2 bg-slate-400 text-white px-6 py-3 rounded-full font-semibold cursor-not-allowed">
+                                <div class="inline-flex items-center gap-2 bg-slate-400 dark:bg-slate-600 text-white px-6 py-3 rounded-full font-semibold cursor-not-allowed">
                                     <i class="fas fa-lock"></i>
                                     Private Repository
                                 </div>
@@ -377,26 +406,26 @@
                     </div>
 
                     <!-- MovieLens Recommendation System -->
-                    <div class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-                        <div class="relative overflow-hidden bg-slate-100">
+                    <div class="group bg-white dark:bg-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden border border-slate-200 dark:border-slate-700">
+                        <div class="relative overflow-hidden bg-slate-100 dark:bg-slate-700">
                             <img src="dist/img/portfolio/3.png" alt="MovieLens Recommendation System" class="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <div class="p-8">
                             <div class="flex items-center gap-2 mb-4">
-                                <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-sm font-semibold rounded-full">Recommendation</span>
-                                <span class="px-3 py-1 bg-red-100 text-red-700 text-sm font-semibold rounded-full">Neural Network</span>
+                                <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 text-sm font-semibold rounded-full">Recommendation</span>
+                                <span class="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 text-sm font-semibold rounded-full">Neural Network</span>
                             </div>
-                            <h3 class="font-bold text-2xl text-dark mb-4 group-hover:text-primary transition-colors duration-300">
+                            <h3 class="font-bold text-2xl text-dark dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
                                 MovieLens Recommendation System
                             </h3>
-                            <p class="text-secondary mb-6 leading-relaxed">
+                            <p class="text-secondary dark:text-slate-400 mb-6 leading-relaxed">
                                 Advanced movie recommendation engine combining content-based filtering and neural networks. 
                                 Processes millions of ratings with cosine similarity and achieves 0.15 MSE for personalized 
                                 movie suggestions.
                             </p>
                             <div class="flex items-center justify-between">
-                                <div class="flex gap-2 text-sm text-slate-500">
+                                <div class="flex gap-2 text-sm text-slate-500 dark:text-slate-400">
                                     <span class="flex items-center gap-1">
                                         <i class="fab fa-python"></i> Python
                                     </span>
@@ -408,9 +437,10 @@
                                     </span>
                                 </div>
                                 <a href="https://github.com/mausneg/Movie-Lens-Recommendation-System" target="_blank"
-                                   class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-primary/90 hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                                   class="group inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-indigo-700 hover:to-purple-700 hover:shadow-xl hover:shadow-indigo-500/50 transform hover:scale-105 transition-all duration-300">
                                     <i class="fab fa-github"></i>
                                     View Code
+                                    <i class="fas fa-external-link-alt text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"></i>
                                 </a>
                             </div>
                         </div>
@@ -420,100 +450,118 @@
             </div>
         </div>
     </section>
-    <section id="achievements" class="pt-36 pb-32 bg-dark">
+    <section id="achievements" class="pt-36 pb-32 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300">
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
-                    <h4 class="font-semibold text-lg text-primary mb-2 uppercase">Achievements</h4>
+                    <h4 class="font-semibold text-lg text-indigo-400 mb-2 uppercase tracking-wider">Achievements</h4>
                     <h2 class="font-bold text-white text-3xl mb-4">Professional Certifications</h2>
-                    <p class="font-medium text-md text-slate-400 text-justify">My professional certifications showcase my commitment to continuous learning and expertise in various domains of technology and data science.</p>
+                    <p class="font-medium text-md text-slate-400 dark:text-slate-500 text-justify">My professional certifications showcase my commitment to continuous learning and expertise in various domains of technology and data science.</p>
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
                 <!-- TensorFlow Developer Certificate -->
-                <div class="bg-slate-700 rounded-lg p-6 text-center hover:bg-slate-600 transition duration-300">
-                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
+                <div class="bg-slate-700 dark:bg-slate-800 rounded-2xl p-6 text-center hover:bg-slate-600 dark:hover:bg-slate-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-slate-600 dark:border-slate-700">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
                         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgekNBpRHJFaIf-oczr-v0d515ii6zSP9hi3lqtKI2UkP_0wF7751u4kJRCug3EhZOSoyt4utFXgtnMDvTZZg9Z_fNWfDhgo-PIJ0H1RdJFf2N7xpT04Q2kbM2Ogql5xbjT4afjNzgDMjc/s1600/tf_badge_cert_tf_certified_developer.png" alt="TensorFlow" class="w-16 h-16 object-contain">
                     </div>
                     <h3 class="text-white font-semibold text-lg mb-2">TensorFlow Developer Certificate</h3>
                     <p class="text-slate-300 text-sm mb-3">TensorFlow Certificate Program</p>
                     <p class="text-slate-400 text-xs mb-4">Issued on: Jan 2024 • Expires: Jan 2027</p>
                     <p class="text-slate-400 text-xs mb-4">ID Kredensial: 93488980</p>
-                    <a target="_blank" class="bg-slate-600 text-white text-xs px-4 py-2 rounded hover:bg-slate-500 transition duration-300" href="https://www.credential.net/852b91ac-df11-4b43-b704-80cfce4662f2">SEE CREDENTIAL</a>
+                    <a target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-xs px-4 py-2 rounded-full hover:scale-105 transition-all duration-300 shadow-lg" href="https://www.credential.net/852b91ac-df11-4b43-b704-80cfce4662f2">
+                        <i class="fas fa-external-link-alt"></i>
+                        SEE CREDENTIAL
+                    </a>
                 </div>
 
                 <!-- Machine Learning Terapan -->
-                <div class="bg-slate-700 rounded-lg p-6 text-center hover:bg-slate-600 transition duration-300">
-                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
+                <div class="bg-slate-700 dark:bg-slate-800 rounded-2xl p-6 text-center hover:bg-slate-600 dark:hover:bg-slate-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-slate-600 dark:border-slate-700">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFdBNzCwzZYZZLvd6eyst4__z3g4W2EKUaaQ&s" alt="Dicoding" class="w-12 h-12 object-contain">
                     </div>
                     <h3 class="text-white font-semibold text-lg mb-2">Machine Learning Terapan</h3>
                     <p class="text-slate-300 text-sm mb-3">Dicoding Indonesia</p>
                     <p class="text-slate-400 text-xs mb-4">Issued on: Feb 2024 • Expires: Feb 2027</p>
                     <p class="text-slate-400 text-xs mb-4">ID Kredensial: TRXYT73K9PVM</p>
-                    <a target="_blank" class="bg-slate-600 text-white text-xs px-4 py-2 rounded hover:bg-slate-500 transition duration-300" href="https://www.dicoding.com/certificates/1RXY179K9PVM">SEE CREDENTIAL</a>
+                    <a target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-xs px-4 py-2 rounded-full hover:scale-105 transition-all duration-300 shadow-lg" href="https://www.dicoding.com/certificates/1RXY179K9PVM">
+                        <i class="fas fa-external-link-alt"></i>
+                        SEE CREDENTIAL
+                    </a>
                 </div>
 
                 <!-- DeepLearning.AI TensorFlow Developer Specialization -->
-                <div class="bg-slate-700 rounded-lg p-6 text-center hover:bg-slate-600 transition duration-300">
-                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
+                <div class="bg-slate-700 dark:bg-slate-800 rounded-2xl p-6 text-center hover:bg-slate-600 dark:hover:bg-slate-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-slate-600 dark:border-slate-700">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
                         <img src="https://coursera-university-assets.s3.amazonaws.com/b4/5cb90bb92f420b99bf323a0356f451/Icon.png" alt="DeepLearning.AI" class="w-12 h-12 object-contain">
                     </div>
                     <h3 class="text-white font-semibold text-lg mb-2">DeepLearning.AI TensorFlow Developer Specialization</h3>
                     <p class="text-slate-300 text-sm mb-3">DeepLearning.AI</p>
                     <p class="text-slate-400 text-xs mb-4">Issued on: Oct 2023</p>
                     <p class="text-slate-400 text-xs mb-4">ID Kredensial: G2AEK2LMNUTE</p>
-                    <a target="_blank" class="bg-slate-600 text-white text-xs px-4 py-2 rounded hover:bg-slate-500 transition duration-300" href="https://www.coursera.org/account/accomplishments/specialization/G2AEK2LMNUTE">SEE CREDENTIAL</a>
+                    <a target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-xs px-4 py-2 rounded-full hover:scale-105 transition-all duration-300 shadow-lg" href="https://www.coursera.org/account/accomplishments/specialization/G2AEK2LMNUTE">
+                        <i class="fas fa-external-link-alt"></i>
+                        SEE CREDENTIAL
+                    </a>
                 </div>
 
                 <!-- Google Data Analytics Certificate -->
-                <div class="bg-slate-700 rounded-lg p-6 text-center hover:bg-slate-600 transition duration-300">
-                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
+                <div class="bg-slate-700 dark:bg-slate-800 rounded-2xl p-6 text-center hover:bg-slate-600 dark:hover:bg-slate-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-slate-600 dark:border-slate-700">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="w-12 h-12 object-contain">
                     </div>
                     <h3 class="text-white font-semibold text-lg mb-2">Google Data Analytics Certificate</h3>
                     <p class="text-slate-300 text-sm mb-3">Coursera</p>
                     <p class="text-slate-400 text-xs mb-4">Issued on: Oct 2023</p>
-                    <a target="_blank" class="bg-slate-600 text-white text-xs px-4 py-2 rounded hover:bg-slate-500 transition duration-300" href="https://www.credly.com/badges/594f50c5-ed51-4c91-add0-14a8addd0314/linked_in_profile">SEE CREDENTIAL</a>
+                    <a target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-xs px-4 py-2 rounded-full hover:scale-105 transition-all duration-300 shadow-lg" href="https://www.credly.com/badges/594f50c5-ed51-4c91-add0-14a8addd0314/linked_in_profile">
+                        <i class="fas fa-external-link-alt"></i>
+                        SEE CREDENTIAL
+                    </a>
                 </div>
 
                 <!-- Fine Tuning LLM with Hugging Face -->
-                <div class="bg-slate-700 rounded-lg p-6 text-center hover:bg-slate-600 transition duration-300">
-                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
+                <div class="bg-slate-700 dark:bg-slate-800 rounded-2xl p-6 text-center hover:bg-slate-600 dark:hover:bg-slate-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-slate-600 dark:border-slate-700">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAAiPkyk9wjoPdFW1WXya1UCFsFNw0ZYBDew&s" alt="Udemy" class="w-12 h-12 object-contain">
                     </div>
                     <h3 class="text-white font-semibold text-lg mb-2">Fine Tuning LLM with Hugging Face Transformers for NLP</h3>
                     <p class="text-slate-300 text-sm mb-3">Udemy</p>
                     <p class="text-slate-400 text-xs mb-4">Issued on: Sep 2025</p>
                     <p class="text-slate-400 text-xs mb-4">ID Kredensial: UC-1f428563-3939-4bde-8def-edb1b75ce3f4</p>
-                    <a target="_blank" class="bg-slate-600 text-white text-xs px-4 py-2 rounded hover:bg-slate-500 transition duration-300" href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-1bf28563-3939-4bde-8d6f-edb1b75ce3f4.pdf">SEE CREDENTIAL</a>
+                    <a target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-xs px-4 py-2 rounded-full hover:scale-105 transition-all duration-300 shadow-lg" href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-1bf28563-3939-4bde-8d6f-edb1b75ce3f4.pdf">
+                        <i class="fas fa-external-link-alt"></i>
+                        SEE CREDENTIAL
+                    </a>
                 </div>
 
                 <!-- Deploy ML Model in Production -->
-                <div class="bg-slate-700 rounded-lg p-6 text-center hover:bg-slate-600 transition duration-300">
-                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
+                <div class="bg-slate-700 dark:bg-slate-800 rounded-2xl p-6 text-center hover:bg-slate-600 dark:hover:bg-slate-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-slate-600 dark:border-slate-700">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAAiPkyk9wjoPdFW1WXya1UCFsFNw0ZYBDew&s" alt="Udemy" class="w-12 h-12 object-contain">
                     </div>
                     <h3 class="text-white font-semibold text-lg mb-2">Deploy ML Model in Production with FastAPI and Docker</h3>
                     <p class="text-slate-300 text-sm mb-3">Udemy</p>
                     <p class="text-slate-400 text-xs mb-4">Issued on: Jul 2025</p>
                     <p class="text-slate-400 text-xs mb-4">ID Kredensial: UC-9c92120c-bb57-4f43-84de-84814efd61e3</p>
-                    <a target="_blank" class="bg-slate-600 text-white text-xs px-4 py-2 rounded hover:bg-slate-500 transition duration-300" href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-9c92120c-bb57-4f43-84de-84814efd61e3.pdf" >SEE CREDENTIAL</a>
+                    <a target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-xs px-4 py-2 rounded-full hover:scale-105 transition-all duration-300 shadow-lg" href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-9c92120c-bb57-4f43-84de-84814efd61e3.pdf" >
+                        <i class="fas fa-external-link-alt"></i>
+                        SEE CREDENTIAL
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-    <footer class="bg-dark pt-24 pb-12">
+    <footer class="bg-slate-900 dark:bg-slate-950 pt-24 pb-12 transition-colors duration-300">
         <div class="container">
             <div class="flex flex-wrap">
-                <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/2">
-                    <h2 class="font-bold text-3xl text-white mb-5">Maulana Surya Negara</h2>
+                <div class="w-full px-4 mb-12 text-slate-300 dark:text-slate-400 font-medium md:w-1/2">
+                    <h2 class="font-bold text-3xl text-white mb-5 bg-gradient-to-r from-indigo-400 via-purple-400 to-fuchsia-400 bg-clip-text text-transparent">Maulana Surya Negara</h2>
                     <h3 class="font-semibold text-2xl">Contact Me</h3>
                     <p>maulanasuryanegara123@gmail.com</p>
                 </div>
-                <div class="w-full px-4 mb-12 text-slate-300 md:w-1/2">
+                <div class="w-full px-4 mb-12 text-slate-300 dark:text-slate-400 md:w-1/2">
                     <h3 class="font-semibold text-xl text-white mb-5">Link</h3>
-                    <ul class="text-slate-300">
+                    <ul class="text-slate-300 dark:text-slate-400">
                         <li>
                             <a href="#home" class="inline-block text-base hover:text-primary mb-3">Home</a>
                         </li>
@@ -529,25 +577,25 @@
                     </ul>
                 </div>
             </div>
-            <div class="w-full pt-10 border-t border-slate-800">
-                <div class="flex items-center justify-center mb-5">
+            <div class="w-full pt-10 border-t border-slate-800 dark:border-slate-700">
+                <div class="flex items-center justify-center mb-5 gap-3">
                     <a href="https://www.instagram.com/mausneg" target="_blank"
-                        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
-                        <i class="fa-brands fa-instagram text-2xl"></i>
+                        class="w-12 h-12 rounded-xl flex justify-center items-center bg-gradient-to-br from-purple-600 to-pink-600 text-white hover:scale-110 hover:shadow-xl hover:shadow-purple-500/50 transition-all duration-300">
+                        <i class="fa-brands fa-instagram text-xl"></i>
                     </a>
 
                     <a href="https://www.github.com/mausneg" target="_blank"
-                        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
-                        <i class="fa-brands fa-github text-2xl"></i>
+                        class="w-12 h-12 rounded-xl flex justify-center items-center bg-gradient-to-br from-slate-800 to-slate-950 dark:from-slate-700 dark:to-slate-900 text-white hover:scale-110 hover:shadow-xl hover:shadow-slate-500/50 transition-all duration-300">
+                        <i class="fa-brands fa-github text-xl"></i>
                     </a>
 
                     <a href="https://www.linkedin.com/in/maulana-surya-negara-5b6a6b270/" target="_blank"
-                        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
-                        <i class="fa-brands fa-linkedin text-2xl"></i>
+                        class="w-12 h-12 rounded-xl flex justify-center items-center bg-gradient-to-br from-blue-600 to-blue-800 text-white hover:scale-110 hover:shadow-xl hover:shadow-blue-500/50 transition-all duration-300">
+                        <i class="fa-brands fa-linkedin text-xl"></i>
                     </a>
                     <a href="https://steamcommunity.com/id/surya_1933" target="_blank"
-                        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
-                        <i class="fa-brands fa-steam text-2xl"></i>
+                        class="w-12 h-12 rounded-xl flex justify-center items-center bg-gradient-to-br from-slate-700 to-slate-900 text-white hover:scale-110 hover:shadow-xl hover:shadow-slate-500/50 transition-all duration-300">
+                        <i class="fa-brands fa-steam text-xl"></i>
                     </a>
                 </div>
                 <p class="font-medium mx-auto text-xs text-slate-500 text-center">

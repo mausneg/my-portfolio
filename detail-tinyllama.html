@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinyLlama AI Assistant - Detail</title>
+    <link href="dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body class="bg-white dark:bg-slate-900 transition-colors duration-300">
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="px-4">
+                    <a href="index.html" class="block py-6 font-bold text-lg md:text-2xl text-dark dark:text-white">
+                        MyPortfolio<span class="text-indigo-600 dark:text-indigo-400 text-2xl">+</span>
+                    </a>
+                </div>
+                <div class="flex items-center gap-4 px-4">
+                    <a href="index.html#portfolio" class="text-dark dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                        <i class="fas fa-arrow-left mr-2"></i>Back to Portfolio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-28 pb-16 bg-slate-50 dark:bg-slate-900 relative overflow-hidden">
+        <div class="container max-w-6xl mx-auto px-4 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-8 items-center">
+                <!-- Left Content -->
+                <div>
+                    <div class="mb-6">
+                        <span class="inline-flex items-center gap-2 px-5 py-2.5 bg-indigo-600 text-white text-sm font-bold rounded-full shadow-lg">
+                            <i class="fas fa-flask"></i>
+                            PERSONAL PROJECT
+                        </span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-slate-900 dark:text-white">
+                        TinyLlama AI Assistant
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed mb-8">
+                        Advanced conversational AI powered by TinyLlama-1.1B model with fine-tuning capabilities, featuring FastAPI backend, conversation memory, PEFT support, and Docker deployment.
+                    </p>
+                    
+                    <!-- Technology Tags -->
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="px-4 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-semibold shadow-sm hover:shadow-md transition-all">
+                            <i class="fas fa-comments mr-2 text-indigo-600"></i>Chatbot
+                        </span>
+                        <span class="px-4 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-semibold shadow-sm hover:shadow-md transition-all">
+                            <i class="fas fa-cogs mr-2 text-indigo-600"></i>Fine-tuning
+                        </span>
+                        <span class="px-4 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-semibold shadow-sm hover:shadow-md transition-all">
+                            <i class="fas fa-memory mr-2 text-indigo-600"></i>1.1B Model
+                        </span>
+                    </div>
+
+                    <!-- Key Metrics -->
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm">
+                            <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">1.1B</div>
+                            <div class="text-xs text-slate-600 dark:text-slate-400 mt-1">Parameters</div>
+                        </div>
+                        <div class="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm">
+                            <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">8-bit</div>
+                            <div class="text-xs text-slate-600 dark:text-slate-400 mt-1">Quantized</div>
+                        </div>
+                        <div class="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm">
+                            <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">PEFT</div>
+                            <div class="text-xs text-slate-600 dark:text-slate-400 mt-1">Support</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual -->
+                <div class="relative">
+                    <div class="relative bg-white dark:bg-slate-800 rounded-3xl p-8 border border-slate-200 dark:border-slate-700 shadow-xl">
+                        <div class="relative space-y-4">
+                            <div class="flex items-center gap-3 bg-slate-50 dark:bg-slate-700 rounded-xl p-4 border border-slate-200 dark:border-slate-600">
+                                <div class="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-bolt text-white text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-semibold text-slate-800 dark:text-slate-200">Fast Inference</div>
+                                    <div class="text-sm text-slate-600 dark:text-slate-400">8-bit quantization</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center gap-3 bg-slate-50 dark:bg-slate-700 rounded-xl p-4 border border-slate-200 dark:border-slate-600">
+                                <div class="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-cloud text-white text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-semibold text-slate-800 dark:text-slate-200">Cloud Storage</div>
+                                    <div class="text-sm text-slate-600 dark:text-slate-400">AWS S3 integration</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center gap-3 bg-slate-50 dark:bg-slate-700 rounded-xl p-4 border border-slate-200 dark:border-slate-600">
+                                <div class="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-docker text-white text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-semibold text-slate-800 dark:text-slate-200">Production Ready</div>
+                                    <div class="text-sm text-slate-600 dark:text-slate-400">Docker deployment</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Image Banner -->
+    <section class="py-0 -mt-8">
+        <div class="container max-w-6xl mx-auto px-4">
+            <div class="relative overflow-hidden rounded-3xl shadow-xl border border-slate-200 dark:border-slate-700">
+                <img src="dist/img/portfolio/1.png" alt="TinyLlama AI Assistant" class="w-full h-[400px] object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-16 min-h-screen">
+        <div class="container max-w-5xl mx-auto px-4">
+
+            <div class="prose prose-lg dark:prose-invert max-w-none">
+                <div class="not-prose mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3"><i class="fas fa-info-circle text-indigo-600 dark:text-indigo-400"></i>Overview</h2>
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 shadow-lg">
+                        <p class="text-slate-700 dark:text-slate-300 text-lg leading-relaxed">This project provides a complete solution for deploying and fine-tuning TinyLlama-1.1B language model as a conversational AI chatbot. It includes a FastAPI backend, Streamlit web interface, and containerized deployment with Docker Compose.</p>
+                    </div>
+                </div>
+
+                <div class="not-prose mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3"><i class="fas fa-star text-indigo-600 dark:text-indigo-400"></i>Key Highlights</h2>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 shadow-md">
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-bolt text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-1">Lightweight & Fast</h3>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400">Optimized with 8-bit quantization for efficient inference</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 shadow-md">
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-server text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-1">Production Ready</h3>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400">Multi-container architecture with Nginx reverse proxy</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 shadow-md">
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-cogs text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-1">Fine-tuning Support</h3>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400">Built-in PEFT adapters for custom training</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 shadow-md">
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-cloud text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-1">Cloud Storage</h3>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400">AWS S3 integration for model versioning and storage</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3 not-prose"><i class="fas fa-list text-indigo-600 dark:text-indigo-400"></i>Features</h2>
+                <table class="min-w-full border border-slate-300 dark:border-slate-700">
+                    <tbody>
+                        <tr><td class="border px-4 py-2">TinyLlama-1.1B Model</td><td class="border px-4 py-2">Lightweight language model optimized for conversational AI</td></tr>
+                        <tr><td class="border px-4 py-2">Conversation Memory</td><td class="border px-4 py-2">Intelligent context management with configurable history length</td></tr>
+                        <tr><td class="border px-4 py-2">FastAPI Backend</td><td class="border px-4 py-2">High-performance REST API with OpenAPI documentation</td></tr>
+                        <tr><td class="border px-4 py-2">Streamlit Frontend</td><td class="border px-4 py-2">Interactive web interface with real-time chat</td></tr>
+                        <tr><td class="border px-4 py-2">Docker Support</td><td class="border px-4 py-2">Multi-container orchestration with GPU support</td></tr>
+                        <tr><td class="border px-4 py-2">Fine-tuning Ready</td><td class="border px-4 py-2">PEFT adapters for parameter-efficient training</td></tr>
+                        <tr><td class="border px-4 py-2">GPU Acceleration</td><td class="border px-4 py-2">8-bit quantization for optimized inference</td></tr>
+                        <tr><td class="border px-4 py-2">AWS S3 Integration</td><td class="border px-4 py-2">Cloud storage for model versioning and deployment</td></tr>
+                    </tbody>
+                </table>
+
+                <h2>Project Structure</h2>
+                <ul>
+                    <li><strong>api/:</strong> FastAPI Backend Service
+                        <ul>
+                            <li>app.py: Main API server with conversation endpoints</li>
+                            <li>Dockerfile: API container configuration</li>
+                        </ul>
+                    </li>
+                    <li><strong>app/:</strong> Streamlit Frontend Service
+                        <ul>
+                            <li>app.py: Web interface application</li>
+                            <li>Dockerfile: Frontend container configuration</li>
+                        </ul>
+                    </li>
+                    <li><strong>components/:</strong> Training & Deployment Utilities
+                        <ul>
+                            <li>trainer.py: Model fine-tuning script</li>
+                            <li>pusher.py: Model deployment to S3</li>
+                        </ul>
+                    </li>
+                    <li><strong>saved_models/:</strong> Fine-tuned Model Storage (v1.0, v1.1, v1.2)</li>
+                </ul>
+
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3 not-prose"><i class="fas fa-rocket text-indigo-600 dark:text-indigo-400"></i>Quick Start</h2>
+                
+                <figure class="my-8 group">
+                    <div class="overflow-hidden rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 transition-transform duration-300 group-hover:scale-[1.02]">
+                        <img src="dist/img/projects/tinyllama/streamlit-ui.png" alt="Streamlit UI Interface" class="w-full">
+                    </div>
+                    <figcaption class="mt-3 text-center text-sm text-slate-600 dark:text-slate-400 italic">Interactive Streamlit web interface for TinyLlama chatbot</figcaption>
+                </figure>
+
+                <div class="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 shadow-md mb-8">
+                    <h3 class="text-xl font-semibold text-slate-800 dark:text-slate-200 mb-4">Prerequisites</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                            <i class="fas fa-check-circle text-indigo-600 dark:text-indigo-400 mt-1 flex-shrink-0"></i>
+                            <span>Docker & Docker Compose</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                            <i class="fas fa-check-circle text-indigo-600 dark:text-indigo-400 mt-1 flex-shrink-0"></i>
+                            <span>NVIDIA GPU (recommended)</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                            <i class="fas fa-check-circle text-indigo-600 dark:text-indigo-400 mt-1 flex-shrink-0"></i>
+                            <span>AWS Account (for S3 storage)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-slate-800 dark:text-slate-200 mt-8 mb-4">Installation</h3>
+                <ol>
+                    <li>Clone repository</li>
+                    <li>Configure AWS credentials in .env file</li>
+                    <li>Launch services: <code>docker compose up --build</code></li>
+                    <li>Access application:
+                        <ul>
+                            <li>Streamlit UI: http://localhost:8501</li>
+                            <li>API Docs: http://localhost:8082/docs</li>
+                            <li>API Endpoint: http://localhost:8082/api/v1/</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h2>API Reference</h2>
+                <h3>Endpoints</h3>
+                <h4>POST /api/v1/conversation</h4>
+                <p>Send conversation history to the chatbot and receive a response.</p>
+                <p><strong>Request Body:</strong></p>
+                <ul>
+                    <li>timestamp (string): Timestamp of the message</li>
+                    <li>content (array): List of conversation history with role tags (&lt;|user|&gt;, &lt;|assistant|&gt;)</li>
+                </ul>
+
+                <h4>DELETE /api/v1/conversation</h4>
+                <p>Clear the conversation history.</p>
+
+                <h3>Message Format</h3>
+                <p>The API expects conversation history in a specific format with role tags (&lt;|user|&gt; and &lt;|assistant|&gt;) followed by message text.</p>
+
+                <figure class="my-8 group">
+                    <div class="overflow-hidden rounded-xl shadow-xl border border-indigo-200 dark:border-indigo-700 transition-transform duration-300 group-hover:scale-[1.02]">
+                        <img src="dist/img/projects/tinyllama/sample.png" alt="Sample Conversation" class="w-full">
+                    </div>
+                    <figcaption class="mt-3 text-center text-sm text-slate-600 dark:text-slate-400 italic">Sample conversation showing multi-turn dialogue with context awareness</figcaption>
+                </figure>
+
+                <h2>Configuration</h2>
+                <h3>Model Configuration</h3>
+                <ul>
+                    <li>MODEL_NAME: TinyLlama-1.1B-Chat-v1.2 (current version)</li>
+                    <li>MAX_LENGTH: 2048 (maximum context window)</li>
+                    <li>load_in_8bit: True (8-bit quantization)</li>
+                </ul>
+
+                <h3>AWS S3 Configuration</h3>
+                <ul>
+                    <li>bucket_name: mausneg-mlops</li>
+                    <li>s3_prefix: saved_models</li>
+                </ul>
+
+                <h3>Docker Services</h3>
+                <table class="min-w-full border border-slate-300 dark:border-slate-700">
+                    <tbody>
+                        <tr><td class="border px-4 py-2">API</td><td class="border px-4 py-2">5003</td><td class="border px-4 py-2">FastAPI backend service</td></tr>
+                        <tr><td class="border px-4 py-2">Nginx</td><td class="border px-4 py-2">8082</td><td class="border px-4 py-2">Reverse proxy and load balancer</td></tr>
+                        <tr><td class="border px-4 py-2">Streamlit</td><td class="border px-4 py-2">8501</td><td class="border px-4 py-2">Web interface</td></tr>
+                    </tbody>
+                </table>
+
+                <h2>Model Fine-Tuning</h2>
+                <h3>Training Process</h3>
+                <ol>
+                    <li>Prepare Training Data: Format data in conversation format</li>
+                    <li>Configure Training: Modify parameters in components/trainer.py</li>
+                    <li>Run Training: Execute training notebook or script</li>
+                    <li>Upload Model: Use components/pusher.py to upload to S3</li>
+                </ol>
+
+                <h3>Available Fine-tuned Models</h3>
+                <p>The project includes three fine-tuned model versions:</p>
+                <ul>
+                    <li>TinyLlama-1.1B-Chat-v1.0</li>
+                    <li>TinyLlama-1.1B-Chat-v1.1</li>
+                    <li>TinyLlama-1.1B-Chat-v1.2 (current)</li>
+                </ul>
+                <p>Each model contains adapter_config.json and adapter_model.safetensors files.</p>
+
+                <h2>Deployment</h2>
+                
+                <figure class="my-8 group">
+                    <div class="overflow-hidden rounded-xl shadow-xl border border-indigo-200 dark:border-indigo-700 transition-transform duration-300 group-hover:scale-[1.02]">
+                        <img src="dist/img/projects/tinyllama/deploying-scenario.png" alt="Deployment Architecture" class="w-full">
+                    </div>
+                    <figcaption class="mt-3 text-center text-sm text-slate-600 dark:text-slate-400 italic">Multi-container deployment architecture with Nginx, FastAPI, and Streamlit</figcaption>
+                </figure>
+
+                <h3>Production Deployment</h3>
+                <p>Use the production Docker Compose configuration:</p>
+                <code>docker compose -f docker-compose.prod.yml up -d</code>
+
+                <h3>Deployment Checklist</h3>
+                <ol>
+                    <li>Set production environment variables in .env</li>
+                    <li>Configure SSL certificates for Nginx (if needed)</li>
+                    <li>Update CORS settings in api/app.py</li>
+                    <li>Set up monitoring and logging</li>
+                    <li>Configure backup for model files</li>
+                </ol>
+
+                <h2>Technology Stack</h2>
+                <table class="min-w-full border border-slate-300 dark:border-slate-700">
+                    <tbody>
+                        <tr><td class="border px-4 py-2">Machine Learning</td><td class="border px-4 py-2">PyTorch, Transformers, PEFT, BitsAndBytes</td></tr>
+                        <tr><td class="border px-4 py-2">Backend</td><td class="border px-4 py-2">FastAPI, Uvicorn</td></tr>
+                        <tr><td class="border px-4 py-2">Frontend</td><td class="border px-4 py-2">Streamlit</td></tr>
+                        <tr><td class="border px-4 py-2">Infrastructure</td><td class="border px-4 py-2">Docker, Docker Compose, Nginx</td></tr>
+                        <tr><td class="border px-4 py-2">Cloud Storage</td><td class="border px-4 py-2">AWS S3, Boto3</td></tr>
+                        <tr><td class="border px-4 py-2">Model</td><td class="border px-4 py-2">TinyLlama-1.1B-Chat</td></tr>
+                    </tbody>
+                </table>
+
+                <h2>Acknowledgments</h2>
+                <p>This project builds upon excellent open-source work:</p>
+                <ul>
+                    <li>TinyLlama - Base language model</li>
+                    <li>Hugging Face - Transformers library and model hub</li>
+                    <li>PEFT - Parameter-efficient fine-tuning library</li>
+                    <li>FastAPI - Modern web framework</li>
+                    <li>Streamlit - Interactive web application framework</li>
+                </ul>
+
+                <div class="mt-8 p-6 bg-slate-100 dark:bg-slate-800 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4">GitHub Repository</h3>
+                    <a href="https://github.com/mausneg/Tiny-LLAMA-Chatbot-Fine-Tuning" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-indigo-700 hover:to-purple-700 hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                        <i class="fab fa-github"></i>
+                        View on GitHub
+                        <i class="fas fa-external-link-alt text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 dark:bg-slate-950 pt-12 pb-6">
+        <div class="container text-center">
+            <p class="text-slate-400">©2023 Maulana Surya Negara. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="dist/js/script.js"></script>
+</body>
+</html>

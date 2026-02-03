@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ollama RAG AI Assistant - Detail</title>
+    <link href="dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body class="bg-white dark:bg-slate-900 transition-colors duration-300">
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="px-4">
+                    <a href="index.html" class="block py-6 font-bold text-lg md:text-2xl text-dark dark:text-white">
+                        MyPortfolio<span class="text-indigo-600 dark:text-indigo-400 text-2xl">+</span>
+                    </a>
+                </div>
+                <div class="flex items-center gap-4 px-4">
+                    <a href="index.html#portfolio" class="text-dark dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                        <i class="fas fa-arrow-left mr-2"></i>Back to Portfolio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-28 pb-16 bg-slate-50 dark:bg-slate-900 relative overflow-hidden">
+        <div class="container max-w-6xl mx-auto px-4 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-8 items-center">
+                <!-- Left Content -->
+                <div>
+                    <div class="mb-6">
+                        <span class="inline-flex items-center gap-2 px-5 py-2.5 bg-indigo-600 text-white text-sm font-bold rounded-full shadow-lg">
+                            <i class="fas fa-flask"></i>
+                            PERSONAL PROJECT
+                        </span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-slate-900 dark:text-white">
+                        Ollama RAG AI Assistant
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed mb-8">
+                        Production-ready RAG-powered conversational AI with document processing capabilities, featuring FAISS vector store, multi-session chat history, and local LLM inference for complete privacy.
+                    </p>
+                    
+                    <!-- Technology Tags -->
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="px-4 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-semibold shadow-sm hover:shadow-md transition-all">
+                            <i class="fas fa-robot mr-2 text-indigo-600"></i>AI Powered
+                        </span>
+                        <span class="px-4 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-semibold shadow-sm hover:shadow-md transition-all">
+                            <i class="fas fa-database mr-2 text-indigo-600"></i>RAG System
+                        </span>
+                        <span class="px-4 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-semibold shadow-sm hover:shadow-md transition-all">
+                            <i class="fas fa-shield-alt mr-2 text-indigo-600"></i>Privacy First
+                        </span>
+                    </div>
+
+                    <!-- Key Metrics -->
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm">
+                            <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">RAG</div>
+                            <div class="text-xs text-slate-600 dark:text-slate-400 mt-1">System</div>
+                        </div>
+                        <div class="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm">
+                            <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">FAISS</div>
+                            <div class="text-xs text-slate-600 dark:text-slate-400 mt-1">Vector Store</div>
+                        </div>
+                        <div class="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm">
+                            <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Local</div>
+                            <div class="text-xs text-slate-600 dark:text-slate-400 mt-1">LLM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual -->
+                <div class="relative">
+                    <div class="relative bg-white dark:bg-slate-800 rounded-3xl p-8 border border-slate-200 dark:border-slate-700 shadow-xl">
+                        <div class="relative space-y-4">
+                            <div class="flex items-center gap-3 bg-slate-50 dark:bg-slate-700 rounded-xl p-4 border border-slate-200 dark:border-slate-600">
+                                <div class="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-file-pdf text-white text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-semibold text-slate-800 dark:text-slate-200">Document Processing</div>
+                                    <div class="text-sm text-slate-600 dark:text-slate-400">PDF parsing & vectorization</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center gap-3 bg-slate-50 dark:bg-slate-700 rounded-xl p-4 border border-slate-200 dark:border-slate-600">
+                                <div class="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-comments text-white text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-semibold text-slate-800 dark:text-slate-200">Multi-Session Chat</div>
+                                    <div class="text-sm text-slate-600 dark:text-slate-400">Persistent history</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center gap-3 bg-slate-50 dark:bg-slate-700 rounded-xl p-4 border border-slate-200 dark:border-slate-600">
+                                <div class="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-shield-alt text-white text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-semibold text-slate-800 dark:text-slate-200">Privacy Focused</div>
+                                    <div class="text-sm text-slate-600 dark:text-slate-400">Local inference</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Image Banner -->
+    <section class="py-0 -mt-8">
+        <div class="container max-w-6xl mx-auto px-4">
+            <div class="relative overflow-hidden rounded-3xl shadow-xl border border-slate-200 dark:border-slate-700">
+                <img src="dist/img/portfolio/6.png" alt="Ollama RAG AI Assistant" class="w-full h-[400px] object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-16 min-h-screen">
+        <div class="container max-w-5xl mx-auto px-4">
+
+            <div class="prose prose-lg dark:prose-invert max-w-none">
+                <div class="not-prose mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3"><i class="fas fa-info-circle text-indigo-600 dark:text-indigo-400"></i>Overview</h2>
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 shadow-lg">
+                        <p class="text-slate-700 dark:text-slate-300 text-lg leading-relaxed mb-4">Ollama AI Assistant is a sophisticated conversational AI application that combines Retrieval Augmented Generation (RAG) with local language models powered by Ollama. It features a ChatGPT-like interface, document vectorization, and persistent chat history management.</p>
+                        <p class="text-slate-700 dark:text-slate-300 text-lg leading-relaxed">This production-ready application enables users to upload documents (PDF, TXT, MD, DOCX, PPTX, XLSX), process them into vector embeddings, and have intelligent conversations about the content using local LLM inference.</p>
+                    </div>
+                </div>
+
+                <div class="not-prose mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3"><i class="fas fa-star text-indigo-600 dark:text-indigo-400"></i>Key Highlights</h2>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 shadow-md">
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-database text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-1">RAG-Powered</h3>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400">Intelligent document retrieval with FAISS vector store</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 shadow-md">
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-comments text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-1">Multi-Session Chat</h3>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400">Persistent conversation history with SQLite</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 shadow-md">
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-file-pdf text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-1">Document Processing</h3>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400">PDF parsing and vectorization with PyMuPDF</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 shadow-md">
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-shield-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-1">Local LLM</h3>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400">Privacy-focused using Ollama's local inference</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 shadow-md">
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-desktop text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-1">Modern UI</h3>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400">ChatGPT-inspired interface built with Streamlit</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 shadow-md">
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-dollar-sign text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-1">Zero Cloud Costs</h3>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400">Runs entirely on your local machine</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3 not-prose"><i class="fas fa-list text-indigo-600 dark:text-indigo-400"></i>Features</h2>
+                <table class="min-w-full border border-slate-300 dark:border-slate-700">
+                    <tbody>
+                        <tr><td class="border px-4 py-2">RAG System</td><td class="border px-4 py-2">Retrieval Augmented Generation with FAISS vector store</td></tr>
+                        <tr><td class="border px-4 py-2">Document Upload</td><td class="border px-4 py-2">Support for PDF, TXT, MD, DOCX, PPTX, XLSX files</td></tr>
+                        <tr><td class="border px-4 py-2">Chat Sessions</td><td class="border px-4 py-2">Multiple conversation threads with persistent history</td></tr>
+                        <tr><td class="border px-4 py-2">Context Management</td><td class="border px-4 py-2">Intelligent context retrieval from uploaded documents</td></tr>
+                        <tr><td class="border px-4 py-2">Local LLM</td><td class="border px-4 py-2">Powered by Ollama (llama3.2:3b) for privacy and speed</td></tr>
+                        <tr><td class="border px-4 py-2">Chat History</td><td class="border px-4 py-2">SQLite-based conversation persistence</td></tr>
+                        <tr><td class="border px-4 py-2">Vector Store Cache</td><td class="border px-4 py-2">Efficient document embedding storage and retrieval</td></tr>
+                    </tbody>
+                </table>
+
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3 not-prose"><i class="fas fa-network-wired text-indigo-600 dark:text-indigo-400"></i>Architecture</h2>
+                <div class="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 shadow-md mb-8">
+                    <h3 class="text-xl font-semibold text-slate-800 dark:text-slate-200 mb-4">System Components</h3>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-slate-50 dark:bg-slate-700 p-4 rounded-lg border border-slate-200 dark:border-slate-600">
+                            <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-2 flex items-center gap-2"><i class="fas fa-desktop"></i>Streamlit Frontend</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Chat UI, file upload, and session management</p>
+                        </div>
+                        <div class="bg-slate-50 dark:bg-slate-700 p-4 rounded-lg border border-slate-200 dark:border-slate-600">
+                            <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-2 flex items-center gap-2"><i class="fas fa-robot"></i>Assistant Class</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">RAG chain, vector store, and chat history management</p>
+                        </div>
+                        <div class="bg-slate-50 dark:bg-slate-700 p-4 rounded-lg border border-slate-200 dark:border-slate-600">
+                            <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-2 flex items-center gap-2"><i class="fas fa-server"></i>Backend Services</h4>
+                            <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-1">
+                                <li>• Ollama LLM API</li>
+                                <li>• FAISS Vector DB</li>
+                                <li>• SQLite Database</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-slate-800 dark:text-slate-200 mt-8 mb-4">Data Flow</h3>
+                <ol>
+                    <li>User Input → Streamlit interface captures question</li>
+                    <li>Context Retrieval → FAISS searches relevant document chunks</li>
+                    <li>History Management → SQLite loads conversation context</li>
+                    <li>LLM Processing → Ollama generates response with RAG</li>
+                    <li>Response Display → Streamed output to user interface</li>
+                </ol>
+
+                <h2>Project Structure</h2>
+                <ul>
+                    <li><strong>app.py:</strong> Main Streamlit application</li>
+                    <li><strong>utils/:</strong> Core utilities
+                        <ul>
+                            <li>assistant.py: RAG Assistant class</li>
+                        </ul>
+                    </li>
+                    <li><strong>vector_db/:</strong> FAISS vector store
+                        <ul>
+                            <li>index.faiss: Document embeddings</li>
+                        </ul>
+                    </li>
+                    <li><strong>chat_history.db:</strong> SQLite conversation database</li>
+                    <li><strong>requirements.txt:</strong> Python dependencies</li>
+                    <li><strong>.env:</strong> Environment configuration (optional)</li>
+                </ul>
+
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-3\"><i class=\"fas fa-rocket text-indigo-600 dark:text-indigo-400\"></i>Quick Start</h2>
+                <figure class="my-8 group">
+                    <div class="overflow-hidden rounded-xl shadow-2xl border-2 border-slate-200 dark:border-slate-700 transition-transform duration-300 group-hover:scale-[1.02]">
+                        <img src="dist/img/projects/ollama-rag/tampilan_awal.png" alt="Initial Interface" class="w-full">
+                    </div>
+                    <figcaption class="mt-3 text-center text-sm text-slate-600 dark:text-slate-400 italic">Modern ChatGPT-inspired interface with session management</figcaption>
+                </figure>
+
+                <h3 class="text-2xl font-semibold text-slate-800 dark:text-slate-200 mt-8 mb-4\">Prerequisites</h3>
+                <ul>
+                    <li>Python 3.10+</li>
+                    <li>Ollama (Latest)</li>
+                    <li>RAM: 8GB+ recommended</li>
+                </ul>
+
+                <h3>Installation</h3>
+                <ol>
+                    <li><strong>Install Ollama:</strong> Visit <a href="https://ollama.ai" target="_blank" class="text-indigo-600 hover:underline">ollama.ai</a> and install for your platform
+                        <br><code>curl -fsSL https://ollama.ai/install.sh | sh</code>
+                    </li>
+                    <li><strong>Pull Models:</strong>
+                        <br><code>ollama pull llama3.2:3b</code>
+                        <br><code>ollama pull nomic-embed-text</code>
+                    </li>
+                    <li><strong>Clone Repository:</strong>
+                        <br><code>git clone https://github.com/mausneg/Ollama-AI-Asisstant.git</code>
+                        <br><code>cd Ollama-AI-Asisstant</code>
+                    </li>
+                    <li><strong>Create Virtual Environment:</strong>
+                        <br><code>python -m venv .venv</code>
+                        <br><code>source .venv/bin/activate</code> (Linux) or <code>.venv\Scripts\activate</code> (Windows)
+                    </li>
+                    <li><strong>Install Dependencies:</strong>
+                        <br><code>pip install -r requirements.txt</code>
+                    </li>
+                    <li><strong>Run Application:</strong>
+                        <br><code>streamlit run app.py</code>
+                    </li>
+                </ol>
+
+                <h2>Usage</h2>
+                <h3>Starting the Application</h3>
+                <p>Run the following command in your terminal:</p>
+                <code>streamlit run app.py</code>
+                <p>The application will open in your default browser at <code>http://localhost:8501</code></p>
+
+                <h3>Chat Interface</h3>
+                <ol>
+                    <li><strong>New Conversation:</strong> Click "New Chat" to start a fresh conversation</li>
+                    <li><strong>Ask Questions:</strong> Type your question in the chat input box</li>
+                    <li><strong>View Response:</strong> Watch the AI response stream in real-time</li>
+                    <li><strong>Continue Chat:</strong> Follow-up questions maintain conversation context</li>
+                </ol>
+
+                <h3 class="text-2xl font-semibold text-slate-800 dark:text-slate-200 mt-8 mb-4">Document Upload</h3>
+                <figure class="my-8 group">
+                    <div class="overflow-hidden rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 transition-transform duration-300 group-hover:scale-[1.02]">
+                        <img src="dist/img/projects/ollama-rag/saat_upload_file.png" alt="Document Upload Process" class="w-full">
+                    </div>
+                    <figcaption class="mt-3 text-center text-sm text-slate-600 dark:text-slate-400 italic">Document upload and vectorization process</figcaption>
+                </figure>
+                <p><strong>Step 1: Click the Attachment Button</strong> - Look for the attachment icon near the chat input</p>
+                <p><strong>Step 2: Select Document</strong> - Supported formats: PDF, TXT, MD, DOCX, DOC, PPTX, PPT, XLSX, XLS (Maximum size: 200MB per file)</p>
+                <p><strong>Step 3: Wait for Processing</strong> - Document is parsed and split into chunks, embeddings are generated using Ollama, and chunks are stored in FAISS vector store</p>
+                <p><strong>Step 4: Ask Questions</strong> - The AI can now answer questions about your document with context automatically retrieved from vector store</p>
+
+                <h3 class="text-2xl font-semibold text-slate-800 dark:text-slate-200 mt-8 mb-4">Sample Q&A</h3>
+                <figure class="my-8 group">
+                    <div class="overflow-hidden rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 transition-transform duration-300 group-hover:scale-[1.02]">
+                        <img src="dist/img/projects/ollama-rag/sample_qa.png" alt="Sample Q&A" class="w-full">
+                    </div>
+                    <figcaption class="mt-3 text-center text-sm text-slate-600 dark:text-slate-400 italic">Real-time RAG-powered question answering from documents</figcaption>
+                </figure>
+
+                <h3>Managing Sessions</h3>
+                <table class="min-w-full border border-slate-300 dark:border-slate-700">
+                    <thead class="bg-slate-100 dark:bg-slate-700">
+                        <tr>
+                            <th class="border px-4 py-2 text-left">Action</th>
+                            <th class="border px-4 py-2 text-left">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border px-4 py-2">New Chat</td><td class="border px-4 py-2">Creates a new conversation session</td></tr>
+                        <tr><td class="border px-4 py-2">Switch Session</td><td class="border px-4 py-2">Click on session title in sidebar</td></tr>
+                        <tr><td class="border px-4 py-2">Delete Session</td><td class="border px-4 py-2">Click X button next to session</td></tr>
+                        <tr><td class="border px-4 py-2">Clear Cache</td><td class="border px-4 py-2">Remove all vector store data</td></tr>
+                    </tbody>
+                </table>
+
+                <h3 class="text-2xl font-semibold text-slate-800 dark:text-slate-200 mt-8 mb-4">Clear Vector Store Cache</h3>
+                <p>To reset all uploaded documents:</p>
+                <ol>
+                    <li>Click "Clear Cache" button in sidebar</li>
+                    <li>Confirm the action</li>
+                    <li>Vector store will be deleted and recreated on next upload</li>
+                </ol>
+
+                <h2>Configuration</h2>
+                <h3>Model Configuration</h3>
+                <p>Customize in utils/assistant.py:</p>
+                <ul>
+                    <li>LLM model: llama3.2:3b (changeable)</li>
+                    <li>Embeddings model: nomic-embed-text</li>
+                    <li>Vector DB path: vector_db</li>
+                    <li>Chat history: SQLite database</li>
+                </ul>
+
+                <h3>RAG Parameters</h3>
+                <ul>
+                    <li>k: 5 (number of documents to retrieve)</li>
+                    <li>fetch_k: 10 (number of candidates to fetch)</li>
+                    <li>chunk_size: 1000 (document chunk size)</li>
+                    <li>chunk_overlap: 100 (overlap between chunks)</li>
+                </ul>
+
+                <h2>Technology Stack</h2>
+                <table class="min-w-full border border-slate-300 dark:border-slate-700">
+                    <tbody>
+                        <tr><td class="border px-4 py-2">Frontend</td><td class="border px-4 py-2">Streamlit</td></tr>
+                        <tr><td class="border px-4 py-2">LLM</td><td class="border px-4 py-2">Ollama (llama3.2:3b)</td></tr>
+                        <tr><td class="border px-4 py-2">Embeddings</td><td class="border px-4 py-2">Ollama (nomic-embed-text)</td></tr>
+                        <tr><td class="border px-4 py-2">Vector Store</td><td class="border px-4 py-2">FAISS</td></tr>
+                        <tr><td class="border px-4 py-2">Database</td><td class="border px-4 py-2">SQLite</td></tr>
+                        <tr><td class="border px-4 py-2">Framework</td><td class="border px-4 py-2">LangChain</td></tr>
+                        <tr><td class="border px-4 py-2">Document Processing</td><td class="border px-4 py-2">PyMuPDF, python-docx, openpyxl</td></tr>
+                    </tbody>
+                </table>
+
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3 not-prose"><i class="fas fa-layer-group text-indigo-600 dark:text-indigo-400"></i>Advanced Features</h2>
+                <h3 class="text-2xl font-semibold text-slate-800 dark:text-slate-200 mt-8 mb-4">Vector Store Implementation</h3>
+                <figure class="my-8 group">
+                    <div class="overflow-hidden rounded-xl shadow-xl border border-indigo-200 dark:border-indigo-700 transition-transform duration-300 group-hover:scale-[1.02]">
+                        <img src="dist/img/projects/ollama-rag/konsep_vecktor_store.png" alt="Vector Store Concept" class="w-full">
+                    </div>
+                    <figcaption class="mt-3 text-center text-sm text-slate-600 dark:text-slate-400 italic">FAISS vector database for efficient similarity search</figcaption>
+                </figure>
+                
+                <h3 class="text-2xl font-semibold text-slate-800 dark:text-slate-200 mt-8 mb-4">RAG System Architecture</h3>
+                <figure class="my-8 group">
+                    <div class="overflow-hidden rounded-xl shadow-xl border border-indigo-200 dark:border-indigo-700 transition-transform duration-300 group-hover:scale-[1.02]">
+                        <img src="dist/img/projects/ollama-rag/konsep_rag.png" alt="RAG Concept Diagram" class="w-full">
+                    </div>
+                    <figcaption class="mt-3 text-center text-sm text-slate-600 dark:text-slate-400 italic">Complete RAG pipeline: document chunking → embedding → retrieval → generation</figcaption>
+                </figure>
+
+                <h3 class="text-2xl font-semibold text-slate-800 dark:text-slate-200 mt-8 mb-4">Custom Model Configuration</h3>
+                <p>To use a different Ollama model:</p>
+                <ol>
+                    <li>Pull the desired model: <code>ollama pull qwen2.5:7b</code></li>
+                    <li>Update assistant.py: <code>llm_model="qwen2.5:7b"</code></li>
+                </ol>
+
+                <h3>Batch Document Upload</h3>
+                <p>For multiple documents, upload them one at a time. The vector store will accumulate all documents.</p>
+
+                <h2>Performance Optimization</h2>
+                <h3>Memory Usage</h3>
+                <ul>
+                    <li>8-bit quantization: Already enabled in Ollama</li>
+                    <li>Batch processing: Documents processed sequentially</li>
+                    <li>Cache management: Use "Clear Cache" regularly</li>
+                </ul>
+
+                <h3>Speed Improvements</h3>
+                <ul>
+                    <li>Use smaller models (1B instead of 3B)</li>
+                    <li>Reduce retrieval count (k=3 instead of k=5)</li>
+                    <li>Optimize chunk size (500-1000 tokens)</li>
+                </ul>
+
+                <h2>Security Considerations</h2>
+                <ul>
+                    <li><strong>Local Processing:</strong> All data stays on your machine</li>
+                    <li><strong>No Cloud:</strong> No external API calls (except Ollama)</li>
+                    <li><strong>Sensitive Data:</strong> Safe for confidential documents</li>
+                    <li><strong>Database:</strong> SQLite file is unencrypted by default</li>
+                </ul>
+
+                <h2>Future Roadmap</h2>
+                <ul>
+                    <li><strong>Completed:</strong></li>
+                    <ul>
+                        <li>Document loader</li>
+                        <li>History message</li>
+                        <li>Vector store and RAG</li>
+                    </ul>
+                    <li><strong>Planned:</strong></li>
+                    <ul>
+                        <li>Tool calling</li>
+                        <li>Agents</li>
+                        <li>Database utilities</li>
+                        <li>Local deployment with Docker, Nginx and FastAPI</li>
+                        <li>Deployment using AWS platforms (ECS, Lambda, S3)</li>
+                    </ul>
+                </ul>
+
+                <div class="mt-8 p-6 bg-slate-100 dark:bg-slate-800 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4">GitHub Repository</h3>
+                    <a href="https://github.com/mausneg/Ollama-AI-Asisstant" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-indigo-700 hover:to-purple-700 hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                        <i class="fab fa-github"></i>
+                        View on GitHub
+                        <i class="fas fa-external-link-alt text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 dark:bg-slate-950 pt-12 pb-6">
+        <div class="container text-center">
+            <p class="text-slate-400">©2023 Maulana Surya Negara. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="dist/js/script.js"></script>
+</body>
+</html>

@@ -2,34 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: "Inter", sans-serif;
+@layer base {
+  body {
+    font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+    @apply antialiased text-slate-800 dark:text-slate-200 bg-slate-50 dark:bg-[#090d16];
+    text-rendering: optimizeLegibility;
+  }
 }
 
+/* Subtle Technical Grid Background */
+.bg-grid-pattern-dark {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-grid-pattern-light {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+}
+
+/* Navbar glass */
 .navbar-fixed {
-  @apply fixed z-[9999] bg-white/80 dark:bg-slate-900/80;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  @apply fixed z-50 bg-white/80 dark:bg-[#090d16]/80 border-b border-slate-200/80 dark:border-slate-800/80;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
-.menu {
-  @apply text-base text-dark dark:text-slate-300 py-2 mx-8 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 flex;
+/* Smooth active menu link */
+.nav-link {
+  @apply text-sm font-medium text-slate-600 dark:text-slate-400 py-1.5 px-3 rounded-md hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-all duration-200;
 }
 
+.nav-link.active {
+  @apply text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-800 font-semibold;
+}
+
+/* Monospace technical tag / badge */
+.tech-pill {
+  @apply inline-flex items-center font-mono text-xs px-2.5 py-1 rounded border transition-colors;
+}
+
+/* Technical Metric Box */
+.metric-box {
+  @apply relative p-4 rounded-xl border border-slate-200/90 dark:border-slate-800/80 bg-white/70 dark:bg-[#0f172a]/70 backdrop-blur-sm shadow-sm;
+}
+
+/* Hairline border glow card */
+.craft-card {
+  @apply relative rounded-2xl border border-slate-200 dark:border-slate-800/80 bg-white dark:bg-[#0f172a] shadow-sm hover:border-slate-300 dark:hover:border-slate-700 transition-all duration-300;
+}
+
+/* Hamburger button styling */
 .hamburger-line {
-  @apply w-[30px] h-[2px] my-2 block bg-dark dark:bg-white transition duration-300 ease-in-out;
+  @apply w-[22px] h-[2px] my-1 block bg-slate-700 dark:bg-slate-300 transition-transform duration-300 ease-in-out;
 }
 
 .hamburger-active > span:nth-child(1) {
-  @apply rotate-45;
+  @apply rotate-45 translate-y-[6px];
 }
 
 .hamburger-active > span:nth-child(2) {
-  @apply scale-0;
+  @apply opacity-0 scale-0;
 }
 
 .hamburger-active > span:nth-child(3) {
-  @apply -rotate-45;
+  @apply -rotate-45 -translate-y-[6px];
 }
 
 /* Smooth scrolling */
@@ -37,93 +78,21 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom animations */
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
 
-.animate-fade-in {
-  animation: fade-in 0.6s ease-out;
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-/* Animated background particles */
-.particle {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  animation: float 8s infinite ease-in-out;
-  pointer-events: none;
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-800 rounded-full;
 }
 
-@keyframes float {
-  0%, 100% { 
-    transform: translateY(0) translateX(0); 
-  }
-  25% { 
-    transform: translateY(-30px) translateX(30px); 
-  }
-  50% { 
-    transform: translateY(-60px) translateX(-30px); 
-  }
-  75% { 
-    transform: translateY(-30px) translateX(30px); 
-  }
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400 dark:bg-slate-700;
 }
 
-/* Gradient animation for hero background */
-@keyframes gradient-shift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-.gradient-animate {
-  background-size: 200% 200%;
-  animation: gradient-shift 15s ease infinite;
-}
-
-/* Slow Pulse Animation */
-@keyframes pulse-slow {
-  0%, 100% {
-    opacity: 0.3;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.5;
-    transform: scale(1.05);
-  }
-}
-
-.animate-pulse-slow {
-  animation: pulse-slow 4s ease-in-out infinite;
-}
-
-/* Slow Ping Animation */
-@keyframes ping-slow {
-  0% {
-    transform: scale(1);
-    opacity: 0.4;
-  }
-  100% {
-    transform: scale(1.25);
-    opacity: 0;
-  }
-}
-
-.animate-ping-slow {
-  animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite;
-}
-
-.animate-ping-slower {
-  animation: ping-slow 4s cubic-bezier(0, 0, 0.2, 1) infinite;
-}

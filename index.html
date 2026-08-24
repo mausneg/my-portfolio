@@ -4,687 +4,1133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maulana Surya Negara - ML Engineer Portfolio</title>
+    <title>Maulana Surya Negara — Machine Learning & Systems Engineer</title>
+    <meta name="description" content="Portfolio of Maulana Surya Negara, Machine Learning Engineer specializing in Computer Vision, Vision Transformers, On-Device TFJS, LLM-based OCR pipelines, and Production MLOps.">
+    
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
     <link href="dist/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 
-<body class="bg-white dark:bg-slate-900 transition-colors duration-300">
-    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
-        <div class="container">
-            <div class="flex items-center justify-between relative">
-                <div class="px-4">
-                    <a href="#home" class="block py-6 font-bold text-lg md:text-2xl text-dark dark:text-white">
-                        MyPortfolio<span class="text-indigo-600 dark:text-indigo-400 text-2xl">+</span>
+<body class="bg-[#fafafa] dark:bg-[#090d16] text-slate-800 dark:text-slate-200 transition-colors duration-300 antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- Subtle Technical Background Grid & Radial Vignette -->
+    <div class="fixed inset-0 pointer-events-none -z-10 bg-grid-pattern-light dark:bg-grid-pattern-dark opacity-60"></div>
+    <div class="fixed inset-0 pointer-events-none -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-500/[0.04] dark:from-indigo-500/[0.07] via-transparent to-transparent"></div>
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-200 bg-white/80 dark:bg-[#090d16]/80 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Brand / Mono Terminal Identifier -->
+                <div class="flex items-center gap-3">
+                    <a href="#home" class="flex items-center gap-2 group">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block ring-4 ring-emerald-500/20"></span>
+                        <span class="font-mono text-sm font-semibold tracking-tight text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                            msn.sys<span class="text-indigo-600 dark:text-indigo-400 font-bold">/</span>ml
+                        </span>
+                        <span class="hidden sm:inline-block font-mono text-[11px] px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800/80 text-slate-500 dark:text-slate-400 border border-slate-200/60 dark:border-slate-700/60">
+                            v2.4
+                        </span>
                     </a>
                 </div>
-                <div class="flex items-center gap-4 px-4">
-                    <!-- Dark Mode Toggle -->
-                    <button id="theme-toggle" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-slate-700 dark:text-slate-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-1 bg-slate-100/70 dark:bg-slate-900/80 p-1 rounded-xl border border-slate-200/70 dark:border-slate-800/80">
+                    <a href="#home" class="nav-link">Overview</a>
+                    <a href="#about" class="nav-link">Architecture & Stack</a>
+                    <a href="#portfolio" class="nav-link">Production Systems</a>
+                    <a href="#achievements" class="nav-link">Credentials</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+
+                <!-- Actions: Theme Toggle + Contact CTA -->
+                <div class="flex items-center gap-2.5">
+                    <!-- Dark/Light Mode Switcher -->
+                    <button id="theme-toggle" type="button" aria-label="Toggle Theme"
+                        class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/80 border border-slate-200/60 dark:border-slate-700/60 transition-colors">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
                         </svg>
-                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-slate-700 dark:text-slate-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg id="theme-toggle-light-icon" class="hidden w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
                         </svg>
                     </button>
-                    
-                    <button id="hamburger" class="block absolute right-4 lg:hidden">
-                        <span class="hamburger-line origin-top-left transition-colors dark:bg-white"></span>
-                        <span class="hamburger-line transition-colors dark:bg-white"></span>
-                        <span class="hamburger-line origin-bottom-left transition-colors dark:bg-white"></span>
+
+                    <!-- Fast Direct Email Copy Trigger -->
+                    <button onclick="copyEmail()" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium text-slate-700 dark:text-slate-300 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/80 dark:hover:bg-slate-700/80 border border-slate-200 dark:border-slate-700 transition-colors">
+                        <i class="far fa-copy text-indigo-500"></i>
+                        <span>Copy Email</span>
                     </button>
-                    <nav id="nav-menu"
-                        class="hidden absolute py-5 bg-white dark:bg-slate-800 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:dark:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
-                        <ul class="block lg:flex">
-                            <li class="group">
-                                <a class="menu" href="#home">Home</a>
-                            </li>
-                            <li class="group">
-                                <a class="menu" href="#about">About Me</a>
-                            </li>
-                            <li class="group">
-                                <a class="menu" href="#portfolio">Portfolio</a>
-                            </li>
-                            <li class="group">
-                                <a class="menu" href="#achievements">Achievements</a>
-                            </li>
-                        </ul>
-                    </nav>
+
+                    <!-- Mobile Hamburger -->
+                    <button id="hamburger" aria-label="Toggle Menu" class="p-2 md:hidden rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200/60 dark:border-slate-700/60">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
                 </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="nav-menu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-[#090d16]/95 backdrop-blur-xl px-4 py-4 space-y-2">
+            <a href="#home" class="nav-link block">Overview</a>
+            <a href="#about" class="nav-link block">Architecture & Stack</a>
+            <a href="#portfolio" class="nav-link block">Production Systems</a>
+            <a href="#achievements" class="nav-link block">Credentials</a>
+            <a href="#contact" class="nav-link block">Contact</a>
+            <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center">
+                <button onclick="copyEmail()" class="w-full inline-flex justify-center items-center gap-2 py-2 rounded-lg text-xs font-mono font-medium text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                    <i class="far fa-copy text-indigo-500"></i> Copy Contact Email
+                </button>
             </div>
         </div>
     </header>
 
-    <section id="home" class="pt-36 pb-20 bg-gradient-to-br from-indigo-600 via-purple-600 to-fuchsia-600 dark:from-indigo-950 dark:via-purple-950 dark:to-fuchsia-950 transition-colors duration-300 relative overflow-hidden">
-        <!-- Animated Particles -->
-        <div class="particle" style="width: 100px; height: 100px; top: 10%; left: 10%; animation-delay: 0s;"></div>
-        <div class="particle" style="width: 60px; height: 60px; top: 70%; left: 20%; animation-delay: 1s;"></div>
-        <div class="particle" style="width: 80px; height: 80px; top: 20%; right: 15%; animation-delay: 2s;"></div>
-        <div class="particle" style="width: 120px; height: 120px; bottom: 20%; right: 10%; animation-delay: 1.5s;"></div>
-        <div class="particle" style="width: 40px; height: 40px; top: 50%; left: 80%; animation-delay: 0.5s;"></div>
-        <div class="particle" style="width: 90px; height: 90px; bottom: 30%; left: 60%; animation-delay: 2.5s;"></div>
-        
-        <div class="container relative z-10">
-            <div class="flex flex-wrap">
-                <div class="w-full self-center px-4 lg:w-1/2">
-                    <h1 class="text-base font-semibold text-white md:text-xl animate-fade-in drop-shadow-lg">Hello World, I'm <span
-                            class="block font-bold text-white text-4xl mt-1 lg:text-5xl drop-shadow-2xl">Maulana Surya Negara</span></h1>
-                    <h2 class="font-medium text-white/90 text-lg mb-5 lg:text-2xl drop-shadow-md">Machine Learning Engineer</h2>
-                    <p class="font-medium text-white/80 mb-10 leading-relaxed drop-shadow-md">Never Stop Exploring, Life Is Way Too
-                        Short to Take It Slow.</p>
-
-                    <a href="#about"
-                        class="group inline-flex items-center gap-2 text-base font-semibold text-white bg-white/10 backdrop-blur-md py-3 px-8 rounded-full border-2 border-white/30 hover:bg-white hover:text-indigo-600 hover:border-white hover:shadow-2xl hover:shadow-white/50 transition-all duration-300 ease-in-out">
-                        Contact Me
-                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
-                    </a>
-                </div>
-                <div class="w-full self-end px-4 lg:w-1/2">
-                    <div class="mt-10 relative lg:mt-9 lg:right-0">
-                        <img src="dist/img/mausneg.png" alt="" class="max-w-full mx-auto relative z-10">
+    <main>
+        <!-- ===================================================================
+             HERO SECTION: High Precision Engineering Presentation
+             =================================================================== -->
+        <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    
+                    <!-- Left: Core Engineering Positioning -->
+                    <div class="lg:col-span-7 space-y-7">
                         
-                        <!-- Glowing Gradient Circle Background -->
-                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
-                            <div class="w-[400px] h-[400px] rounded-full bg-gradient-to-br from-indigo-500/30 via-purple-500/30 to-fuchsia-500/30 blur-3xl animate-pulse-slow"></div>
+                        <!-- Real-time Status Badge -->
+                        <div class="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-mono font-medium">
+                            <span class="relative flex h-2 w-2">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                            </span>
+                            <span>Available for ML & Computer Vision Roles</span>
                         </div>
+
+                        <!-- Main Technical Headline -->
+                        <div class="space-y-3">
+                            <div class="font-mono text-xs md:text-sm uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-semibold">
+                                Maulana Surya Negara · Machine Learning Engineer
+                            </div>
+                            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15]">
+                                Engineering High-Performance <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-indigo-400 dark:from-indigo-400 dark:to-indigo-200">Computer Vision & LLM Systems</span> for Production.
+                            </h1>
+                        </div>
+
+                        <!-- Technical Narrative -->
+                        <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl font-normal">
+                            Specializing in fine-tuning Vision Transformers (ViT), real-time on-device TFJS inference pipelines, structured LLM information extraction, and automated MLOps infrastructure with Docker and Apache Airflow.
+                        </p>
+
+                        <!-- Engineering Key Metrics Matrix -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+                            <div class="metric-box">
+                                <div class="font-mono text-xl md:text-2xl font-bold text-slate-900 dark:text-white tracking-tight">86%</div>
+                                <div class="font-mono text-[11px] text-slate-500 dark:text-slate-400 mt-1 uppercase">ViT Accuracy (+10%)</div>
+                            </div>
+                            <div class="metric-box">
+                                <div class="font-mono text-xl md:text-2xl font-bold text-emerald-600 dark:text-emerald-400 tracking-tight">15-22s</div>
+                                <div class="font-mono text-[11px] text-slate-500 dark:text-slate-400 mt-1 uppercase">LLM OCR Pipeline</div>
+                            </div>
+                            <div class="metric-box">
+                                <div class="font-mono text-xl md:text-2xl font-bold text-slate-900 dark:text-white tracking-tight">200ms</div>
+                                <div class="font-mono text-[11px] text-slate-500 dark:text-slate-400 mt-1 uppercase">CPU Latency/Img</div>
+                            </div>
+                            <div class="metric-box">
+                                <div class="font-mono text-xl md:text-2xl font-bold text-indigo-600 dark:text-indigo-400 tracking-tight">-80%</div>
+                                <div class="font-mono text-[11px] text-slate-500 dark:text-slate-400 mt-1 uppercase">Manual MLOps Ops</div>
+                            </div>
+                        </div>
+
+                        <!-- Primary Action Triggers -->
+                        <div class="flex flex-wrap items-center gap-3 pt-2">
+                            <a href="#portfolio" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-semibold hover:bg-indigo-600 dark:hover:bg-indigo-50 hover:shadow-lg transition-all duration-200">
+                                <span>Explore Systems Architecture</span>
+                                <i class="fas fa-arrow-down text-xs"></i>
+                            </a>
+                            <button onclick="copyEmail()" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white dark:bg-slate-800/80 text-slate-800 dark:text-slate-200 text-sm font-medium border border-slate-200 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 transition-colors">
+                                <i class="far fa-envelope text-indigo-500"></i>
+                                <span>Get in Touch</span>
+                            </button>
+                            <a href="https://github.com/mausneg" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-white dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:text-indigo-600 dark:hover:text-white transition-colors" title="GitHub Profile">
+                                <i class="fab fa-github text-lg"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/maulana-surya-negara-5b6a6b270/" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-white dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:text-indigo-600 dark:hover:text-white transition-colors" title="LinkedIn Profile">
+                                <i class="fab fa-linkedin text-lg"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Right: Precision Engineer Card & Metadata Frame -->
+                    <div class="lg:col-span-5">
+                        <div class="craft-card p-6 md:p-7 relative overflow-hidden group">
+                            
+                            <!-- Frame Top Bar: System Terminal Heading -->
+                            <div class="flex items-center justify-between pb-4 mb-5 border-b border-slate-200/80 dark:border-slate-800/80">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                                    <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                                    <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                                    <span class="font-mono text-xs text-slate-500 dark:text-slate-400 ml-2">node@surya-ml-core</span>
+                                </div>
+                                <span class="font-mono text-[11px] px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border border-indigo-200/50 dark:border-indigo-800/50">
+                                    GPU RUNTIME
+                                </span>
+                            </div>
+
+                            <!-- Avatar & Core Info -->
+                            <div class="flex flex-col sm:flex-row items-center gap-6 mb-6">
+                                <div class="relative w-32 h-32 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 border-2 border-slate-200/80 dark:border-slate-700/80 flex-shrink-0">
+                                    <img src="dist/img/mausneg.png" alt="Maulana Surya Negara" class="w-full h-full object-cover object-top">
+                                </div>
+                                <div class="space-y-1.5 text-center sm:text-left">
+                                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Maulana Surya Negara</h3>
+                                    <p class="font-mono text-xs text-indigo-600 dark:text-indigo-400">TensorFlow Certified Developer</p>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 flex items-center justify-center sm:justify-start gap-1.5 pt-1">
+                                        <i class="fas fa-map-marker-alt text-slate-400"></i>
+                                        <span>Indonesia (UTC+7) · Remote Ready</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Terminal Metadata Parameters -->
+                            <div class="rounded-xl bg-slate-50 dark:bg-[#070a12] p-4 border border-slate-200/70 dark:border-slate-800/70 font-mono text-xs space-y-2">
+                                <div class="flex justify-between text-slate-600 dark:text-slate-400">
+                                    <span class="text-slate-400 dark:text-slate-500">&gt; primary_focus:</span>
+                                    <span class="text-slate-800 dark:text-slate-200 font-semibold">["ViT", "LLM-OCR", "MLOps"]</span>
+                                </div>
+                                <div class="flex justify-between text-slate-600 dark:text-slate-400">
+                                    <span class="text-slate-400 dark:text-slate-500">&gt; core_runtime:</span>
+                                    <span class="text-slate-800 dark:text-slate-200">PyTorch · TFJS · Ollama</span>
+                                </div>
+                                <div class="flex justify-between text-slate-600 dark:text-slate-400">
+                                    <span class="text-slate-400 dark:text-slate-500">&gt; deployment:</span>
+                                    <span class="text-slate-800 dark:text-slate-200">Docker · FastAPI · Airflow</span>
+                                </div>
+                                <div class="flex justify-between text-slate-600 dark:text-slate-400">
+                                    <span class="text-slate-400 dark:text-slate-500">&gt; status:</span>
+                                    <span class="text-emerald-500 dark:text-emerald-400 font-bold">READY_FOR_DEPLOYMENT</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             ABOUT & CORE ARCHITECTURAL STACK SECTION
+             =================================================================== -->
+        <section id="about" class="py-24 border-t border-slate-200/80 dark:border-slate-800/80 bg-white/50 dark:bg-[#0c101c]/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="max-w-3xl mb-16 space-y-3">
+                    <div class="font-mono text-xs uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-semibold">
+                        01 / Engineering Competency
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                        Architecting Scalable Machine Learning Pipelines.
+                    </h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+                        I engineer end-to-end ML solutions from deep neural network architecture design and fine-tuning to high-throughput inference APIs and automated CI/CD MLOps pipelines.
+                    </p>
+                </div>
+
+                <!-- Structured 3-Column Architectural Stack Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                    
+                    <!-- Column 1: Vision & Deep Learning Models -->
+                    <div class="craft-card p-6 space-y-5">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-lg">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Computer Vision & LLMs</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Foundational deep learning & transformer architectures</p>
+                        </div>
+                        <div class="space-y-2 pt-2">
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200">Vision Transformers (ViT)</span>
+                                <span class="text-slate-400 text-[11px]">Base / Attention</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200">YOLOv5nu / TFJS</span>
+                                <span class="text-slate-400 text-[11px]">Edge Auto-Detect</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200">Attention U-Net & Pix2Pix</span>
+                                <span class="text-slate-400 text-[11px]">GAN Enhancement</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200">Ministral-3 / TinyLlama</span>
+                                <span class="text-slate-400 text-[11px]">Ollama / PEFT 8-bit</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: MLOps & Production Infrastructure -->
+                    <div class="craft-card p-6 space-y-5">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-lg">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">MLOps & Infrastructure</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Orchestration, tracking, containerization & deployment</p>
+                        </div>
+                        <div class="space-y-2 pt-2">
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200">Docker & Compose</span>
+                                <span class="text-slate-400 text-[11px]">Microservices</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200">Apache Airflow</span>
+                                <span class="text-slate-400 text-[11px]">DAG Workflows</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200">MLflow Tracking</span>
+                                <span class="text-slate-400 text-[11px]">Experiment Registry</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200">FastAPI & Pydantic</span>
+                                <span class="text-slate-400 text-[11px]">Async Validation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Frameworks, Tooling & Vector Stores -->
+                    <div class="craft-card p-6 space-y-5">
+                        <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-600 dark:text-cyan-400 flex items-center justify-center text-lg">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Frameworks & Retrieval</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Core programming ecosystems, vector DBs & tooling</p>
+                        </div>
+                        <div class="space-y-2 pt-2">
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200">PyTorch & TensorFlow</span>
+                                <span class="text-slate-400 text-[11px]">Primary Core</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200">OpenCV & TFJS</span>
+                                <span class="text-slate-400 text-[11px]">Image Processing</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200">FAISS & LangChain</span>
+                                <span class="text-slate-400 text-[11px]">Vector RAG</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200">Hugging Face Transformers</span>
+                                <span class="text-slate-400 text-[11px]">PEFT / LoRA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Verified Impact Narrative Box -->
+                <div class="craft-card p-7 md:p-9 border-l-4 border-l-indigo-500">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                        <div class="lg:col-span-8 space-y-2">
+                            <h4 class="text-base font-bold text-slate-900 dark:text-white font-mono uppercase tracking-wide">
+                                Production Track Record
+                            </h4>
+                            <p class="text-sm md:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                                At PT Hizrian Bersaudara Sukses, engineered automated MLOps pipelines cutting manual operational workload by ~80% and successfully deployed medical-grade classification models serving sub-300ms inference on CPU with 86% verified accuracy.
+                            </p>
+                        </div>
+                        <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-end">
+                            <div class="font-mono text-xs px-3.5 py-2.5 rounded-lg bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-between">
+                                <span>Certification:</span>
+                                <span class="font-bold text-indigo-600 dark:text-indigo-400">TensorFlow Dev #93488980</span>
+                            </div>
+                            <div class="font-mono text-xs px-3.5 py-2.5 rounded-lg bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-between">
+                                <span>Location:</span>
+                                <span class="text-slate-800 dark:text-slate-200">Bandung / Remote</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             PRODUCTION SYSTEMS & PROJECTS SHOWCASE
+             =================================================================== -->
+        <section id="portfolio" class="py-24 border-t border-slate-200/80 dark:border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header with Filter Controls -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+                    <div class="space-y-3">
+                        <div class="font-mono text-xs uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-semibold">
+                            02 / Systems Portfolio
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                            Engineered Production & Research Systems.
+                        </h2>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm md:text-base max-w-2xl">
+                            Real-world deployed machine learning systems, deep neural network research, and conversational retrieval architectures.
+                        </p>
+                    </div>
+
+                    <!-- Interactive Filter Controls -->
+                    <div class="flex items-center gap-1.5 p-1 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 self-start md:self-auto font-mono text-xs">
+                        <button data-filter="all" class="px-3.5 py-1.5 rounded-lg font-medium bg-slate-900 text-white dark:bg-white dark:text-slate-900 shadow-sm transition-all">
+                            All Systems (6)
+                        </button>
+                        <button data-filter="production" class="px-3.5 py-1.5 rounded-lg font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-200/60 dark:hover:bg-slate-800 transition-all">
+                            Production (4)
+                        </button>
+                        <button data-filter="research" class="px-3.5 py-1.5 rounded-lg font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-200/60 dark:hover:bg-slate-800 transition-all">
+                            R&D (2)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    
+                    <!-- PROJECT 1: Indonesian ID Card Extractor with Auto-Capture & LLM OCR -->
+                    <div data-category="production" class="craft-card flex flex-col justify-between overflow-hidden group">
+                        <div>
+                            <!-- Card Header: Image & Status -->
+                            <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200/80 dark:border-slate-800/80">
+                                <img src="dist/img/portfolio/5.png" alt="Indonesian ID Card Auto-Capture & LLM OCR" class="max-h-52 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute top-4 left-4">
+                                    <span class="inline-flex items-center gap-1.5 font-mono text-[11px] px-2.5 py-1 rounded bg-emerald-500/90 text-white font-semibold backdrop-blur-md shadow-sm">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                                        PRODUCTION DEPLOYED
+                                    </span>
+                                </div>
+                                <div class="absolute top-4 right-4">
+                                    <span class="font-mono text-[11px] px-2.5 py-1 rounded bg-black/60 text-slate-200 border border-white/10 backdrop-blur-md">
+                                        15-22s End-to-End
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Card Body -->
+                            <div class="p-6 md:p-7 space-y-4">
+                                <!-- Architecture Chain Flow -->
+                                <div class="font-mono text-xs text-indigo-600 dark:text-indigo-400 flex flex-wrap items-center gap-1.5 font-medium">
+                                    <span>YOLOv5nu (TFJS)</span>
+                                    <span>→</span>
+                                    <span>FastAPI</span>
+                                    <span>→</span>
+                                    <span>Ministral-3 (Ollama)</span>
+                                    <span>→</span>
+                                    <span>Pydantic</span>
+                                </div>
+
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                    Indonesian ID Card Extractor with Auto-Capture & LLM OCR
+                                </h3>
+
+                                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    End-to-end KTP/SIM document processing system combining an on-device TFJS detector for real-time edge capture with a GPU-backed Ministral-3 LLM for structured OCR extraction. Replaced fragile contour cropping with 100% structured JSON normalization.
+                                </p>
+
+                                <!-- Technical Spec Metric Box -->
+                                <div class="grid grid-cols-3 gap-2 pt-2">
+                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[10px] text-slate-400 uppercase">Input Res</div>
+                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">160px YOLO</div>
+                                    </div>
+                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[10px] text-slate-400 uppercase">Detection mAP</div>
+                                        <div class="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-0.5">99.5% @0.5</div>
+                                    </div>
+                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[10px] text-slate-400 uppercase">Deployment</div>
+                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">Docker GPU</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card Footer Links -->
+                        <div class="p-6 md:p-7 pt-0 flex items-center justify-between border-t border-slate-100 dark:border-slate-800/60 mt-4">
+                            <div class="flex gap-2">
+                                <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">YOLOv5</span>
+                                <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">Ollama</span>
+                                <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">TFJS</span>
+                            </div>
+                            <a href="detail-id-card-extractor.html" class="inline-flex items-center gap-1.5 font-mono text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300">
+                                <span>Architecture Breakdown</span>
+                                <i class="fas fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 2: ENT Disease Classification with Vision Transformer (ViT) -->
+                    <div data-category="production" class="craft-card flex flex-col justify-between overflow-hidden group">
+                        <div>
+                            <!-- Card Header -->
+                            <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200/80 dark:border-slate-800/80">
+                                <img src="dist/img/portfolio/7.png" alt="ENT Disease Classification ViT" class="max-h-52 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute top-4 left-4">
+                                    <span class="inline-flex items-center gap-1.5 font-mono text-[11px] px-2.5 py-1 rounded bg-emerald-500/90 text-white font-semibold backdrop-blur-md shadow-sm">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                                        MEDICAL PRODUCTION
+                                    </span>
+                                </div>
+                                <div class="absolute top-4 right-4">
+                                    <span class="font-mono text-[11px] px-2.5 py-1 rounded bg-black/60 text-slate-200 border border-white/10 backdrop-blur-md">
+                                        200-300ms CPU
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Card Body -->
+                            <div class="p-6 md:p-7 space-y-4">
+                                <div class="font-mono text-xs text-indigo-600 dark:text-indigo-400 flex flex-wrap items-center gap-1.5 font-medium">
+                                    <span>ViT-Base</span>
+                                    <span>→</span>
+                                    <span>Attention Rollout</span>
+                                    <span>→</span>
+                                    <span>FastAPI</span>
+                                    <span>→</span>
+                                    <span>Docker Container</span>
+                                </div>
+
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                    ENT Disease Classification with Vision Transformer (ViT)
+                                </h3>
+
+                                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    Clinical-grade classification system classifying 12 distinct ear pathology conditions. Fine-tuned Google Vision Transformer Base, outperforming baseline DenseNet169 by +10% with attention rollout interpretability for otolaryngologists.
+                                </p>
+
+                                <div class="grid grid-cols-3 gap-2 pt-2">
+                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[10px] text-slate-400 uppercase">Test Accuracy</div>
+                                        <div class="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-0.5">86.0% (+10%)</div>
+                                    </div>
+                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[10px] text-slate-400 uppercase">Macro F1</div>
+                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">0.87 / 12 cls</div>
+                                    </div>
+                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[10px] text-slate-400 uppercase">Inference</div>
+                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">CPU Optimized</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-6 md:p-7 pt-0 flex items-center justify-between border-t border-slate-100 dark:border-slate-800/60 mt-4">
+                            <div class="flex gap-2">
+                                <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">PyTorch</span>
+                                <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">ViT</span>
+                                <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">FastAPI</span>
+                            </div>
+                            <a href="detail-ent-disease.html" class="inline-flex items-center gap-1.5 font-mono text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300">
+                                <span>Architecture Breakdown</span>
+                                <i class="fas fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 3: Pix2Pix GAN Endoscopic Image Enhancement -->
+                    <div data-category="production" class="craft-card flex flex-col justify-between overflow-hidden group">
+                        <div>
+                            <!-- Card Header -->
+                            <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200/80 dark:border-slate-800/80">
+                                <img src="dist/img/portfolio/2.png" alt="GAN Endoscopic Image Enhancement" class="max-h-52 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute top-4 left-4">
+                                    <span class="inline-flex items-center gap-1.5 font-mono text-[11px] px-2.5 py-1 rounded bg-emerald-500/90 text-white font-semibold backdrop-blur-md shadow-sm">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                                        MEDICAL VISION
+                                    </span>
+                                </div>
+                                <div class="absolute top-4 right-4">
+                                    <span class="font-mono text-[11px] px-2.5 py-1 rounded bg-black/60 text-slate-200 border border-white/10 backdrop-blur-md">
+                                        PSNR 26dB · SSIM 0.80
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Card Body -->
+                            <div class="p-6 md:p-7 space-y-4">
+                                <div class="font-mono text-xs text-indigo-600 dark:text-indigo-400 flex flex-wrap items-center gap-1.5 font-medium">
+                                    <span>Attention U-Net</span>
+                                    <span>→</span>
+                                    <span>PatchGAN Discriminator</span>
+                                    <span>→</span>
+                                    <span>L1 + Adv Loss</span>
+                                </div>
+
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                    Pix2Pix GAN Endoscopic Image Enhancement
+                                </h3>
+
+                                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    Adversarial reconstruction system for endoscopic video frames. Integrates soft self-attention gates in the U-Net skip connections to preserve critical vascular and mucosal textures while denoising glare and motion artifacts.
+                                </p>
+
+                                <div class="grid grid-cols-3 gap-2 pt-2">
+                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[10px] text-slate-400 uppercase">PSNR Metric</div>
+                                        <div class="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-0.5">26.0 dB</div>
+                                    </div>
+                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[10px] text-slate-400 uppercase">SSIM Score</div>
+                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">0.80 Struct</div>
+                                    </div>
+                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[10px] text-slate-400 uppercase">Framework</div>
+                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">TensorFlow</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-6 md:p-7 pt-0 flex items-center justify-between border-t border-slate-100 dark:border-slate-800/60 mt-4">
+                            <div class="flex gap-2">
+                                <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">GAN</span>
+                                <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">U-Net</span>
+                                <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">TensorFlow</span>
+                            </div>
+                            <a href="detail-gan-image-enhancement.html" class="inline-flex items-center gap-1.5 font-mono text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300">
+                                <span>Architecture Breakdown</span>
+                                <i class="fas fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 4: End-to-End MLOps Automation Infrastructure -->
+                    <div data-category="production" class="craft-card flex flex-col justify-between overflow-hidden group">
+                        <div>
+                            <!-- Card Header -->
+                            <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200/80 dark:border-slate-800/80">
+                                <img src="dist/img/portfolio/4.png" alt="End-to-End MLOps Pipeline" class="max-h-52 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute top-4 left-4">
+                                    <span class="inline-flex items-center gap-1.5 font-mono text-[11px] px-2.5 py-1 rounded bg-indigo-600 text-white font-semibold backdrop-blur-md shadow-sm">
+                                        <i class="fas fa-industry text-[10px]"></i>
+                                        ENTERPRISE MLOPS
+                                    </span>
+                                </div>
+                                <div class="absolute top-4 right-4">
+                                    <span class="font-mono text-[11px] px-2.5 py-1 rounded bg-black/60 text-slate-200 border border-white/10 backdrop-blur-md">
+                                        80% Ops Automation
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Card Body -->
+                            <div class="p-6 md:p-7 space-y-4">
+                                <div class="font-mono text-xs text-indigo-600 dark:text-indigo-400 flex flex-wrap items-center gap-1.5 font-medium">
+                                    <span>Apache Airflow</span>
+                                    <span>→</span>
+                                    <span>MLflow Registry</span>
+                                    <span>→</span>
+                                    <span>Docker Compose</span>
+                                    <span>→</span>
+                                    <span>FastAPI</span>
+                                </div>
+
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                    End-to-End MLOps Pipeline & Automation
+                                </h3>
+
+                                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    Production infrastructure built at PT Hizrian Bersaudara Sukses. Orchestrates automated data validation, scheduled model re-training triggers, experiment tracking, and zero-downtime containerized inference endpoints for medical AI integration.
+                                </p>
+
+                                <div class="grid grid-cols-3 gap-2 pt-2">
+                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[10px] text-slate-400 uppercase">Workload Cut</div>
+                                        <div class="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-0.5">~80% Saved</div>
+                                    </div>
+                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[10px] text-slate-400 uppercase">Orchestrator</div>
+                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">Airflow DAGs</div>
+                                    </div>
+                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[10px] text-slate-400 uppercase">Tracking</div>
+                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">MLflow</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-6 md:p-7 pt-0 flex items-center justify-between border-t border-slate-100 dark:border-slate-800/60 mt-4">
+                            <div class="flex gap-2">
+                                <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">Airflow</span>
+                                <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">Docker</span>
+                                <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">MLflow</span>
+                            </div>
+                            <span class="inline-flex items-center gap-1.5 font-mono text-xs text-slate-400 dark:text-slate-500">
+                                <i class="fas fa-lock text-[11px]"></i>
+                                <span>Enterprise Internal</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 5: Ollama RAG Conversational AI Assistant -->
+                    <div data-category="research" class="craft-card flex flex-col justify-between overflow-hidden group">
+                        <div>
+                            <!-- Card Header -->
+                            <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200/80 dark:border-slate-800/80">
+                                <img src="dist/img/portfolio/6.png" alt="Ollama RAG AI Assistant" class="max-h-52 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute top-4 left-4">
+                                    <span class="inline-flex items-center gap-1.5 font-mono text-[11px] px-2.5 py-1 rounded bg-slate-800/90 text-white font-semibold backdrop-blur-md border border-slate-700">
+                                        <i class="fas fa-flask text-[10px] text-indigo-400"></i>
+                                        R&D / PRIVACY LLM
+                                    </span>
+                                </div>
+                                <div class="absolute top-4 right-4">
+                                    <span class="font-mono text-[11px] px-2.5 py-1 rounded bg-black/60 text-slate-200 border border-white/10 backdrop-blur-md">
+                                        Zero Cloud Cost
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Card Body -->
+                            <div class="p-6 md:p-7 space-y-4">
+                                <div class="font-mono text-xs text-indigo-600 dark:text-indigo-400 flex flex-wrap items-center gap-1.5 font-medium">
+                                    <span>Doc Loader</span>
+                                    <span>→</span>
+                                    <span>FAISS Vector Store</span>
+                                    <span>→</span>
+                                    <span>LangChain</span>
+                                    <span>→</span>
+                                    <span>Local Ollama</span>
+                                </div>
+
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                    Ollama Local RAG Document Intelligence
+                                </h3>
+
+                                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    Privacy-first Retrieval-Augmented Generation system with multi-session chat context and dynamic document chunking. Operates entirely on local hardware with zero external API telemetry.
+                                </p>
+
+                                <div class="grid grid-cols-3 gap-2 pt-2">
+                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[10px] text-slate-400 uppercase">Vector Index</div>
+                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">FAISS CPU</div>
+                                    </div>
+                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[10px] text-slate-400 uppercase">Inference</div>
+                                        <div class="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-0.5">Ollama Local</div>
+                                    </div>
+                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[10px] text-slate-400 uppercase">Orchestrator</div>
+                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">LangChain</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-6 md:p-7 pt-0 flex items-center justify-between border-t border-slate-100 dark:border-slate-800/60 mt-4">
+                            <div class="flex gap-2">
+                                <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">FAISS</span>
+                                <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">LangChain</span>
+                                <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">Streamlit</span>
+                            </div>
+                            <a href="detail-ollama-rag.html" class="inline-flex items-center gap-1.5 font-mono text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300">
+                                <span>Architecture Breakdown</span>
+                                <i class="fas fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 6: TinyLlama Fine-Tuning & Quantization Pipeline -->
+                    <div data-category="research" class="craft-card flex flex-col justify-between overflow-hidden group">
+                        <div>
+                            <!-- Card Header -->
+                            <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200/80 dark:border-slate-800/80">
+                                <img src="dist/img/portfolio/1.png" alt="TinyLlama AI Assistant" class="max-h-52 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute top-4 left-4">
+                                    <span class="inline-flex items-center gap-1.5 font-mono text-[11px] px-2.5 py-1 rounded bg-slate-800/90 text-white font-semibold backdrop-blur-md border border-slate-700">
+                                        <i class="fas fa-microchip text-[10px] text-indigo-400"></i>
+                                        R&D / QUANTIZATION
+                                    </span>
+                                </div>
+                                <div class="absolute top-4 right-4">
+                                    <span class="font-mono text-[11px] px-2.5 py-1 rounded bg-black/60 text-slate-200 border border-white/10 backdrop-blur-md">
+                                        8-bit PEFT LoRA
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Card Body -->
+                            <div class="p-6 md:p-7 space-y-4">
+                                <div class="font-mono text-xs text-indigo-600 dark:text-indigo-400 flex flex-wrap items-center gap-1.5 font-medium">
+                                    <span>TinyLlama-1.1B</span>
+                                    <span>→</span>
+                                    <span>PEFT / LoRA</span>
+                                    <span>→</span>
+                                    <span>8-Bit Quant</span>
+                                    <span>→</span>
+                                    <span>FastAPI</span>
+                                </div>
+
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                    TinyLlama Fine-Tuning & Quantization Pipeline
+                                </h3>
+
+                                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    Low-parameter LLM optimization research utilizing parameter-efficient fine-tuning (PEFT) and bitsandbytes 8-bit quantization. Includes stateful conversation history buffering and FastAPI microservice packaging.
+                                </p>
+
+                                <div class="grid grid-cols-3 gap-2 pt-2">
+                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[10px] text-slate-400 uppercase">Parameters</div>
+                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">1.1B Weights</div>
+                                    </div>
+                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[10px] text-slate-400 uppercase">Precision</div>
+                                        <div class="text-xs font-bold text-indigo-600 dark:text-indigo-400 mt-0.5">INT8 Quant</div>
+                                    </div>
+                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[10px] text-slate-400 uppercase">Backend</div>
+                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">FastAPI Async</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-6 md:p-7 pt-0 flex items-center justify-between border-t border-slate-100 dark:border-slate-800/60 mt-4">
+                            <div class="flex gap-2">
+                                <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">HuggingFace</span>
+                                <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">LoRA</span>
+                                <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">Docker</span>
+                            </div>
+                            <a href="detail-tinyllama.html" class="inline-flex items-center gap-1.5 font-mono text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300">
+                                <span>Architecture Breakdown</span>
+                                <i class="fas fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             VERIFIED CREDENTIALS & CERTIFICATIONS LEDGER
+             =================================================================== -->
+        <section id="achievements" class="py-24 border-t border-slate-200/80 dark:border-slate-800/80 bg-white/50 dark:bg-[#0c101c]/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="max-w-3xl mb-16 space-y-3">
+                    <div class="font-mono text-xs uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-semibold">
+                        03 / Verified Qualifications
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                        Credentials & Industry Certifications.
+                    </h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+                        Independently verified certifications across deep learning frameworks, specialized LLM fine-tuning, and production system deployment.
+                    </p>
+                </div>
+
+                <!-- High-Trust Credential Ledger Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Credential 1: Google TensorFlow Developer -->
+                    <div class="craft-card p-6 flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <div class="flex items-start justify-between">
+                                <div class="w-12 h-12 rounded-xl bg-white p-1.5 flex items-center justify-center border border-slate-200 shadow-sm">
+                                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgekNBpRHJFaIf-oczr-v0d515ii6zSP9hi3lqtKI2UkP_0wF7751u4kJRCug3EhZOSoyt4utFXgtnMDvTZZg9Z_fNWfDhgo-PIJ0H1RdJFf2N7xpT04Q2kbM2Ogql5xbjT4afjNzgDMjc/s1600/tf_badge_cert_tf_certified_developer.png" alt="TensorFlow" class="w-9 h-9 object-contain">
+                                </div>
+                                <span class="inline-flex items-center gap-1 font-mono text-[11px] px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60">
+                                    <i class="fas fa-check-circle text-[10px]"></i> VERIFIED
+                                </span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 dark:text-white text-base">TensorFlow Developer Certificate</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Google / TensorFlow Certificate Program</p>
+                            </div>
+                            <div class="font-mono text-xs bg-slate-50 dark:bg-slate-900/60 p-3 rounded-lg border border-slate-200/60 dark:border-slate-800/60 space-y-1">
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
+                                    <span>Issued:</span>
+                                    <span class="text-slate-800 dark:text-slate-200">Jan 2024 (Active to 2027)</span>
+                                </div>
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
+                                    <span>Credential ID:</span>
+                                    <span class="text-indigo-600 dark:text-indigo-400 font-semibold cursor-pointer hover:underline" onclick="copyCredential('93488980')">93488980 <i class="far fa-copy text-[10px]"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://www.credential.net/852b91ac-df11-4b43-b704-80cfce4662f2" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 w-full py-2.5 rounded-lg font-mono text-xs font-semibold text-slate-800 dark:text-slate-200 bg-slate-100 dark:bg-slate-800/80 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors border border-slate-200 dark:border-slate-700">
+                            <span>Verify on Credential.net</span>
+                            <i class="fas fa-external-link-alt text-[10px]"></i>
+                        </a>
+                    </div>
+
+                    <!-- Credential 2: Machine Learning Terapan -->
+                    <div class="craft-card p-6 flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <div class="flex items-start justify-between">
+                                <div class="w-12 h-12 rounded-xl bg-white p-1.5 flex items-center justify-center border border-slate-200 shadow-sm">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFdBNzCwzZYZZLvd6eyst4__z3g4W2EKUaaQ&s" alt="Dicoding" class="w-8 h-8 object-contain">
+                                </div>
+                                <span class="inline-flex items-center gap-1 font-mono text-[11px] px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60">
+                                    <i class="fas fa-check-circle text-[10px]"></i> VERIFIED
+                                </span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 dark:text-white text-base">Applied Machine Learning Specialist</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Dicoding Indonesia</p>
+                            </div>
+                            <div class="font-mono text-xs bg-slate-50 dark:bg-slate-900/60 p-3 rounded-lg border border-slate-200/60 dark:border-slate-800/60 space-y-1">
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
+                                    <span>Issued:</span>
+                                    <span class="text-slate-800 dark:text-slate-200">Feb 2024 (Active to 2027)</span>
+                                </div>
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
+                                    <span>Credential ID:</span>
+                                    <span class="text-indigo-600 dark:text-indigo-400 font-semibold cursor-pointer hover:underline" onclick="copyCredential('TRXYT73K9PVM')">TRXYT73K9PVM <i class="far fa-copy text-[10px]"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://www.dicoding.com/certificates/1RXY179K9PVM" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 w-full py-2.5 rounded-lg font-mono text-xs font-semibold text-slate-800 dark:text-slate-200 bg-slate-100 dark:bg-slate-800/80 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors border border-slate-200 dark:border-slate-700">
+                            <span>Verify on Dicoding</span>
+                            <i class="fas fa-external-link-alt text-[10px]"></i>
+                        </a>
+                    </div>
+
+                    <!-- Credential 3: DeepLearning.AI TensorFlow Specialization -->
+                    <div class="craft-card p-6 flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <div class="flex items-start justify-between">
+                                <div class="w-12 h-12 rounded-xl bg-white p-1.5 flex items-center justify-center border border-slate-200 shadow-sm">
+                                    <img src="https://coursera-university-assets.s3.amazonaws.com/b4/5cb90bb92f420b99bf323a0356f451/Icon.png" alt="DeepLearning.AI" class="w-8 h-8 object-contain">
+                                </div>
+                                <span class="inline-flex items-center gap-1 font-mono text-[11px] px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60">
+                                    <i class="fas fa-check-circle text-[10px]"></i> VERIFIED
+                                </span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 dark:text-white text-base">TensorFlow Developer Specialization</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">DeepLearning.AI (Coursera)</p>
+                            </div>
+                            <div class="font-mono text-xs bg-slate-50 dark:bg-slate-900/60 p-3 rounded-lg border border-slate-200/60 dark:border-slate-800/60 space-y-1">
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
+                                    <span>Issued:</span>
+                                    <span class="text-slate-800 dark:text-slate-200">Oct 2023</span>
+                                </div>
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
+                                    <span>Credential ID:</span>
+                                    <span class="text-indigo-600 dark:text-indigo-400 font-semibold cursor-pointer hover:underline" onclick="copyCredential('G2AEK2LMNUTE')">G2AEK2LMNUTE <i class="far fa-copy text-[10px]"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://www.coursera.org/account/accomplishments/specialization/G2AEK2LMNUTE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 w-full py-2.5 rounded-lg font-mono text-xs font-semibold text-slate-800 dark:text-slate-200 bg-slate-100 dark:bg-slate-800/80 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors border border-slate-200 dark:border-slate-700">
+                            <span>Verify on Coursera</span>
+                            <i class="fas fa-external-link-alt text-[10px]"></i>
+                        </a>
+                    </div>
+
+                    <!-- Credential 4: Fine-Tuning LLMs with Hugging Face -->
+                    <div class="craft-card p-6 flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <div class="flex items-start justify-between">
+                                <div class="w-12 h-12 rounded-xl bg-white p-1.5 flex items-center justify-center border border-slate-200 shadow-sm">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAAiPkyk9wjoPdFW1WXya1UCFsFNw0ZYBDew&s" alt="Udemy" class="w-8 h-8 object-contain">
+                                </div>
+                                <span class="inline-flex items-center gap-1 font-mono text-[11px] px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60">
+                                    <i class="fas fa-check-circle text-[10px]"></i> VERIFIED
+                                </span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 dark:text-white text-base">Fine-Tuning LLMs with Hugging Face</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Udemy / Transformers for NLP</p>
+                            </div>
+                            <div class="font-mono text-xs bg-slate-50 dark:bg-slate-900/60 p-3 rounded-lg border border-slate-200/60 dark:border-slate-800/60 space-y-1">
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
+                                    <span>Issued:</span>
+                                    <span class="text-slate-800 dark:text-slate-200">Sep 2025</span>
+                                </div>
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
+                                    <span>Credential ID:</span>
+                                    <span class="text-indigo-600 dark:text-indigo-400 font-semibold cursor-pointer hover:underline" onclick="copyCredential('UC-1f428563-3939-4bde-8def-edb1b75ce3f4')">UC-1f428563... <i class="far fa-copy text-[10px]"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-1bf28563-3939-4bde-8d6f-edb1b75ce3f4.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 w-full py-2.5 rounded-lg font-mono text-xs font-semibold text-slate-800 dark:text-slate-200 bg-slate-100 dark:bg-slate-800/80 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors border border-slate-200 dark:border-slate-700">
+                            <span>View Certificate PDF</span>
+                            <i class="fas fa-external-link-alt text-[10px]"></i>
+                        </a>
+                    </div>
+
+                    <!-- Credential 5: Deploy ML Models in Production with FastAPI & Docker -->
+                    <div class="craft-card p-6 flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <div class="flex items-start justify-between">
+                                <div class="w-12 h-12 rounded-xl bg-white p-1.5 flex items-center justify-center border border-slate-200 shadow-sm">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAAiPkyk9wjoPdFW1WXya1UCFsFNw0ZYBDew&s" alt="Udemy" class="w-8 h-8 object-contain">
+                                </div>
+                                <span class="inline-flex items-center gap-1 font-mono text-[11px] px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60">
+                                    <i class="fas fa-check-circle text-[10px]"></i> VERIFIED
+                                </span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 dark:text-white text-base">Deploy ML in Production: FastAPI & Docker</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Udemy / Production MLOps</p>
+                            </div>
+                            <div class="font-mono text-xs bg-slate-50 dark:bg-slate-900/60 p-3 rounded-lg border border-slate-200/60 dark:border-slate-800/60 space-y-1">
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
+                                    <span>Issued:</span>
+                                    <span class="text-slate-800 dark:text-slate-200">Jul 2025</span>
+                                </div>
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
+                                    <span>Credential ID:</span>
+                                    <span class="text-indigo-600 dark:text-indigo-400 font-semibold cursor-pointer hover:underline" onclick="copyCredential('UC-9c92120c-bb57-4f43-84de-84814efd61e3')">UC-9c92120c... <i class="far fa-copy text-[10px]"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-9c92120c-bb57-4f43-84de-84814efd61e3.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 w-full py-2.5 rounded-lg font-mono text-xs font-semibold text-slate-800 dark:text-slate-200 bg-slate-100 dark:bg-slate-800/80 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors border border-slate-200 dark:border-slate-700">
+                            <span>View Certificate PDF</span>
+                            <i class="fas fa-external-link-alt text-[10px]"></i>
+                        </a>
+                    </div>
+
+                    <!-- Credential 6: Google Data Analytics Professional Certificate -->
+                    <div class="craft-card p-6 flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <div class="flex items-start justify-between">
+                                <div class="w-12 h-12 rounded-xl bg-white p-1.5 flex items-center justify-center border border-slate-200 shadow-sm">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="w-8 h-8 object-contain">
+                                </div>
+                                <span class="inline-flex items-center gap-1 font-mono text-[11px] px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60">
+                                    <i class="fas fa-check-circle text-[10px]"></i> VERIFIED
+                                </span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 dark:text-white text-base">Google Data Analytics Professional</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Google (Coursera)</p>
+                            </div>
+                            <div class="font-mono text-xs bg-slate-50 dark:bg-slate-900/60 p-3 rounded-lg border border-slate-200/60 dark:border-slate-800/60 space-y-1">
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
+                                    <span>Issued:</span>
+                                    <span class="text-slate-800 dark:text-slate-200">Oct 2023</span>
+                                </div>
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
+                                    <span>Platform:</span>
+                                    <span class="text-slate-800 dark:text-slate-200">Credly Verified</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://www.credly.com/badges/594f50c5-ed51-4c91-add0-14a8addd0314/linked_in_profile" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 w-full py-2.5 rounded-lg font-mono text-xs font-semibold text-slate-800 dark:text-slate-200 bg-slate-100 dark:bg-slate-800/80 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors border border-slate-200 dark:border-slate-700">
+                            <span>Verify on Credly</span>
+                            <i class="fas fa-external-link-alt text-[10px]"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             CONTACT & COLLABORATION TERMINAL SECTION
+             =================================================================== -->
+        <section id="contact" class="py-24 border-t border-slate-200/80 dark:border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="craft-card p-8 md:p-12 relative overflow-hidden bg-gradient-to-b from-white to-slate-50 dark:from-[#0f172a] dark:to-[#090d16]">
+                    
+                    <div class="max-w-3xl mx-auto text-center space-y-6">
                         
-                        <!-- Animated Rings -->
-                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
-                            <div class="w-[350px] h-[350px] rounded-full border-2 border-indigo-400/35 animate-ping-slow"></div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-200/60 dark:border-indigo-800/60 text-indigo-600 dark:text-indigo-400 font-mono text-xs font-semibold">
+                            <span>INITIATE COLLABORATION</span>
                         </div>
-                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
-                            <div class="w-[450px] h-[450px] rounded-full border-2 border-purple-400/25 animate-ping-slower"></div>
+
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                            Let's Build Robust ML Systems Together.
+                        </h2>
+
+                        <p class="text-slate-600 dark:text-slate-400 text-base max-w-xl mx-auto">
+                            Whether you need production-grade computer vision pipelines, fine-tuned transformer architectures, or automated MLOps infrastructure — let's connect.
+                        </p>
+
+                        <!-- Copy Email Interaction Box -->
+                        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+                            <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 font-mono text-sm text-slate-800 dark:text-slate-200 w-full sm:w-auto">
+                                <i class="fas fa-envelope text-indigo-500"></i>
+                                <span class="select-all">maulanasuryanegara123@gmail.com</span>
+                            </div>
+                            <button onclick="copyEmail()" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm transition-all shadow-md w-full sm:w-auto">
+                                <i class="far fa-copy"></i>
+                                <span>Copy Email</span>
+                            </button>
                         </div>
+
+                        <!-- Direct Social Channels -->
+                        <div class="pt-6 flex items-center justify-center gap-4">
+                            <a href="https://github.com/mausneg" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white border border-slate-200 dark:border-slate-700 transition-colors" title="GitHub">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/maulana-surya-negara-5b6a6b270/" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white border border-slate-200 dark:border-slate-700 transition-colors" title="LinkedIn">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="https://www.instagram.com/mausneg" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white border border-slate-200 dark:border-slate-700 transition-colors" title="Instagram">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="https://steamcommunity.com/id/surya_1933" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white border border-slate-200 dark:border-slate-700 transition-colors" title="Steam">
+                                <i class="fab fa-steam text-xl"></i>
+                            </a>
+                        </div>
+
                     </div>
+
                 </div>
+
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <section id="about" class="pt-36 pb-32 bg-white dark:bg-slate-900 transition-colors duration-300">
-        <div class="container">
-            <div class="flex flex-wrap">
-                <div class="w-full px-4 mb-10 lg:w-1/2 ">
-                    <h4 class="font-bold uppercase text-indigo-600 dark:text-indigo-400 text-lg mb-3 tracking-wider">About Me</h4>
-                    <h2 class="font-bold text-dark dark:text-white text-3xl mb-5 max-w-md lg:text-4xl">Learn About Me Here</h2>
-                    <p id="about-content" class="font-medium text-base text-secondary dark:text-slate-400 max-w-xl lg:text-lg text-justify">
-                    </p>
-                </div>
-                <div class="w-full px-4 lg:w-1/2">
-                    <h3 class="font-semibold text-dark dark:text-white text-2xl mb-4 lg:text-3xl lg:pt-10">Explore My Background</h3>
-                    <p id="social-media" class="font-medium text-base text-secondary dark:text-slate-400 mb-6 lg:text-lg text-justify"></p>
-                    <div class="flex items-center gap-3">
-                        <a href="https://www.instagram.com/mausneg" target="_blank"
-                            class="w-12 h-12 rounded-xl flex justify-center items-center bg-gradient-to-br from-purple-600 to-pink-600 text-white hover:scale-110 hover:shadow-xl hover:shadow-purple-500/50 transition-all duration-300">
-                            <i class="fa-brands fa-instagram text-xl"></i>
-                        </a>
-
-                        <a href="https://www.github.com/mausneg" target="_blank"
-                            class="w-12 h-12 rounded-xl flex justify-center items-center bg-gradient-to-br from-slate-800 to-slate-950 dark:from-slate-700 dark:to-slate-900 text-white hover:scale-110 hover:shadow-xl hover:shadow-slate-500/50 transition-all duration-300">
-                            <i class="fa-brands fa-github text-xl"></i>
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/maulana-surya-negara-5b6a6b270/" target="_blank"
-                            class="w-12 h-12 rounded-xl flex justify-center items-center bg-gradient-to-br from-blue-600 to-blue-800 text-white hover:scale-110 hover:shadow-xl hover:shadow-blue-500/50 transition-all duration-300">
-                            <i class="fa-brands fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="https://steamcommunity.com/id/surya_1933" target="_blank"
-                            class="w-12 h-12 rounded-xl flex justify-center items-center bg-gradient-to-br from-slate-700 to-slate-900 text-white hover:scale-110 hover:shadow-xl hover:shadow-slate-500/50 transition-all duration-300">
-                            <i class="fa-brands fa-steam text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="pt-36 pb-32 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800 transition-colors duration-300">
-        <div class="container">
-            <div class="w-full px-4">
-                <div class="max-w-4xl mx-auto text-center mb-20">
-                    <h4 class="font-bold text-lg text-indigo-600 dark:text-indigo-400 mb-3 uppercase tracking-wider">Portfolio</h4>
-                    <h2 class="font-bold text-dark dark:text-white text-4xl mb-6 lg:text-5xl">Featured Projects</h2>
-                    <p class="font-medium text-lg text-secondary dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
-                        Explore my collection of machine learning and software development projects, showcasing innovative solutions 
-                        and cutting-edge technologies in artificial intelligence and data science.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="max-w-7xl mx-auto px-4">
-                <!-- Real World Projects Section -->
-                <div class="mb-12">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="flex-1 h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent"></div>
-                        <h3 class="text-2xl md:text-3xl font-bold text-dark dark:text-white flex items-center gap-3">
-                            <span class="w-3 h-3 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full animate-pulse"></span>
-                            Real World Projects
-                            <span class="w-3 h-3 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full animate-pulse"></span>
-                        </h3>
-                        <div class="flex-1 h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent"></div>
-                    </div>
-                    <p class="text-center text-secondary dark:text-slate-400 mb-10 max-w-3xl mx-auto">
-                        Production-ready projects deployed in real-world environments with actual users and business impact
-                    </p>
+    <!-- Refined Footer with Status Telemetry -->
+    <footer class="border-t border-slate-200 dark:border-slate-800/80 bg-white dark:bg-[#070a12] py-12 font-mono text-xs text-slate-500 dark:text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                
+                <div class="flex items-center gap-3">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span class="text-slate-700 dark:text-slate-300 font-semibold">msn.sys/ml</span>
+                    <span>·</span>
+                    <span>All core models operational</span>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <!-- Indonesian ID Card Auto-Capture & LLM OCR -->
-                    <div class="group bg-white dark:bg-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden border border-slate-200 dark:border-slate-700">
-                        <div class="relative overflow-hidden bg-slate-100 dark:bg-slate-700">
-                            <img src="dist/img/portfolio/5.png" alt="Indonesian ID Card Auto-Capture & LLM OCR" class="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </div>
-                        <div class="p-8">
-                            <div class="mb-3">
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-emerald-500 to-green-500 text-white text-xs font-bold rounded-full shadow-lg">
-                                    <i class="fas fa-briefcase"></i>
-                                    REAL WORLD PROJECT
-                                </span>
-                            </div>
-                            <div class="flex items-center gap-2 mb-4">
-                                <span class="px-3 py-1 bg-indigo-100 text-indigo-700 text-sm font-semibold rounded-full">Auto-Capture</span>
-                                <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-sm font-semibold rounded-full">YOLOv5</span>
-                                <span class="px-3 py-1 bg-sky-100 text-sky-700 text-sm font-semibold rounded-full">LLM OCR</span>
-                            </div>
-                            <h3 class="font-bold text-2xl text-dark dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
-                                Indonesian ID Card Extractor with Auto-Capture & LLM OCR
-                            </h3>
-                            <p class="text-secondary dark:text-slate-400 mb-6 leading-relaxed">
-                                End-to-end Indonesian ID card (KTP/SIM) processing system with real-time auto-capture using 
-                                YOLOv5nu (TFJS) and LLM-based OCR extraction via Ministral-3 (Ollama). Features hierarchical 
-                                region normalization, structured JSON output, and Docker Compose deployment. Achieves inference 
-                                time of 15-22 seconds in production environment.
-                            </p>
-                            <div class="flex items-center justify-between">
-                                <div class="flex gap-2 text-sm text-slate-500">
-                                    <span class="flex items-center gap-1">
-                                        <i class="fas fa-brain"></i> LLM
-                                    </span>
-                                    <span class="flex items-center gap-1">
-                                        <i class="fab fa-python"></i> FastAPI
-                                    </span>
-                                    <span class="flex items-center gap-1">
-                                        <i class="fab fa-docker"></i> Docker
-                                    </span>
-                                </div>
-                                <a href="detail-id-card-extractor.html"
-                                   class="group inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-indigo-700 hover:to-purple-700 hover:shadow-xl hover:shadow-indigo-500/50 transform hover:scale-105 transition-all duration-300">
-                                    <i class="fas fa-info-circle"></i>
-                                    View Detail
-                                    <i class="fas fa-arrow-right text-xs group-hover:translate-x-0.5 transition-transform duration-300"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ENT Disease Classification with ViT -->
-                    <div class="group bg-white dark:bg-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden border border-slate-200 dark:border-slate-700">
-                        <div class="relative overflow-hidden bg-slate-100 dark:bg-slate-700">
-                            <img src="dist/img/portfolio/7.png" alt="ENT Disease Classification" class="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </div>
-                        <div class="p-8">
-                            <div class="mb-3">
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-emerald-500 to-green-500 text-white text-xs font-bold rounded-full shadow-lg">
-                                    <i class="fas fa-briefcase"></i>
-                                    REAL WORLD PROJECT
-                                </span>
-                            </div>
-                            <div class="flex items-center gap-2 mb-4">
-                                <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 text-sm font-semibold rounded-full">Medical AI</span>
-                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-semibold rounded-full">Vision Transformer</span>
-                                <span class="px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 text-sm font-semibold rounded-full">FastAPI</span>
-                            </div>
-                            <h3 class="font-bold text-2xl text-dark dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
-                                ENT Disease Classification with ViT
-                            </h3>
-                            <p class="text-secondary dark:text-slate-400 mb-6 leading-relaxed">
-                                Automated ENT disease classification system using Vision Transformer (ViT-base) for ear disease 
-                                diagnosis. Achieved ~86% accuracy across 12 disease classes with FastAPI deployment, improving 
-                                10% over previous DenseNet169 implementation.
-                            </p>
-                            <div class="flex items-center justify-between">
-                                <div class="flex gap-2 text-sm text-slate-500 dark:text-slate-400">
-                                    <span class="flex items-center gap-1">
-                                        <i class="fas fa-brain"></i> ViT
-                                    </span>
-                                    <span class="flex items-center gap-1">
-                                        <i class="fas fa-stethoscope"></i> Medical
-                                    </span>
-                                    <span class="flex items-center gap-1">
-                                        <i class="fab fa-docker"></i> Docker
-                                    </span>
-                                </div>
-                                <a href="detail-ent-disease.html"
-                                   class="group inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-indigo-700 hover:to-purple-700 hover:shadow-xl hover:shadow-indigo-500/50 transform hover:scale-105 transition-all duration-300">
-                                    <i class="fas fa-info-circle"></i>
-                                    View Detail
-                                    <i class="fas fa-arrow-right text-xs group-hover:translate-x-0.5 transition-transform duration-300"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- GAN-Based Image Enhancement -->
-                    <div class="group bg-white dark:bg-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden border border-slate-200 dark:border-slate-700">
-                        <div class="relative overflow-hidden bg-slate-100 dark:bg-slate-700">
-                            <img src="dist/img/portfolio/2.png" alt="GAN-Based Image Enhancement" class="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </div>
-                        <div class="p-8">
-                            <div class="mb-3">
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-emerald-500 to-green-500 text-white text-xs font-bold rounded-full shadow-lg">
-                                    <i class="fas fa-briefcase"></i>
-                                    REAL WORLD PROJECT
-                                </span>
-                            </div>
-                            <div class="flex items-center gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-semibold rounded-full">Computer Vision</span>
-                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-semibold rounded-full">GAN</span>
-                                <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 text-sm font-semibold rounded-full">Medical AI</span>
-                            </div>
-                            <h3 class="font-bold text-2xl text-dark dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
-                                Pix2Pix GAN-Based Image Enhancement
-                            </h3>
-                            <p class="text-secondary dark:text-slate-400 mb-6 leading-relaxed">
-                                Advanced image enhancement model using Attention U-Net generator and PatchGAN discriminator 
-                                for endoscopic image quality improvement. Achieved exceptional PSNR of 26 and SSIM of 0.80 
-                                for medical imaging applications.
-                            </p>
-                            <div class="flex items-center justify-between">
-                                <div class="flex gap-2 text-sm text-slate-500 dark:text-slate-400">
-                                    <span class="flex items-center gap-1">
-                                        <i class="fas fa-brain"></i> GAN
-                                    </span>
-                                    <span class="flex items-center gap-1">
-                                        <i class="fab fa-python"></i> TensorFlow
-                                    </span>
-                                    <span class="flex items-center gap-1">
-                                        <i class="fas fa-eye"></i> U-Net
-                                    </span>
-                                </div>
-                                <a href="detail-gan-image-enhancement.html"
-                                   class="group inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-indigo-700 hover:to-purple-700 hover:shadow-xl hover:shadow-indigo-500/50 transform hover:scale-105 transition-all duration-300">
-                                    <i class="fas fa-info-circle"></i>
-                                    View Detail
-                                    <i class="fas fa-arrow-right text-xs group-hover:translate-x-0.5 transition-transform duration-300"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- MLOps Pipeline -->
-                    <div class="group bg-white dark:bg-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden border border-slate-200 dark:border-slate-700">
-                        <div class="relative overflow-hidden bg-slate-100 dark:bg-slate-700">
-                            <img src="dist/img/portfolio/4.png" alt="End-to-End MLOps Pipeline" class="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </div>
-                        <div class="p-8">
-                            <div class="mb-3">
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-emerald-500 to-green-500 text-white text-xs font-bold rounded-full shadow-lg">
-                                    <i class="fas fa-briefcase"></i>
-                                    REAL WORLD PROJECT
-                                </span>
-                            </div>
-                            <div class="flex items-center gap-2 mb-4">
-                                <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm font-semibold rounded-full">MLOps</span>
-                                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-semibold rounded-full">Production</span>
-                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-semibold rounded-full">Pipeline</span>
-                            </div>
-                            <h3 class="font-bold text-2xl text-dark dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
-                                End-to-End MLOps Pipeline
-                            </h3>
-                            <p class="text-secondary dark:text-slate-400 mb-6 leading-relaxed">
-                                Production-ready MLOps pipeline built at PT Hizrian Bersaudara Sukses featuring 
-                                automated orchestration, experiment tracking, and containerized deployment. 
-                                Integrates seamlessly with medical devices for real-time AI inference capabilities.
-                            </p>
-                            <div class="flex items-center justify-between">
-                                <div class="flex gap-2 text-sm text-slate-500 dark:text-slate-400">
-                                    <span class="flex items-center gap-1">
-                                        <i class="fas fa-cogs"></i> Airflow
-                                    </span>
-                                    <span class="flex items-center gap-1">
-                                        <i class="fab fa-docker"></i> Docker
-                                    </span>
-                                    <span class="flex items-center gap-1">
-                                        <i class="fas fa-chart-line"></i> MLflow
-                                    </span>
-                                </div>
-                                <div class="inline-flex items-center gap-2 bg-slate-400 dark:bg-slate-600 text-white px-6 py-3 rounded-full font-semibold cursor-not-allowed">
-                                    <i class="fas fa-lock"></i>
-                                    Private Repository
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="flex items-center gap-6">
+                    <a href="#home" class="hover:text-slate-900 dark:hover:text-white transition-colors">Overview</a>
+                    <a href="#about" class="hover:text-slate-900 dark:hover:text-white transition-colors">Stack</a>
+                    <a href="#portfolio" class="hover:text-slate-900 dark:hover:text-white transition-colors">Systems</a>
+                    <a href="#achievements" class="hover:text-slate-900 dark:hover:text-white transition-colors">Credentials</a>
                 </div>
 
-                <!-- Personal Practice Projects Section -->
-                <div class="mt-20 mb-12">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="flex-1 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
-                        <h3 class="text-2xl md:text-3xl font-bold text-dark dark:text-white flex items-center gap-3">
-                            <span class="w-3 h-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-pulse"></span>
-                            Personal Practice Projects
-                            <span class="w-3 h-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-pulse"></span>
-                        </h3>
-                        <div class="flex-1 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
-                    </div>
-                    <p class="text-center text-secondary dark:text-slate-400 mb-10 max-w-3xl mx-auto">
-                        Learning and experimental projects for skill development and technology exploration
-                    </p>
+                <div>
+                    © 2026 Maulana Surya Negara. Designed for engineering precision.
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <!-- MovieLens Recommendation System -->
-                    <div class="group bg-white dark:bg-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden border border-slate-200 dark:border-slate-700">
-                        <div class="relative overflow-hidden bg-slate-100 dark:bg-slate-700">
-                            <img src="dist/img/portfolio/3.png" alt="MovieLens Recommendation System" class="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </div>
-                        <div class="p-8">
-                            <div class="mb-3">
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full shadow-lg">
-                                    <i class="fas fa-flask"></i>
-                                    PERSONAL PROJECT
-                                </span>
-                            </div>
-                            <div class="flex items-center gap-2 mb-4">
-                                <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 text-sm font-semibold rounded-full">Recommendation</span>
-                                <span class="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 text-sm font-semibold rounded-full">Neural Network</span>
-                            </div>
-                            <h3 class="font-bold text-2xl text-dark dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
-                                MovieLens Recommendation System
-                            </h3>
-                            <p class="text-secondary dark:text-slate-400 mb-6 leading-relaxed">
-                                Advanced movie recommendation engine combining content-based filtering and neural networks. 
-                                Processes millions of ratings with cosine similarity and achieves 0.15 MSE for personalized 
-                                movie suggestions.
-                            </p>
-                            <div class="flex items-center justify-between">
-                                <div class="flex gap-2 text-sm text-slate-500 dark:text-slate-400">
-                                    <span class="flex items-center gap-1">
-                                        <i class="fab fa-python"></i> Python
-                                    </span>
-                                    <span class="flex items-center gap-1">
-                                        <i class="fas fa-network-wired"></i> Neural Network
-                                    </span>
-                                    <span class="flex items-center gap-1">
-                                        <i class="fas fa-database"></i> Big Data
-                                    </span>
-                                </div>
-                                <a href="detail-movielens.html"
-                                   class="group inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-indigo-700 hover:to-purple-700 hover:shadow-xl hover:shadow-indigo-500/50 transform hover:scale-105 transition-all duration-300">
-                                    <i class="fas fa-info-circle"></i>
-                                    View Detail
-                                    <i class="fas fa-arrow-right text-xs group-hover:translate-x-0.5 transition-transform duration-300"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Ollama RAG AI Assistant -->
-                    <div class="group bg-white dark:bg-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden border border-slate-200 dark:border-slate-700">
-                        <div class="relative overflow-hidden bg-slate-100 dark:bg-slate-700">
-                            <img src="dist/img/portfolio/6.png" alt="Ollama RAG AI Assistant" class="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </div>
-                        <div class="p-8">
-                            <div class="mb-3">
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full shadow-lg">
-                                    <i class="fas fa-flask"></i>
-                                    PERSONAL PROJECT
-                                </span>
-                            </div>
-                            <div class="flex items-center gap-2 mb-4">
-                                <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light text-sm font-semibold rounded-full">RAG System</span>
-                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-semibold rounded-full">LangChain</span>
-                                <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 text-sm font-semibold rounded-full">Ollama</span>
-                            </div>
-                            <h3 class="font-bold text-2xl text-dark dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
-                                Ollama RAG AI Assistant
-                            </h3>
-                            <p class="text-secondary dark:text-slate-400 mb-6 leading-relaxed">
-                                Production-ready RAG-powered conversational AI with document processing capabilities. 
-                                Features FAISS vector store, multi-session chat history, ChatGPT-like interface, and 
-                                local LLM inference for complete privacy with zero cloud costs.
-                            </p>
-                            <div class="flex items-center justify-between">
-                                <div class="flex gap-2 text-sm text-slate-500 dark:text-slate-400">
-                                    <span class="flex items-center gap-1">
-                                        <i class="fas fa-database"></i> FAISS
-                                    </span>
-                                    <span class="flex items-center gap-1">
-                                        <i class="fas fa-robot"></i> RAG
-                                    </span>
-                                    <span class="flex items-center gap-1">
-                                        <i class="fab fa-python"></i> Streamlit
-                                    </span>
-                                </div>
-                                <a href="detail-ollama-rag.html"
-                                   class="group inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-indigo-700 hover:to-purple-700 hover:shadow-xl hover:shadow-indigo-500/50 transform hover:scale-105 transition-all duration-300">
-                                    <i class="fas fa-info-circle"></i>
-                                    View Detail
-                                    <i class="fas fa-arrow-right text-xs group-hover:translate-x-0.5 transition-transform duration-300"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- TinyLlama AI Assistant -->
-                    <div class="group bg-white dark:bg-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden border border-slate-200 dark:border-slate-700">
-                        <div class="relative overflow-hidden bg-slate-100 dark:bg-slate-700">
-                            <img src="dist/img/portfolio/1.png" alt="TinyLlama AI Assistant" class="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </div>
-                        <div class="p-8">
-                            <div class="mb-3">
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full shadow-lg">
-                                    <i class="fas fa-flask"></i>
-                                    PERSONAL PROJECT
-                                </span>
-                            </div>
-                            <div class="flex items-center gap-2 mb-4">
-                                <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-semibold rounded-full">AI Assistant</span>
-                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-semibold rounded-full">Fine-Tuning</span>
-                                <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 text-sm font-semibold rounded-full">LLM</span>
-                            </div>
-                            <h3 class="font-bold text-2xl text-dark dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
-                                TinyLlama AI Assistant
-                            </h3>
-                            <p class="text-secondary dark:text-slate-400 mb-6 leading-relaxed">
-                                Advanced conversational AI powered by TinyLlama-1.1B model with fine-tuning capabilities. 
-                                Features FastAPI backend, conversation memory, PEFT support, and Docker deployment with 
-                                8-bit quantization for optimized performance.
-                            </p>
-                            <div class="flex items-center justify-between">
-                                <div class="flex gap-2 text-sm text-slate-500 dark:text-slate-400">
-                                    <span class="flex items-center gap-1">
-                                        <i class="fab fa-python"></i> FastAPI
-                                    </span>
-                                    <span class="flex items-center gap-1">
-                                        <i class="fas fa-robot"></i> LLM
-                                    </span>
-                                    <span class="flex items-center gap-1">
-                                        <i class="fab fa-docker"></i> Docker
-                                    </span>
-                                </div>
-                                <a href="detail-tinyllama.html"
-                                   class="group inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-indigo-700 hover:to-purple-700 hover:shadow-xl hover:shadow-indigo-500/50 transform hover:scale-105 transition-all duration-300">
-                                    <i class="fas fa-info-circle"></i>
-                                    View Detail
-                                    <i class="fas fa-arrow-right text-xs group-hover:translate-x-0.5 transition-transform duration-300"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="achievements" class="pt-36 pb-32 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300">
-        <div class="container">
-            <div class="w-full px-4">
-                <div class="max-w-xl mx-auto text-center mb-16">
-                    <h4 class="font-semibold text-lg text-indigo-400 mb-2 uppercase tracking-wider">Achievements</h4>
-                    <h2 class="font-bold text-white text-3xl mb-4">Professional Certifications</h2>
-                    <p class="font-medium text-md text-slate-400 dark:text-slate-500 text-justify">My professional certifications showcase my commitment to continuous learning and expertise in various domains of technology and data science.</p>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
-                <!-- TensorFlow Developer Certificate -->
-                <div class="bg-slate-700 dark:bg-slate-800 rounded-2xl p-6 text-center hover:bg-slate-600 dark:hover:bg-slate-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-slate-600 dark:border-slate-700">
-                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
-                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgekNBpRHJFaIf-oczr-v0d515ii6zSP9hi3lqtKI2UkP_0wF7751u4kJRCug3EhZOSoyt4utFXgtnMDvTZZg9Z_fNWfDhgo-PIJ0H1RdJFf2N7xpT04Q2kbM2Ogql5xbjT4afjNzgDMjc/s1600/tf_badge_cert_tf_certified_developer.png" alt="TensorFlow" class="w-16 h-16 object-contain">
-                    </div>
-                    <h3 class="text-white font-semibold text-lg mb-2">TensorFlow Developer Certificate</h3>
-                    <p class="text-slate-300 text-sm mb-3">TensorFlow Certificate Program</p>
-                    <p class="text-slate-400 text-xs mb-4">Issued on: Jan 2024 • Expires: Jan 2027</p>
-                    <p class="text-slate-400 text-xs mb-4">ID Kredensial: 93488980</p>
-                    <a target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-xs px-4 py-2 rounded-full hover:scale-105 transition-all duration-300 shadow-lg" href="https://www.credential.net/852b91ac-df11-4b43-b704-80cfce4662f2">
-                        <i class="fas fa-external-link-alt"></i>
-                        SEE CREDENTIAL
-                    </a>
-                </div>
-
-                <!-- Machine Learning Terapan -->
-                <div class="bg-slate-700 dark:bg-slate-800 rounded-2xl p-6 text-center hover:bg-slate-600 dark:hover:bg-slate-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-slate-600 dark:border-slate-700">
-                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFdBNzCwzZYZZLvd6eyst4__z3g4W2EKUaaQ&s" alt="Dicoding" class="w-12 h-12 object-contain">
-                    </div>
-                    <h3 class="text-white font-semibold text-lg mb-2">Machine Learning Terapan</h3>
-                    <p class="text-slate-300 text-sm mb-3">Dicoding Indonesia</p>
-                    <p class="text-slate-400 text-xs mb-4">Issued on: Feb 2024 • Expires: Feb 2027</p>
-                    <p class="text-slate-400 text-xs mb-4">ID Kredensial: TRXYT73K9PVM</p>
-                    <a target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-xs px-4 py-2 rounded-full hover:scale-105 transition-all duration-300 shadow-lg" href="https://www.dicoding.com/certificates/1RXY179K9PVM">
-                        <i class="fas fa-external-link-alt"></i>
-                        SEE CREDENTIAL
-                    </a>
-                </div>
-
-                <!-- DeepLearning.AI TensorFlow Developer Specialization -->
-                <div class="bg-slate-700 dark:bg-slate-800 rounded-2xl p-6 text-center hover:bg-slate-600 dark:hover:bg-slate-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-slate-600 dark:border-slate-700">
-                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
-                        <img src="https://coursera-university-assets.s3.amazonaws.com/b4/5cb90bb92f420b99bf323a0356f451/Icon.png" alt="DeepLearning.AI" class="w-12 h-12 object-contain">
-                    </div>
-                    <h3 class="text-white font-semibold text-lg mb-2">DeepLearning.AI TensorFlow Developer Specialization</h3>
-                    <p class="text-slate-300 text-sm mb-3">DeepLearning.AI</p>
-                    <p class="text-slate-400 text-xs mb-4">Issued on: Oct 2023</p>
-                    <p class="text-slate-400 text-xs mb-4">ID Kredensial: G2AEK2LMNUTE</p>
-                    <a target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-xs px-4 py-2 rounded-full hover:scale-105 transition-all duration-300 shadow-lg" href="https://www.coursera.org/account/accomplishments/specialization/G2AEK2LMNUTE">
-                        <i class="fas fa-external-link-alt"></i>
-                        SEE CREDENTIAL
-                    </a>
-                </div>
-
-                <!-- Google Data Analytics Certificate -->
-                <div class="bg-slate-700 dark:bg-slate-800 rounded-2xl p-6 text-center hover:bg-slate-600 dark:hover:bg-slate-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-slate-600 dark:border-slate-700">
-                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="w-12 h-12 object-contain">
-                    </div>
-                    <h3 class="text-white font-semibold text-lg mb-2">Google Data Analytics Certificate</h3>
-                    <p class="text-slate-300 text-sm mb-3">Coursera</p>
-                    <p class="text-slate-400 text-xs mb-4">Issued on: Oct 2023</p>
-                    <a target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-xs px-4 py-2 rounded-full hover:scale-105 transition-all duration-300 shadow-lg" href="https://www.credly.com/badges/594f50c5-ed51-4c91-add0-14a8addd0314/linked_in_profile">
-                        <i class="fas fa-external-link-alt"></i>
-                        SEE CREDENTIAL
-                    </a>
-                </div>
-
-                <!-- Fine Tuning LLM with Hugging Face -->
-                <div class="bg-slate-700 dark:bg-slate-800 rounded-2xl p-6 text-center hover:bg-slate-600 dark:hover:bg-slate-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-slate-600 dark:border-slate-700">
-                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAAiPkyk9wjoPdFW1WXya1UCFsFNw0ZYBDew&s" alt="Udemy" class="w-12 h-12 object-contain">
-                    </div>
-                    <h3 class="text-white font-semibold text-lg mb-2">Fine Tuning LLM with Hugging Face Transformers for NLP</h3>
-                    <p class="text-slate-300 text-sm mb-3">Udemy</p>
-                    <p class="text-slate-400 text-xs mb-4">Issued on: Sep 2025</p>
-                    <p class="text-slate-400 text-xs mb-4">ID Kredensial: UC-1f428563-3939-4bde-8def-edb1b75ce3f4</p>
-                    <a target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-xs px-4 py-2 rounded-full hover:scale-105 transition-all duration-300 shadow-lg" href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-1bf28563-3939-4bde-8d6f-edb1b75ce3f4.pdf">
-                        <i class="fas fa-external-link-alt"></i>
-                        SEE CREDENTIAL
-                    </a>
-                </div>
-
-                <!-- Deploy ML Model in Production -->
-                <div class="bg-slate-700 dark:bg-slate-800 rounded-2xl p-6 text-center hover:bg-slate-600 dark:hover:bg-slate-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-slate-600 dark:border-slate-700">
-                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAAiPkyk9wjoPdFW1WXya1UCFsFNw0ZYBDew&s" alt="Udemy" class="w-12 h-12 object-contain">
-                    </div>
-                    <h3 class="text-white font-semibold text-lg mb-2">Deploy ML Model in Production with FastAPI and Docker</h3>
-                    <p class="text-slate-300 text-sm mb-3">Udemy</p>
-                    <p class="text-slate-400 text-xs mb-4">Issued on: Jul 2025</p>
-                    <p class="text-slate-400 text-xs mb-4">ID Kredensial: UC-9c92120c-bb57-4f43-84de-84814efd61e3</p>
-                    <a target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-xs px-4 py-2 rounded-full hover:scale-105 transition-all duration-300 shadow-lg" href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-9c92120c-bb57-4f43-84de-84814efd61e3.pdf" >
-                        <i class="fas fa-external-link-alt"></i>
-                        SEE CREDENTIAL
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="bg-slate-900 dark:bg-slate-950 pt-24 pb-12 transition-colors duration-300">
-        <div class="container">
-            <div class="flex flex-wrap">
-                <div class="w-full px-4 mb-12 text-slate-300 dark:text-slate-400 font-medium md:w-1/2">
-                    <h2 class="font-bold text-3xl text-white mb-5 bg-gradient-to-r from-indigo-400 via-purple-400 to-fuchsia-400 bg-clip-text text-transparent">Maulana Surya Negara</h2>
-                    <h3 class="font-semibold text-2xl">Contact Me</h3>
-                    <p>maulanasuryanegara123@gmail.com</p>
-                </div>
-                <div class="w-full px-4 mb-12 text-slate-300 dark:text-slate-400 md:w-1/2">
-                    <h3 class="font-semibold text-xl text-white mb-5">Link</h3>
-                    <ul class="text-slate-300 dark:text-slate-400">
-                        <li>
-                            <a href="#home" class="inline-block text-base hover:text-primary mb-3">Home</a>
-                        </li>
-                        <li>
-                            <a href="#about" class="inline-block text-base hover:text-primary mb-3">About Me</a>
-                        </li>
-                        <li>
-                            <a href="#portfolio" class="inline-block text-base hover:text-primary mb-3">Portfolio</a>
-                        </li>
-                        <li>
-                            <a href="#achievements" class="inline-block text-base hover:text-primary mb-3">Achievements</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="w-full pt-10 border-t border-slate-800 dark:border-slate-700">
-                <div class="flex items-center justify-center mb-5 gap-3">
-                    <a href="https://www.instagram.com/mausneg" target="_blank"
-                        class="w-12 h-12 rounded-xl flex justify-center items-center bg-gradient-to-br from-purple-600 to-pink-600 text-white hover:scale-110 hover:shadow-xl hover:shadow-purple-500/50 transition-all duration-300">
-                        <i class="fa-brands fa-instagram text-xl"></i>
-                    </a>
-
-                    <a href="https://www.github.com/mausneg" target="_blank"
-                        class="w-12 h-12 rounded-xl flex justify-center items-center bg-gradient-to-br from-slate-800 to-slate-950 dark:from-slate-700 dark:to-slate-900 text-white hover:scale-110 hover:shadow-xl hover:shadow-slate-500/50 transition-all duration-300">
-                        <i class="fa-brands fa-github text-xl"></i>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/maulana-surya-negara-5b6a6b270/" target="_blank"
-                        class="w-12 h-12 rounded-xl flex justify-center items-center bg-gradient-to-br from-blue-600 to-blue-800 text-white hover:scale-110 hover:shadow-xl hover:shadow-blue-500/50 transition-all duration-300">
-                        <i class="fa-brands fa-linkedin text-xl"></i>
-                    </a>
-                    <a href="https://steamcommunity.com/id/surya_1933" target="_blank"
-                        class="w-12 h-12 rounded-xl flex justify-center items-center bg-gradient-to-br from-slate-700 to-slate-900 text-white hover:scale-110 hover:shadow-xl hover:shadow-slate-500/50 transition-all duration-300">
-                        <i class="fa-brands fa-steam text-xl"></i>
-                    </a>
-                </div>
-                <p class="font-medium mx-auto text-xs text-slate-500 text-center">
-                    ©2023 Maulana Surya Negara. All rights reserved.
-                </p>
             </div>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- Scripts -->
     <script src="dist/js/script.js"></script>
 </body>
 

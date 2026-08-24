@@ -7,6 +7,7 @@
     font-family: "Plus Jakarta Sans", "Inter", sans-serif;
     @apply antialiased text-slate-800 dark:text-slate-200 bg-slate-50 dark:bg-[#090d16];
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
   }
 }
 
@@ -27,9 +28,9 @@
 
 /* Navbar glass */
 .navbar-fixed {
-  @apply fixed z-50 bg-white/80 dark:bg-[#090d16]/80 border-b border-slate-200/80 dark:border-slate-800/80;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  @apply fixed z-50 bg-white/85 dark:bg-[#090d16]/85 border-b border-slate-200/80 dark:border-slate-800/80;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 /* Smooth active menu link */
@@ -43,12 +44,12 @@
 
 /* Monospace technical tag / badge */
 .tech-pill {
-  @apply inline-flex items-center font-mono text-xs px-2.5 py-1 rounded border transition-colors;
+  @apply inline-flex items-center font-mono text-[11px] sm:text-xs px-2.5 py-1 rounded border transition-colors;
 }
 
 /* Technical Metric Box */
 .metric-box {
-  @apply relative p-4 rounded-xl border border-slate-200/90 dark:border-slate-800/80 bg-white/70 dark:bg-[#0f172a]/70 backdrop-blur-sm shadow-sm;
+  @apply relative p-3.5 sm:p-4 rounded-xl border border-slate-200/90 dark:border-slate-800/80 bg-white/70 dark:bg-[#0f172a]/70 backdrop-blur-sm shadow-sm;
 }
 
 /* Hairline border glow card */
@@ -58,7 +59,7 @@
 
 /* Hamburger button styling */
 .hamburger-line {
-  @apply w-[22px] h-[2px] my-1 block bg-slate-700 dark:bg-slate-300 transition-transform duration-300 ease-in-out;
+  @apply w-[20px] h-[2px] my-1 block bg-slate-700 dark:bg-slate-300 transition-all duration-300 ease-in-out;
 }
 
 .hamburger-active > span:nth-child(1) {
@@ -73,6 +74,15 @@
   @apply -rotate-45 -translate-y-[6px];
 }
 
+/* Hide scrollbar for filter container */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -80,8 +90,8 @@ html {
 
 /* Custom modern scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 
 ::-webkit-scrollbar-track {
@@ -95,4 +105,5 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-slate-400 dark:bg-slate-700;
 }
+
 

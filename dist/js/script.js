@@ -74,7 +74,7 @@ function handleScroll() {
     });
 }
 
-window.addEventListener('scroll', handleScroll);
+window.addEventListener('scroll', handleScroll, { passive: true });
 handleScroll();
 
 // ==========================================
@@ -83,20 +83,35 @@ handleScroll();
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav-menu");
 
+function closeMobileMenu() {
+    if (navMenu && !navMenu.classList.contains("hidden")) {
+        navMenu.classList.add("hidden");
+    }
+    if (hamburger) {
+        hamburger.classList.remove("hamburger-active");
+    }
+}
+
 if (hamburger && navMenu) {
-    hamburger.addEventListener("click", function () {
+    hamburger.addEventListener("click", function (e) {
+        e.stopPropagation();
         hamburger.classList.toggle("hamburger-active");
         navMenu.classList.toggle("hidden");
     });
 
-    // Close mobile menu on clicking any link
-    navLinks.forEach(link => {
+    // Close mobile menu on clicking any link inside
+    const mobileNavLinks = navMenu.querySelectorAll("a, button");
+    mobileNavLinks.forEach(link => {
         link.addEventListener("click", () => {
-            if (!navMenu.classList.contains("hidden")) {
-                navMenu.classList.add("hidden");
-                hamburger.classList.remove("hamburger-active");
-            }
+            closeMobileMenu();
         });
+    });
+
+    // Close when clicking outside of menu
+    document.addEventListener("click", function (e) {
+        if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+            closeMobileMenu();
+        }
     });
 }
 
@@ -113,10 +128,10 @@ filterButtons.forEach(button => {
         // Update active button state
         filterButtons.forEach(btn => {
             btn.classList.remove("bg-slate-900", "text-white", "dark:bg-white", "dark:text-slate-900", "shadow-sm");
-            btn.classList.add("text-slate-600", "dark:text-slate-400", "hover:bg-slate-100", "dark:hover:bg-slate-800");
+            btn.classList.add("text-slate-600", "dark:text-slate-400", "hover:bg-slate-200/60", "dark:hover:bg-slate-800");
         });
 
-        button.classList.remove("text-slate-600", "dark:text-slate-400", "hover:bg-slate-100", "dark:hover:bg-slate-800");
+        button.classList.remove("text-slate-600", "dark:text-slate-400", "hover:bg-slate-200/60", "dark:hover:bg-slate-800");
         button.classList.add("bg-slate-900", "text-white", "dark:bg-white", "dark:text-slate-900", "shadow-sm");
 
         // Filter projects
@@ -142,7 +157,6 @@ function copyEmail(emailAddress = "maulanasuryanegara123@gmail.com") {
     });
 }
 
-// Global expose for inline onclick if needed
 window.copyEmail = copyEmail;
 
 // Copy Credential helper
@@ -160,10 +174,10 @@ function showToast(message) {
     if (!toast) {
         toast = document.createElement("div");
         toast.id = "toast-notification";
-        toast.className = "fixed bottom-6 right-6 z-50 flex items-center gap-3 px-4 py-3 bg-slate-900 text-white dark:bg-white dark:text-slate-900 text-sm font-medium rounded-xl shadow-2xl transition-all duration-300 transform translate-y-10 opacity-0 pointer-events-none";
+        toast.className = "fixed bottom-6 right-6 z-50 flex items-center gap-3 px-4 py-3 bg-slate-900 text-white dark:bg-white dark:text-slate-900 text-xs sm:text-sm font-medium rounded-xl shadow-2xl transition-all duration-300 transform translate-y-10 opacity-0 pointer-events-none max-w-[90vw]";
         toast.innerHTML = `
-            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-            <span id="toast-message"></span>
+            <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+            <span id="toast-message" class="truncate"></span>
         `;
         document.body.appendChild(toast);
     }
@@ -179,6 +193,7 @@ function showToast(message) {
         toast.classList.remove("translate-y-0", "opacity-100");
     }, 2800);
 }
+
 
 
 

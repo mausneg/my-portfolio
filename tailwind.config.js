@@ -30,8 +30,8 @@ module.exports = {
         'cyan-accent': '#06b6d4',
       },
       screens: {
+        'xs': '420px',
         '2xl': '1320px',
-        'sm': { 'max': '640px' }
       },
       boxShadow: {
         'subtle-glow': '0 0 25px -5px rgba(99, 102, 241, 0.15)',
@@ -45,5 +45,6 @@ module.exports = {
     require('@tailwindcss/typography'),
   ],
 }
+
 
 

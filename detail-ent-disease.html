@@ -12,22 +12,22 @@
     <link href="dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body class="bg-[#fafafa] dark:bg-[#090d16] text-slate-800 dark:text-slate-200 transition-colors duration-300 antialiased selection:bg-indigo-500 selection:text-white">
+<body class="bg-[#fafafa] dark:bg-[#090d16] text-slate-800 dark:text-slate-200 transition-colors duration-300 antialiased selection:bg-indigo-500 selection:text-white overflow-x-hidden">
 
     <!-- Subtle Technical Background Grid -->
     <div class="fixed inset-0 pointer-events-none -z-10 bg-grid-pattern-light dark:bg-grid-pattern-dark opacity-60"></div>
     <div class="fixed inset-0 pointer-events-none -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-500/[0.04] dark:from-indigo-500/[0.07] via-transparent to-transparent"></div>
 
     <!-- Top Navigation Header -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-white/80 dark:bg-[#090d16]/80 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80">
+    <header class="fixed top-0 left-0 w-full z-50 bg-white/85 dark:bg-[#090d16]/85 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 
                 <!-- Brand & Breadcrumbs -->
-                <div class="flex items-center gap-3">
+                <div class="flex items-center gap-2 sm:gap-3">
                     <a href="index.html" class="flex items-center gap-2 group">
                         <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block ring-4 ring-emerald-500/20"></span>
-                        <span class="font-mono text-sm font-semibold tracking-tight text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                        <span class="font-mono text-xs sm:text-sm font-semibold tracking-tight text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                             msn.sys<span class="text-indigo-600 dark:text-indigo-400 font-bold">/</span>ml
                         </span>
                     </a>
@@ -36,7 +36,7 @@
                 </div>
 
                 <!-- Actions -->
-                <div class="flex items-center gap-3">
+                <div class="flex items-center gap-2 sm:gap-3">
                     <button id="theme-toggle" type="button" aria-label="Toggle Theme" class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/80 border border-slate-200/60 dark:border-slate-700/60 transition-colors">
                         <svg id="theme-toggle-dark-icon" class="hidden w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
@@ -46,9 +46,10 @@
                         </svg>
                     </button>
                     
-                    <a href="index.html#portfolio" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg font-mono text-xs font-semibold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800/80 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition-colors">
+                    <a href="index.html#portfolio" class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-lg font-mono text-xs font-semibold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800/80 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition-colors">
                         <i class="fas fa-arrow-left text-[10px]"></i>
-                        <span>Back to Systems</span>
+                        <span class="hidden xs:inline">Back to Systems</span>
+                        <span class="xs:hidden">Back</span>
                     </a>
                 </div>
 
@@ -56,14 +57,14 @@
         </div>
     </header>
 
-    <main class="pt-24 pb-20">
+    <main class="pt-20 sm:pt-24 pb-16 sm:pb-20">
         <!-- ===================================================================
              PROJECT HERO SECTION
              =================================================================== -->
-        <section class="py-12 md:py-16">
+        <section class="py-8 sm:py-12 md:py-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="flex flex-wrap items-center gap-3 mb-6">
+                <div class="flex flex-wrap items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
                     <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-mono text-xs font-bold">
                         <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                         MEDICAL PRODUCTION
@@ -73,17 +74,17 @@
                     </span>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
-                    <div class="lg:col-span-8 space-y-4">
-                        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.15]">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start mb-8 sm:mb-12">
+                    <div class="lg:col-span-8 space-y-3 sm:space-y-4">
+                        <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.18] sm:leading-[1.15]">
                             ENT Ear Disease Classification with Vision Transformer
                         </h1>
-                        <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl">
+                        <p class="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl">
                             Clinical-grade deep learning classification system discriminating across 12 subtle ear pathology conditions. Fine-tuned Google Vision Transformer Base (ViT-base-patch16-224), achieving 86% verified test accuracy (+10% gain over DenseNet169) with Attention Rollout explainability.
                         </p>
                     </div>
 
-                    <div class="lg:col-span-4 flex flex-wrap gap-2 lg:justify-end">
+                    <div class="lg:col-span-4 flex flex-wrap gap-1.5 sm:gap-2 lg:justify-end">
                         <span class="tech-pill bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 border-slate-200 dark:border-slate-700">PyTorch</span>
                         <span class="tech-pill bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 border-slate-200 dark:border-slate-700">ViT-Base</span>
                         <span class="tech-pill bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 border-slate-200 dark:border-slate-700">Attention Rollout</span>
@@ -93,22 +94,22 @@
                 </div>
 
                 <!-- Telemetry Metrics Matrix -->
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4">
                     <div class="metric-box">
-                        <div class="font-mono text-2xl font-bold text-emerald-600 dark:text-emerald-400">86.1%</div>
-                        <div class="font-mono text-xs text-slate-500 dark:text-slate-400 mt-1 uppercase">Test Accuracy (+10%)</div>
+                        <div class="font-mono text-lg sm:text-2xl font-bold text-emerald-600 dark:text-emerald-400">86.1%</div>
+                        <div class="font-mono text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 mt-1 uppercase">Accuracy (+10%)</div>
                     </div>
                     <div class="metric-box">
-                        <div class="font-mono text-2xl font-bold text-slate-900 dark:text-white">87.3%</div>
-                        <div class="font-mono text-xs text-slate-500 dark:text-slate-400 mt-1 uppercase">Macro F1 Score</div>
+                        <div class="font-mono text-lg sm:text-2xl font-bold text-slate-900 dark:text-white">87.3%</div>
+                        <div class="font-mono text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 mt-1 uppercase">Macro F1 Score</div>
                     </div>
                     <div class="metric-box">
-                        <div class="font-mono text-2xl font-bold text-indigo-600 dark:text-indigo-400">12 Cls</div>
-                        <div class="font-mono text-xs text-slate-500 dark:text-slate-400 mt-1 uppercase">Pathology Categories</div>
+                        <div class="font-mono text-lg sm:text-2xl font-bold text-indigo-600 dark:text-indigo-400">12 Cls</div>
+                        <div class="font-mono text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 mt-1 uppercase">Pathology Categories</div>
                     </div>
                     <div class="metric-box">
-                        <div class="font-mono text-2xl font-bold text-slate-900 dark:text-white">200ms</div>
-                        <div class="font-mono text-xs text-slate-500 dark:text-slate-400 mt-1 uppercase">CPU Latency/Image</div>
+                        <div class="font-mono text-lg sm:text-2xl font-bold text-slate-900 dark:text-white">200ms</div>
+                        <div class="font-mono text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 mt-1 uppercase">CPU Latency</div>
                     </div>
                 </div>
 
@@ -118,17 +119,17 @@
         <!-- ===================================================================
              MEDIA BANNER & ARCHITECTURE
              =================================================================== -->
-        <section class="py-6">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <section class="py-4 sm:py-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-12">
                 
-                <div class="craft-card p-4 md:p-6 overflow-hidden">
-                    <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-200/80 dark:border-slate-800/80">
-                        <div class="flex items-center gap-2 font-mono text-xs text-slate-500 dark:text-slate-400">
-                            <i class="fas fa-microchip text-indigo-500"></i>
-                            <span>VISION TRANSFORMER (VIT) EMBEDDING & MULTI-HEAD ATTENTION ARCHITECTURE</span>
+                <div class="craft-card p-3 sm:p-5 md:p-6 overflow-hidden">
+                    <div class="flex items-center justify-between pb-3 sm:pb-4 mb-3 sm:mb-4 border-b border-slate-200/80 dark:border-slate-800/80">
+                        <div class="flex items-center gap-2 font-mono text-xs text-slate-500 dark:text-slate-400 truncate">
+                            <i class="fas fa-microchip text-indigo-500 flex-shrink-0"></i>
+                            <span class="truncate">VISION TRANSFORMER (VIT) EMBEDDING & ATTENTION TOPOGRAPHY</span>
                         </div>
                     </div>
-                    <img src="dist/img/projects/ent-disease/vit-architechture.png" alt="ViT Architecture" class="w-full rounded-xl object-contain max-h-[480px] bg-slate-900 p-4">
+                    <img src="dist/img/projects/ent-disease/vit-architechture.png" alt="ViT Architecture" class="w-full rounded-xl object-contain max-h-[480px] bg-slate-900 p-2 sm:p-4">
                 </div>
 
             </div>
@@ -137,48 +138,48 @@
         <!-- ===================================================================
              BENCHMARK & DATA EVALUATION
              =================================================================== -->
-        <section class="py-16 border-t border-slate-200/80 dark:border-slate-800/80 bg-white/50 dark:bg-[#0c101c]/50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <section class="py-12 sm:py-16 border-t border-slate-200/80 dark:border-slate-800/80 bg-white/50 dark:bg-[#0c101c]/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-12">
                 
-                <div class="space-y-3">
+                <div class="space-y-2.5 sm:space-y-3">
                     <div class="font-mono text-xs uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-semibold">
                         Empirical Validation
                     </div>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                    <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
                         ViT vs CNN Baseline Benchmark
                     </h2>
                 </div>
 
-                <!-- Comparative Table -->
+                <!-- Comparative Table (Mobile Scroll Safe) -->
                 <div class="craft-card overflow-hidden">
-                    <div class="p-5 border-b border-slate-200/80 dark:border-slate-800/80 font-mono text-xs font-semibold text-slate-900 dark:text-white">
-                        Performance Comparison on Otoscopy Benchmark (823 Endoscopic Images / 12 Classes)
+                    <div class="p-4 sm:p-5 border-b border-slate-200/80 dark:border-slate-800/80 font-mono text-xs font-semibold text-slate-900 dark:text-white">
+                        Performance Comparison on Otoscopy Benchmark (823 Images / 12 Classes)
                     </div>
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-left font-mono text-xs">
+                    <div class="overflow-x-auto no-scrollbar">
+                        <table class="w-full text-left font-mono text-xs whitespace-nowrap sm:whitespace-normal">
                             <thead class="bg-slate-100/70 dark:bg-slate-800/70 text-slate-600 dark:text-slate-300">
                                 <tr>
-                                    <th class="p-4">Model Architecture</th>
-                                    <th class="p-4">Parameters</th>
-                                    <th class="p-4">Test Accuracy</th>
-                                    <th class="p-4">Macro F1</th>
-                                    <th class="p-4">Explainability Mechanism</th>
+                                    <th class="p-3.5 sm:p-4">Model Architecture</th>
+                                    <th class="p-3.5 sm:p-4">Parameters</th>
+                                    <th class="p-3.5 sm:p-4">Test Accuracy</th>
+                                    <th class="p-3.5 sm:p-4">Macro F1</th>
+                                    <th class="p-3.5 sm:p-4">Explainability Mechanism</th>
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-slate-200/60 dark:divide-slate-800/60 text-slate-700 dark:text-slate-300">
                                 <tr class="bg-indigo-50/50 dark:bg-indigo-950/20">
-                                    <td class="p-4 font-bold text-slate-900 dark:text-white">ViT-Base-Patch16-224 (Fine-Tuned)</td>
-                                    <td class="p-4">86.4M</td>
-                                    <td class="p-4 text-emerald-600 dark:text-emerald-400 font-bold">86.1%</td>
-                                    <td class="p-4 text-emerald-600 dark:text-emerald-400 font-bold">87.3%</td>
-                                    <td class="p-4 text-indigo-600 dark:text-indigo-400 font-semibold">Native Attention Rollout</td>
+                                    <td class="p-3.5 sm:p-4 font-bold text-slate-900 dark:text-white">ViT-Base-Patch16-224 (Fine-Tuned)</td>
+                                    <td class="p-3.5 sm:p-4">86.4M</td>
+                                    <td class="p-3.5 sm:p-4 text-emerald-600 dark:text-emerald-400 font-bold">86.1%</td>
+                                    <td class="p-3.5 sm:p-4 text-emerald-600 dark:text-emerald-400 font-bold">87.3%</td>
+                                    <td class="p-3.5 sm:p-4 text-indigo-600 dark:text-indigo-400 font-semibold">Attention Rollout</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-4 font-semibold">DenseNet169 (Baseline)</td>
-                                    <td class="p-4">14.1M</td>
-                                    <td class="p-4">76.0%</td>
-                                    <td class="p-4">75.8%</td>
-                                    <td class="p-4 text-slate-400">Grad-CAM (Gradient Blurs)</td>
+                                    <td class="p-3.5 sm:p-4 font-semibold">DenseNet169 (Baseline)</td>
+                                    <td class="p-3.5 sm:p-4">14.1M</td>
+                                    <td class="p-3.5 sm:p-4">76.0%</td>
+                                    <td class="p-3.5 sm:p-4">75.8%</td>
+                                    <td class="p-3.5 sm:p-4 text-slate-400">Grad-CAM (CNN)</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -186,13 +187,13 @@
                 </div>
 
                 <!-- Visual Evaluations (Confusion Matrix & Attention Rollout) -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
                     
                     <!-- Attention Rollout -->
-                    <div class="craft-card p-6 space-y-4">
+                    <div class="craft-card p-5 sm:p-6 space-y-3 sm:space-y-4">
                         <div class="flex items-center justify-between font-mono text-xs">
-                            <span class="font-bold text-slate-900 dark:text-white">Attention Rollout Explainability</span>
-                            <span class="text-indigo-500 font-semibold">Self-Attention Matrix</span>
+                            <span class="font-bold text-slate-900 dark:text-white">Attention Rollout</span>
+                            <span class="text-indigo-500 font-semibold">Self-Attention</span>
                         </div>
                         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                             Visualizes where transformer self-attention heads concentrate weight across all 12 encoding layers, verifying that the model focuses on tympanic membrane perforations rather than peripheral reflections.
@@ -201,10 +202,10 @@
                     </div>
 
                     <!-- Confusion Matrix -->
-                    <div class="craft-card p-6 space-y-4">
+                    <div class="craft-card p-5 sm:p-6 space-y-3 sm:space-y-4">
                         <div class="flex items-center justify-between font-mono text-xs">
-                            <span class="font-bold text-slate-900 dark:text-white">12-Class Confusion Matrix</span>
-                            <span class="text-emerald-500 font-semibold">Stratified Test Split</span>
+                            <span class="font-bold text-slate-900 dark:text-white">Confusion Matrix</span>
+                            <span class="text-emerald-500 font-semibold">Stratified Split</span>
                         </div>
                         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                             Demonstrates >90% precision on high-risk categories including OMA Perforation and Otomikosis fungal infections.
@@ -220,32 +221,32 @@
         <!-- ===================================================================
              DEPLOYMENT ARCHITECTURE & SERVING
              =================================================================== -->
-        <section class="py-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <section class="py-12 sm:py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-12">
                 
-                <div class="space-y-3">
+                <div class="space-y-2.5 sm:space-y-3">
                     <div class="font-mono text-xs uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-semibold">
                         Serving Infrastructure
                     </div>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                    <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
                         Containerized Clinical Inference Serving
                     </h2>
                 </div>
 
-                <div class="craft-card p-6 space-y-6">
-                    <img src="dist/img/projects/ent-disease/deployment-architecture.png" alt="Deployment Architecture" class="w-full rounded-xl object-contain max-h-[420px] bg-slate-900 p-4">
+                <div class="craft-card p-5 sm:p-6 space-y-5 sm:space-y-6">
+                    <img src="dist/img/projects/ent-disease/deployment-architecture.png" alt="Deployment Architecture" class="w-full rounded-xl object-contain max-h-[420px] bg-slate-900 p-2 sm:p-4">
                     
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-                        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 font-mono text-xs space-y-1">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 pt-1">
+                        <div class="p-3.5 sm:p-4 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 font-mono text-xs space-y-1">
                             <div class="text-slate-400 uppercase text-[10px]">API Framework</div>
-                            <div class="font-bold text-slate-800 dark:text-slate-200">FastAPI Async Worker</div>
+                            <div class="font-bold text-slate-800 dark:text-slate-200">FastAPI Async</div>
                         </div>
-                        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 font-mono text-xs space-y-1">
-                            <div class="text-slate-400 uppercase text-[10px]">Containerization</div>
-                            <div class="font-bold text-slate-800 dark:text-slate-200">Docker + Healthchecks</div>
+                        <div class="p-3.5 sm:p-4 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 font-mono text-xs space-y-1">
+                            <div class="text-slate-400 uppercase text-[10px]">Container</div>
+                            <div class="font-bold text-slate-800 dark:text-slate-200">Docker Microservice</div>
                         </div>
-                        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 font-mono text-xs space-y-1">
-                            <div class="text-slate-400 uppercase text-[10px]">Response Latency</div>
+                        <div class="p-3.5 sm:p-4 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 font-mono text-xs space-y-1">
+                            <div class="text-slate-400 uppercase text-[10px]">Latency</div>
                             <div class="font-bold text-emerald-600 dark:text-emerald-400">200-300ms (CPU)</div>
                         </div>
                     </div>
@@ -257,9 +258,9 @@
         <!-- ===================================================================
              BOTTOM SYSTEM NAVIGATION
              =================================================================== -->
-        <section class="py-12 border-t border-slate-200/80 dark:border-slate-800/80">
+        <section class="py-8 sm:py-12 border-t border-slate-200/80 dark:border-slate-800/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
                     <a href="detail-id-card-extractor.html" class="font-mono text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center gap-2">
                         <i class="fas fa-arrow-left text-[10px]"></i>
                         <span>Prev: ID Card Extractor</span>
@@ -277,10 +278,10 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-slate-200 dark:border-slate-800/80 bg-white dark:bg-[#070a12] py-8 font-mono text-xs text-slate-500 dark:text-slate-400">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+    <footer class="border-t border-slate-200 dark:border-slate-800/80 bg-white dark:bg-[#070a12] py-8 font-mono text-[11px] sm:text-xs text-slate-500 dark:text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-center sm:text-left">
+            <div class="flex items-center gap-2 justify-center">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0"></span>
                 <span>msn.sys/ml · ENT Vision Transformer</span>
             </div>
             <div>© 2026 Maulana Surya Negara. Clinical AI Systems.</div>

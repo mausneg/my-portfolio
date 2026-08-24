@@ -19,24 +19,24 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="bg-[#fafafa] dark:bg-[#090d16] text-slate-800 dark:text-slate-200 transition-colors duration-300 antialiased selection:bg-indigo-500 selection:text-white">
+<body class="bg-[#fafafa] dark:bg-[#090d16] text-slate-800 dark:text-slate-200 transition-colors duration-300 antialiased selection:bg-indigo-500 selection:text-white overflow-x-hidden">
 
     <!-- Subtle Technical Background Grid & Radial Vignette -->
     <div class="fixed inset-0 pointer-events-none -z-10 bg-grid-pattern-light dark:bg-grid-pattern-dark opacity-60"></div>
     <div class="fixed inset-0 pointer-events-none -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-500/[0.04] dark:from-indigo-500/[0.07] via-transparent to-transparent"></div>
 
     <!-- Navigation Header -->
-    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-200 bg-white/80 dark:bg-[#090d16]/80 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80">
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-200 bg-white/85 dark:bg-[#090d16]/85 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <!-- Brand / Mono Terminal Identifier -->
                 <div class="flex items-center gap-3">
                     <a href="#home" class="flex items-center gap-2 group">
                         <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block ring-4 ring-emerald-500/20"></span>
-                        <span class="font-mono text-sm font-semibold tracking-tight text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                        <span class="font-mono text-xs sm:text-sm font-semibold tracking-tight text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                             msn.sys<span class="text-indigo-600 dark:text-indigo-400 font-bold">/</span>ml
                         </span>
-                        <span class="hidden sm:inline-block font-mono text-[11px] px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800/80 text-slate-500 dark:text-slate-400 border border-slate-200/60 dark:border-slate-700/60">
+                        <span class="hidden xs:inline-block font-mono text-[10px] sm:text-[11px] px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800/80 text-slate-500 dark:text-slate-400 border border-slate-200/60 dark:border-slate-700/60">
                             v2.4
                         </span>
                     </a>
@@ -52,7 +52,7 @@
                 </nav>
 
                 <!-- Actions: Theme Toggle + Contact CTA -->
-                <div class="flex items-center gap-2.5">
+                <div class="flex items-center gap-2 sm:gap-2.5">
                     <!-- Dark/Light Mode Switcher -->
                     <button id="theme-toggle" type="button" aria-label="Toggle Theme"
                         class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/80 border border-slate-200/60 dark:border-slate-700/60 transition-colors">
@@ -87,8 +87,8 @@
             <a href="#portfolio" class="nav-link block">Production Systems</a>
             <a href="#achievements" class="nav-link block">Credentials</a>
             <a href="#contact" class="nav-link block">Contact</a>
-            <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center">
-                <button onclick="copyEmail()" class="w-full inline-flex justify-center items-center gap-2 py-2 rounded-lg text-xs font-mono font-medium text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+            <div class="pt-3 border-t border-slate-200 dark:border-slate-800">
+                <button onclick="copyEmail()" class="w-full inline-flex justify-center items-center gap-2 py-2.5 rounded-lg text-xs font-mono font-medium text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
                     <i class="far fa-copy text-indigo-500"></i> Copy Contact Email
                 </button>
             </div>
@@ -99,127 +99,129 @@
         <!-- ===================================================================
              HERO SECTION: High Precision Engineering Presentation
              =================================================================== -->
-        <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 relative">
+        <section id="home" class="pt-28 pb-16 sm:pt-36 sm:pb-24 md:pt-40 md:pb-28 relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
                     
                     <!-- Left: Core Engineering Positioning -->
-                    <div class="lg:col-span-7 space-y-7">
+                    <div class="lg:col-span-7 space-y-6 sm:space-y-7">
                         
                         <!-- Real-time Status Badge -->
-                        <div class="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-mono font-medium">
-                            <span class="relative flex h-2 w-2">
+                        <div class="inline-flex items-center gap-2 sm:gap-2.5 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-mono font-medium">
+                            <span class="relative flex h-2 w-2 flex-shrink-0">
                                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                                 <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                             </span>
-                            <span>Available for ML & Computer Vision Roles</span>
+                            <span class="truncate">Available for ML & Computer Vision Roles</span>
                         </div>
 
                         <!-- Main Technical Headline -->
-                        <div class="space-y-3">
-                            <div class="font-mono text-xs md:text-sm uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-semibold">
+                        <div class="space-y-2.5 sm:space-y-3">
+                            <div class="font-mono text-xs md:text-sm uppercase tracking-wider sm:tracking-widest text-indigo-600 dark:text-indigo-400 font-semibold">
                                 Maulana Surya Negara · Machine Learning Engineer
                             </div>
-                            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15]">
+                            <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.18] sm:leading-[1.15]">
                                 Engineering High-Performance <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-indigo-400 dark:from-indigo-400 dark:to-indigo-200">Computer Vision & LLM Systems</span> for Production.
                             </h1>
                         </div>
 
                         <!-- Technical Narrative -->
-                        <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl font-normal">
+                        <p class="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl font-normal">
                             Specializing in fine-tuning Vision Transformers (ViT), real-time on-device TFJS inference pipelines, structured LLM information extraction, and automated MLOps infrastructure with Docker and Apache Airflow.
                         </p>
 
                         <!-- Engineering Key Metrics Matrix -->
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-2">
                             <div class="metric-box">
-                                <div class="font-mono text-xl md:text-2xl font-bold text-slate-900 dark:text-white tracking-tight">86%</div>
-                                <div class="font-mono text-[11px] text-slate-500 dark:text-slate-400 mt-1 uppercase">ViT Accuracy (+10%)</div>
+                                <div class="font-mono text-lg sm:text-xl md:text-2xl font-bold text-slate-900 dark:text-white tracking-tight">86%</div>
+                                <div class="font-mono text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 mt-1 uppercase leading-tight">ViT Accuracy (+10%)</div>
                             </div>
                             <div class="metric-box">
-                                <div class="font-mono text-xl md:text-2xl font-bold text-emerald-600 dark:text-emerald-400 tracking-tight">15-22s</div>
-                                <div class="font-mono text-[11px] text-slate-500 dark:text-slate-400 mt-1 uppercase">LLM OCR Pipeline</div>
+                                <div class="font-mono text-lg sm:text-xl md:text-2xl font-bold text-emerald-600 dark:text-emerald-400 tracking-tight">15-22s</div>
+                                <div class="font-mono text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 mt-1 uppercase leading-tight">LLM OCR Pipeline</div>
                             </div>
                             <div class="metric-box">
-                                <div class="font-mono text-xl md:text-2xl font-bold text-slate-900 dark:text-white tracking-tight">200ms</div>
-                                <div class="font-mono text-[11px] text-slate-500 dark:text-slate-400 mt-1 uppercase">CPU Latency/Img</div>
+                                <div class="font-mono text-lg sm:text-xl md:text-2xl font-bold text-slate-900 dark:text-white tracking-tight">200ms</div>
+                                <div class="font-mono text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 mt-1 uppercase leading-tight">CPU Latency/Img</div>
                             </div>
                             <div class="metric-box">
-                                <div class="font-mono text-xl md:text-2xl font-bold text-indigo-600 dark:text-indigo-400 tracking-tight">-80%</div>
-                                <div class="font-mono text-[11px] text-slate-500 dark:text-slate-400 mt-1 uppercase">Manual MLOps Ops</div>
+                                <div class="font-mono text-lg sm:text-xl md:text-2xl font-bold text-indigo-600 dark:text-indigo-400 tracking-tight">-80%</div>
+                                <div class="font-mono text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 mt-1 uppercase leading-tight">Manual MLOps Ops</div>
                             </div>
                         </div>
 
                         <!-- Primary Action Triggers -->
-                        <div class="flex flex-wrap items-center gap-3 pt-2">
-                            <a href="#portfolio" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-semibold hover:bg-indigo-600 dark:hover:bg-indigo-50 hover:shadow-lg transition-all duration-200">
+                        <div class="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2.5 sm:gap-3 pt-2">
+                            <a href="#portfolio" class="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-semibold hover:bg-indigo-600 dark:hover:bg-indigo-50 hover:shadow-lg transition-all duration-200 text-center">
                                 <span>Explore Systems Architecture</span>
                                 <i class="fas fa-arrow-down text-xs"></i>
                             </a>
-                            <button onclick="copyEmail()" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white dark:bg-slate-800/80 text-slate-800 dark:text-slate-200 text-sm font-medium border border-slate-200 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 transition-colors">
-                                <i class="far fa-envelope text-indigo-500"></i>
-                                <span>Get in Touch</span>
-                            </button>
-                            <a href="https://github.com/mausneg" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-white dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:text-indigo-600 dark:hover:text-white transition-colors" title="GitHub Profile">
-                                <i class="fab fa-github text-lg"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/maulana-surya-negara-5b6a6b270/" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-white dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:text-indigo-600 dark:hover:text-white transition-colors" title="LinkedIn Profile">
-                                <i class="fab fa-linkedin text-lg"></i>
-                            </a>
+                            <div class="flex items-center gap-2">
+                                <button onclick="copyEmail()" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-3 rounded-xl bg-white dark:bg-slate-800/80 text-slate-800 dark:text-slate-200 text-sm font-medium border border-slate-200 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 transition-colors">
+                                    <i class="far fa-envelope text-indigo-500"></i>
+                                    <span>Get in Touch</span>
+                                </button>
+                                <a href="https://github.com/mausneg" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-white dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:text-indigo-600 dark:hover:text-white transition-colors" title="GitHub Profile">
+                                    <i class="fab fa-github text-lg"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/maulana-surya-negara-5b6a6b270/" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-white dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:text-indigo-600 dark:hover:text-white transition-colors" title="LinkedIn Profile">
+                                    <i class="fab fa-linkedin text-lg"></i>
+                                </a>
+                            </div>
                         </div>
 
                     </div>
 
                     <!-- Right: Precision Engineer Card & Metadata Frame -->
                     <div class="lg:col-span-5">
-                        <div class="craft-card p-6 md:p-7 relative overflow-hidden group">
+                        <div class="craft-card p-5 sm:p-7 relative overflow-hidden group max-w-md mx-auto lg:max-w-none">
                             
                             <!-- Frame Top Bar: System Terminal Heading -->
-                            <div class="flex items-center justify-between pb-4 mb-5 border-b border-slate-200/80 dark:border-slate-800/80">
+                            <div class="flex items-center justify-between pb-3 sm:pb-4 mb-4 sm:mb-5 border-b border-slate-200/80 dark:border-slate-800/80">
                                 <div class="flex items-center gap-2">
-                                    <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
-                                    <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
-                                    <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
-                                    <span class="font-mono text-xs text-slate-500 dark:text-slate-400 ml-2">node@surya-ml-core</span>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
+                                    <span class="font-mono text-xs text-slate-500 dark:text-slate-400 ml-1 sm:ml-2">node@surya-ml-core</span>
                                 </div>
-                                <span class="font-mono text-[11px] px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border border-indigo-200/50 dark:border-indigo-800/50">
+                                <span class="font-mono text-[10px] sm:text-[11px] px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border border-indigo-200/50 dark:border-indigo-800/50">
                                     GPU RUNTIME
                                 </span>
                             </div>
 
                             <!-- Avatar & Core Info -->
-                            <div class="flex flex-col sm:flex-row items-center gap-6 mb-6">
-                                <div class="relative w-32 h-32 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 border-2 border-slate-200/80 dark:border-slate-700/80 flex-shrink-0">
+                            <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mb-5 sm:mb-6">
+                                <div class="relative w-24 h-24 sm:w-32 sm:h-32 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 border-2 border-slate-200/80 dark:border-slate-700/80 flex-shrink-0">
                                     <img src="dist/img/mausneg.png" alt="Maulana Surya Negara" class="w-full h-full object-cover object-top">
                                 </div>
-                                <div class="space-y-1.5 text-center sm:text-left">
-                                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Maulana Surya Negara</h3>
+                                <div class="space-y-1 text-center sm:text-left">
+                                    <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">Maulana Surya Negara</h3>
                                     <p class="font-mono text-xs text-indigo-600 dark:text-indigo-400">TensorFlow Certified Developer</p>
                                     <p class="text-xs text-slate-500 dark:text-slate-400 flex items-center justify-center sm:justify-start gap-1.5 pt-1">
                                         <i class="fas fa-map-marker-alt text-slate-400"></i>
-                                        <span>Indonesia (UTC+7) · Remote Ready</span>
+                                        <span>Indonesia (UTC+7) · Remote</span>
                                     </p>
                                 </div>
                             </div>
 
                             <!-- Terminal Metadata Parameters -->
-                            <div class="rounded-xl bg-slate-50 dark:bg-[#070a12] p-4 border border-slate-200/70 dark:border-slate-800/70 font-mono text-xs space-y-2">
-                                <div class="flex justify-between text-slate-600 dark:text-slate-400">
-                                    <span class="text-slate-400 dark:text-slate-500">&gt; primary_focus:</span>
-                                    <span class="text-slate-800 dark:text-slate-200 font-semibold">["ViT", "LLM-OCR", "MLOps"]</span>
+                            <div class="rounded-xl bg-slate-50 dark:bg-[#070a12] p-3.5 sm:p-4 border border-slate-200/70 dark:border-slate-800/70 font-mono text-xs space-y-2">
+                                <div class="flex justify-between text-slate-600 dark:text-slate-400 gap-2">
+                                    <span class="text-slate-400 dark:text-slate-500 flex-shrink-0">&gt; primary:</span>
+                                    <span class="text-slate-800 dark:text-slate-200 font-semibold truncate">["ViT", "LLM-OCR", "MLOps"]</span>
                                 </div>
-                                <div class="flex justify-between text-slate-600 dark:text-slate-400">
-                                    <span class="text-slate-400 dark:text-slate-500">&gt; core_runtime:</span>
-                                    <span class="text-slate-800 dark:text-slate-200">PyTorch · TFJS · Ollama</span>
+                                <div class="flex justify-between text-slate-600 dark:text-slate-400 gap-2">
+                                    <span class="text-slate-400 dark:text-slate-500 flex-shrink-0">&gt; runtime:</span>
+                                    <span class="text-slate-800 dark:text-slate-200 truncate">PyTorch · TFJS · Ollama</span>
                                 </div>
-                                <div class="flex justify-between text-slate-600 dark:text-slate-400">
-                                    <span class="text-slate-400 dark:text-slate-500">&gt; deployment:</span>
-                                    <span class="text-slate-800 dark:text-slate-200">Docker · FastAPI · Airflow</span>
+                                <div class="flex justify-between text-slate-600 dark:text-slate-400 gap-2">
+                                    <span class="text-slate-400 dark:text-slate-500 flex-shrink-0">&gt; ops:</span>
+                                    <span class="text-slate-800 dark:text-slate-200 truncate">Docker · FastAPI · Airflow</span>
                                 </div>
-                                <div class="flex justify-between text-slate-600 dark:text-slate-400">
-                                    <span class="text-slate-400 dark:text-slate-500">&gt; status:</span>
-                                    <span class="text-emerald-500 dark:text-emerald-400 font-bold">READY_FOR_DEPLOYMENT</span>
+                                <div class="flex justify-between text-slate-600 dark:text-slate-400 gap-2">
+                                    <span class="text-slate-400 dark:text-slate-500 flex-shrink-0">&gt; status:</span>
+                                    <span class="text-emerald-500 dark:text-emerald-400 font-bold">READY_TO_DEPLOY</span>
                                 </div>
                             </div>
 
@@ -234,108 +236,108 @@
         <!-- ===================================================================
              ABOUT & CORE ARCHITECTURAL STACK SECTION
              =================================================================== -->
-        <section id="about" class="py-24 border-t border-slate-200/80 dark:border-slate-800/80 bg-white/50 dark:bg-[#0c101c]/50">
+        <section id="about" class="py-16 sm:py-24 border-t border-slate-200/80 dark:border-slate-800/80 bg-white/50 dark:bg-[#0c101c]/50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <!-- Section Header -->
-                <div class="max-w-3xl mb-16 space-y-3">
+                <div class="max-w-3xl mb-12 sm:mb-16 space-y-2.5 sm:space-y-3">
                     <div class="font-mono text-xs uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-semibold">
                         01 / Engineering Competency
                     </div>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
                         Architecting Scalable Machine Learning Pipelines.
                     </h2>
-                    <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+                    <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
                         I engineer end-to-end ML solutions from deep neural network architecture design and fine-tuning to high-throughput inference APIs and automated CI/CD MLOps pipelines.
                     </p>
                 </div>
 
                 <!-- Structured 3-Column Architectural Stack Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 mb-12 sm:mb-16">
                     
                     <!-- Column 1: Vision & Deep Learning Models -->
-                    <div class="craft-card p-6 space-y-5">
+                    <div class="craft-card p-5 sm:p-6 space-y-4 sm:space-y-5">
                         <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-lg">
                             <i class="fas fa-brain"></i>
                         </div>
                         <div>
-                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Computer Vision & LLMs</h3>
+                            <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">Computer Vision & LLMs</h3>
                             <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Foundational deep learning & transformer architectures</p>
                         </div>
-                        <div class="space-y-2 pt-2">
-                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
-                                <span class="font-semibold text-slate-800 dark:text-slate-200">Vision Transformers (ViT)</span>
-                                <span class="text-slate-400 text-[11px]">Base / Attention</span>
+                        <div class="space-y-2 pt-1">
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 gap-2">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200 truncate">Vision Transformers (ViT)</span>
+                                <span class="text-slate-400 text-[10px] sm:text-[11px] flex-shrink-0">Base / Attention</span>
                             </div>
-                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
-                                <span class="font-semibold text-slate-800 dark:text-slate-200">YOLOv5nu / TFJS</span>
-                                <span class="text-slate-400 text-[11px]">Edge Auto-Detect</span>
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 gap-2">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200 truncate">YOLOv5nu / TFJS</span>
+                                <span class="text-slate-400 text-[10px] sm:text-[11px] flex-shrink-0">Edge Auto-Detect</span>
                             </div>
-                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
-                                <span class="font-semibold text-slate-800 dark:text-slate-200">Attention U-Net & Pix2Pix</span>
-                                <span class="text-slate-400 text-[11px]">GAN Enhancement</span>
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 gap-2">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200 truncate">Attention U-Net & Pix2Pix</span>
+                                <span class="text-slate-400 text-[10px] sm:text-[11px] flex-shrink-0">GAN Enhancement</span>
                             </div>
-                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
-                                <span class="font-semibold text-slate-800 dark:text-slate-200">Ministral-3 / TinyLlama</span>
-                                <span class="text-slate-400 text-[11px]">Ollama / PEFT 8-bit</span>
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 gap-2">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200 truncate">Ministral-3 / TinyLlama</span>
+                                <span class="text-slate-400 text-[10px] sm:text-[11px] flex-shrink-0">Ollama / PEFT 8-bit</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Column 2: MLOps & Production Infrastructure -->
-                    <div class="craft-card p-6 space-y-5">
+                    <div class="craft-card p-5 sm:p-6 space-y-4 sm:space-y-5">
                         <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-lg">
                             <i class="fas fa-server"></i>
                         </div>
                         <div>
-                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">MLOps & Infrastructure</h3>
+                            <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">MLOps & Infrastructure</h3>
                             <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Orchestration, tracking, containerization & deployment</p>
                         </div>
-                        <div class="space-y-2 pt-2">
-                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
-                                <span class="font-semibold text-slate-800 dark:text-slate-200">Docker & Compose</span>
-                                <span class="text-slate-400 text-[11px]">Microservices</span>
+                        <div class="space-y-2 pt-1">
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 gap-2">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200 truncate">Docker & Compose</span>
+                                <span class="text-slate-400 text-[10px] sm:text-[11px] flex-shrink-0">Microservices</span>
                             </div>
-                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
-                                <span class="font-semibold text-slate-800 dark:text-slate-200">Apache Airflow</span>
-                                <span class="text-slate-400 text-[11px]">DAG Workflows</span>
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 gap-2">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200 truncate">Apache Airflow</span>
+                                <span class="text-slate-400 text-[10px] sm:text-[11px] flex-shrink-0">DAG Workflows</span>
                             </div>
-                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
-                                <span class="font-semibold text-slate-800 dark:text-slate-200">MLflow Tracking</span>
-                                <span class="text-slate-400 text-[11px]">Experiment Registry</span>
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 gap-2">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200 truncate">MLflow Tracking</span>
+                                <span class="text-slate-400 text-[10px] sm:text-[11px] flex-shrink-0">Experiment Registry</span>
                             </div>
-                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
-                                <span class="font-semibold text-slate-800 dark:text-slate-200">FastAPI & Pydantic</span>
-                                <span class="text-slate-400 text-[11px]">Async Validation</span>
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 gap-2">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200 truncate">FastAPI & Pydantic</span>
+                                <span class="text-slate-400 text-[10px] sm:text-[11px] flex-shrink-0">Async Validation</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Column 3: Frameworks, Tooling & Vector Stores -->
-                    <div class="craft-card p-6 space-y-5">
+                    <div class="craft-card p-5 sm:p-6 space-y-4 sm:space-y-5 md:col-span-2 lg:col-span-1">
                         <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-600 dark:text-cyan-400 flex items-center justify-center text-lg">
                             <i class="fas fa-microchip"></i>
                         </div>
                         <div>
-                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Frameworks & Retrieval</h3>
+                            <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">Frameworks & Retrieval</h3>
                             <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Core programming ecosystems, vector DBs & tooling</p>
                         </div>
-                        <div class="space-y-2 pt-2">
-                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
-                                <span class="font-semibold text-slate-800 dark:text-slate-200">PyTorch & TensorFlow</span>
-                                <span class="text-slate-400 text-[11px]">Primary Core</span>
+                        <div class="space-y-2 pt-1">
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 gap-2">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200 truncate">PyTorch & TensorFlow</span>
+                                <span class="text-slate-400 text-[10px] sm:text-[11px] flex-shrink-0">Primary Core</span>
                             </div>
-                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
-                                <span class="font-semibold text-slate-800 dark:text-slate-200">OpenCV & TFJS</span>
-                                <span class="text-slate-400 text-[11px]">Image Processing</span>
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 gap-2">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200 truncate">OpenCV & TFJS</span>
+                                <span class="text-slate-400 text-[10px] sm:text-[11px] flex-shrink-0">Image Processing</span>
                             </div>
-                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
-                                <span class="font-semibold text-slate-800 dark:text-slate-200">FAISS & LangChain</span>
-                                <span class="text-slate-400 text-[11px]">Vector RAG</span>
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 gap-2">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200 truncate">FAISS & LangChain</span>
+                                <span class="text-slate-400 text-[10px] sm:text-[11px] flex-shrink-0">Vector RAG</span>
                             </div>
-                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
-                                <span class="font-semibold text-slate-800 dark:text-slate-200">Hugging Face Transformers</span>
-                                <span class="text-slate-400 text-[11px]">PEFT / LoRA</span>
+                            <div class="flex items-center justify-between text-xs font-mono p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 gap-2">
+                                <span class="font-semibold text-slate-800 dark:text-slate-200 truncate">Hugging Face Transformers</span>
+                                <span class="text-slate-400 text-[10px] sm:text-[11px] flex-shrink-0">PEFT / LoRA</span>
                             </div>
                         </div>
                     </div>
@@ -343,20 +345,20 @@
                 </div>
 
                 <!-- Verified Impact Narrative Box -->
-                <div class="craft-card p-7 md:p-9 border-l-4 border-l-indigo-500">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                <div class="craft-card p-5 sm:p-7 md:p-9 border-l-4 border-l-indigo-500">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-center">
                         <div class="lg:col-span-8 space-y-2">
-                            <h4 class="text-base font-bold text-slate-900 dark:text-white font-mono uppercase tracking-wide">
+                            <h4 class="text-sm sm:text-base font-bold text-slate-900 dark:text-white font-mono uppercase tracking-wide">
                                 Production Track Record
                             </h4>
-                            <p class="text-sm md:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                            <p class="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
                                 At PT Hizrian Bersaudara Sukses, engineered automated MLOps pipelines cutting manual operational workload by ~80% and successfully deployed medical-grade classification models serving sub-300ms inference on CPU with 86% verified accuracy.
                             </p>
                         </div>
-                        <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-end">
+                        <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-2.5 sm:gap-3 justify-end">
                             <div class="font-mono text-xs px-3.5 py-2.5 rounded-lg bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-between">
                                 <span>Certification:</span>
-                                <span class="font-bold text-indigo-600 dark:text-indigo-400">TensorFlow Dev #93488980</span>
+                                <span class="font-bold text-indigo-600 dark:text-indigo-400">TF Dev #93488980</span>
                             </div>
                             <div class="font-mono text-xs px-3.5 py-2.5 rounded-lg bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-between">
                                 <span>Location:</span>
@@ -372,101 +374,101 @@
         <!-- ===================================================================
              PRODUCTION SYSTEMS & PROJECTS SHOWCASE
              =================================================================== -->
-        <section id="portfolio" class="py-24 border-t border-slate-200/80 dark:border-slate-800/80">
+        <section id="portfolio" class="py-16 sm:py-24 border-t border-slate-200/80 dark:border-slate-800/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <!-- Section Header with Filter Controls -->
-                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
-                    <div class="space-y-3">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-5 sm:gap-6 mb-10 sm:mb-14">
+                    <div class="space-y-2.5 sm:space-y-3">
                         <div class="font-mono text-xs uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-semibold">
                             02 / Systems Portfolio
                         </div>
-                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
                             Engineered Production & Research Systems.
                         </h2>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm md:text-base max-w-2xl">
+                        <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm md:text-base max-w-2xl">
                             Real-world deployed machine learning systems, deep neural network research, and conversational retrieval architectures.
                         </p>
                     </div>
 
-                    <!-- Interactive Filter Controls -->
-                    <div class="flex items-center gap-1.5 p-1 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 self-start md:self-auto font-mono text-xs">
-                        <button data-filter="all" class="px-3.5 py-1.5 rounded-lg font-medium bg-slate-900 text-white dark:bg-white dark:text-slate-900 shadow-sm transition-all">
+                    <!-- Interactive Filter Controls (Mobile Scrollable) -->
+                    <div class="flex items-center gap-1.5 p-1 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 self-start md:self-auto font-mono text-xs overflow-x-auto max-w-full no-scrollbar">
+                        <button data-filter="all" class="px-3 sm:px-3.5 py-1.5 rounded-lg font-medium bg-slate-900 text-white dark:bg-white dark:text-slate-900 shadow-sm transition-all flex-shrink-0">
                             All Systems (6)
                         </button>
-                        <button data-filter="production" class="px-3.5 py-1.5 rounded-lg font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-200/60 dark:hover:bg-slate-800 transition-all">
+                        <button data-filter="production" class="px-3 sm:px-3.5 py-1.5 rounded-lg font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-200/60 dark:hover:bg-slate-800 transition-all flex-shrink-0">
                             Production (4)
                         </button>
-                        <button data-filter="research" class="px-3.5 py-1.5 rounded-lg font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-200/60 dark:hover:bg-slate-800 transition-all">
+                        <button data-filter="research" class="px-3 sm:px-3.5 py-1.5 rounded-lg font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-200/60 dark:hover:bg-slate-800 transition-all flex-shrink-0">
                             R&D (2)
                         </button>
                     </div>
                 </div>
 
                 <!-- Projects Grid -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
                     
                     <!-- PROJECT 1: Indonesian ID Card Extractor with Auto-Capture & LLM OCR -->
                     <div data-category="production" class="craft-card flex flex-col justify-between overflow-hidden group">
                         <div>
                             <!-- Card Header: Image & Status -->
-                            <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200/80 dark:border-slate-800/80">
-                                <img src="dist/img/portfolio/5.png" alt="Indonesian ID Card Auto-Capture & LLM OCR" class="max-h-52 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
-                                <div class="absolute top-4 left-4">
-                                    <span class="inline-flex items-center gap-1.5 font-mono text-[11px] px-2.5 py-1 rounded bg-emerald-500/90 text-white font-semibold backdrop-blur-md shadow-sm">
+                            <div class="relative bg-slate-950 h-48 sm:h-56 flex items-center justify-center overflow-hidden border-b border-slate-200/80 dark:border-slate-800/80">
+                                <img src="dist/img/portfolio/5.png" alt="Indonesian ID Card Auto-Capture & LLM OCR" class="max-h-44 sm:max-h-52 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute top-3 left-3 sm:top-4 sm:left-4">
+                                    <span class="inline-flex items-center gap-1.5 font-mono text-[10px] sm:text-[11px] px-2.5 py-1 rounded bg-emerald-500/90 text-white font-semibold backdrop-blur-md shadow-sm">
                                         <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
                                         PRODUCTION DEPLOYED
                                     </span>
                                 </div>
-                                <div class="absolute top-4 right-4">
-                                    <span class="font-mono text-[11px] px-2.5 py-1 rounded bg-black/60 text-slate-200 border border-white/10 backdrop-blur-md">
+                                <div class="absolute top-3 right-3 sm:top-4 sm:right-4">
+                                    <span class="font-mono text-[10px] sm:text-[11px] px-2.5 py-1 rounded bg-black/60 text-slate-200 border border-white/10 backdrop-blur-md">
                                         15-22s End-to-End
                                     </span>
                                 </div>
                             </div>
 
                             <!-- Card Body -->
-                            <div class="p-6 md:p-7 space-y-4">
+                            <div class="p-5 sm:p-7 space-y-3.5 sm:space-y-4">
                                 <!-- Architecture Chain Flow -->
-                                <div class="font-mono text-xs text-indigo-600 dark:text-indigo-400 flex flex-wrap items-center gap-1.5 font-medium">
+                                <div class="font-mono text-[11px] sm:text-xs text-indigo-600 dark:text-indigo-400 flex flex-wrap items-center gap-1 sm:gap-1.5 font-medium">
                                     <span>YOLOv5nu (TFJS)</span>
                                     <span>→</span>
                                     <span>FastAPI</span>
                                     <span>→</span>
-                                    <span>Ministral-3 (Ollama)</span>
+                                    <span>Ministral-3</span>
                                     <span>→</span>
                                     <span>Pydantic</span>
                                 </div>
 
-                                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                                     Indonesian ID Card Extractor with Auto-Capture & LLM OCR
                                 </h3>
 
-                                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                                     End-to-end KTP/SIM document processing system combining an on-device TFJS detector for real-time edge capture with a GPU-backed Ministral-3 LLM for structured OCR extraction. Replaced fragile contour cropping with 100% structured JSON normalization.
                                 </p>
 
                                 <!-- Technical Spec Metric Box -->
-                                <div class="grid grid-cols-3 gap-2 pt-2">
-                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
-                                        <div class="text-[10px] text-slate-400 uppercase">Input Res</div>
-                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">160px YOLO</div>
+                                <div class="grid grid-cols-3 gap-2 pt-1">
+                                    <div class="p-2 sm:p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[9px] sm:text-[10px] text-slate-400 uppercase">Input Res</div>
+                                        <div class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 mt-0.5">160px YOLO</div>
                                     </div>
-                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
-                                        <div class="text-[10px] text-slate-400 uppercase">Detection mAP</div>
-                                        <div class="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-0.5">99.5% @0.5</div>
+                                    <div class="p-2 sm:p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[9px] sm:text-[10px] text-slate-400 uppercase">mAP@0.5</div>
+                                        <div class="text-xs sm:text-sm font-bold text-emerald-600 dark:text-emerald-400 mt-0.5">99.5%</div>
                                     </div>
-                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
-                                        <div class="text-[10px] text-slate-400 uppercase">Deployment</div>
-                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">Docker GPU</div>
+                                    <div class="p-2 sm:p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[9px] sm:text-[10px] text-slate-400 uppercase">Deployment</div>
+                                        <div class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 mt-0.5">Docker GPU</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Card Footer Links -->
-                        <div class="p-6 md:p-7 pt-0 flex items-center justify-between border-t border-slate-100 dark:border-slate-800/60 mt-4">
-                            <div class="flex gap-2">
+                        <div class="p-5 sm:p-7 pt-0 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 dark:border-slate-800/60 mt-3 sm:mt-4">
+                            <div class="flex flex-wrap gap-1.5 sm:gap-2">
                                 <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">YOLOv5</span>
                                 <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">Ollama</span>
                                 <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">TFJS</span>
@@ -482,60 +484,60 @@
                     <div data-category="production" class="craft-card flex flex-col justify-between overflow-hidden group">
                         <div>
                             <!-- Card Header -->
-                            <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200/80 dark:border-slate-800/80">
-                                <img src="dist/img/portfolio/7.png" alt="ENT Disease Classification ViT" class="max-h-52 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
-                                <div class="absolute top-4 left-4">
-                                    <span class="inline-flex items-center gap-1.5 font-mono text-[11px] px-2.5 py-1 rounded bg-emerald-500/90 text-white font-semibold backdrop-blur-md shadow-sm">
+                            <div class="relative bg-slate-950 h-48 sm:h-56 flex items-center justify-center overflow-hidden border-b border-slate-200/80 dark:border-slate-800/80">
+                                <img src="dist/img/portfolio/7.png" alt="ENT Disease Classification ViT" class="max-h-44 sm:max-h-52 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute top-3 left-3 sm:top-4 sm:left-4">
+                                    <span class="inline-flex items-center gap-1.5 font-mono text-[10px] sm:text-[11px] px-2.5 py-1 rounded bg-emerald-500/90 text-white font-semibold backdrop-blur-md shadow-sm">
                                         <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
                                         MEDICAL PRODUCTION
                                     </span>
                                 </div>
-                                <div class="absolute top-4 right-4">
-                                    <span class="font-mono text-[11px] px-2.5 py-1 rounded bg-black/60 text-slate-200 border border-white/10 backdrop-blur-md">
+                                <div class="absolute top-3 right-3 sm:top-4 sm:right-4">
+                                    <span class="font-mono text-[10px] sm:text-[11px] px-2.5 py-1 rounded bg-black/60 text-slate-200 border border-white/10 backdrop-blur-md">
                                         200-300ms CPU
                                     </span>
                                 </div>
                             </div>
 
                             <!-- Card Body -->
-                            <div class="p-6 md:p-7 space-y-4">
-                                <div class="font-mono text-xs text-indigo-600 dark:text-indigo-400 flex flex-wrap items-center gap-1.5 font-medium">
+                            <div class="p-5 sm:p-7 space-y-3.5 sm:space-y-4">
+                                <div class="font-mono text-[11px] sm:text-xs text-indigo-600 dark:text-indigo-400 flex flex-wrap items-center gap-1 sm:gap-1.5 font-medium">
                                     <span>ViT-Base</span>
                                     <span>→</span>
                                     <span>Attention Rollout</span>
                                     <span>→</span>
                                     <span>FastAPI</span>
                                     <span>→</span>
-                                    <span>Docker Container</span>
+                                    <span>Docker</span>
                                 </div>
 
-                                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                                     ENT Disease Classification with Vision Transformer (ViT)
                                 </h3>
 
-                                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                                     Clinical-grade classification system classifying 12 distinct ear pathology conditions. Fine-tuned Google Vision Transformer Base, outperforming baseline DenseNet169 by +10% with attention rollout interpretability for otolaryngologists.
                                 </p>
 
-                                <div class="grid grid-cols-3 gap-2 pt-2">
-                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
-                                        <div class="text-[10px] text-slate-400 uppercase">Test Accuracy</div>
-                                        <div class="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-0.5">86.0% (+10%)</div>
+                                <div class="grid grid-cols-3 gap-2 pt-1">
+                                    <div class="p-2 sm:p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[9px] sm:text-[10px] text-slate-400 uppercase">Test Accuracy</div>
+                                        <div class="text-xs sm:text-sm font-bold text-emerald-600 dark:text-emerald-400 mt-0.5">86.0% (+10%)</div>
                                     </div>
-                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
-                                        <div class="text-[10px] text-slate-400 uppercase">Macro F1</div>
-                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">0.87 / 12 cls</div>
+                                    <div class="p-2 sm:p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[9px] sm:text-[10px] text-slate-400 uppercase">Macro F1</div>
+                                        <div class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 mt-0.5">0.87 / 12 cls</div>
                                     </div>
-                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
-                                        <div class="text-[10px] text-slate-400 uppercase">Inference</div>
-                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">CPU Optimized</div>
+                                    <div class="p-2 sm:p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[9px] sm:text-[10px] text-slate-400 uppercase">Inference</div>
+                                        <div class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 mt-0.5">CPU Serving</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="p-6 md:p-7 pt-0 flex items-center justify-between border-t border-slate-100 dark:border-slate-800/60 mt-4">
-                            <div class="flex gap-2">
+                        <div class="p-5 sm:p-7 pt-0 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 dark:border-slate-800/60 mt-3 sm:mt-4">
+                            <div class="flex flex-wrap gap-1.5 sm:gap-2">
                                 <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">PyTorch</span>
                                 <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">ViT</span>
                                 <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">FastAPI</span>
@@ -551,58 +553,58 @@
                     <div data-category="production" class="craft-card flex flex-col justify-between overflow-hidden group">
                         <div>
                             <!-- Card Header -->
-                            <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200/80 dark:border-slate-800/80">
-                                <img src="dist/img/portfolio/2.png" alt="GAN Endoscopic Image Enhancement" class="max-h-52 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
-                                <div class="absolute top-4 left-4">
-                                    <span class="inline-flex items-center gap-1.5 font-mono text-[11px] px-2.5 py-1 rounded bg-emerald-500/90 text-white font-semibold backdrop-blur-md shadow-sm">
+                            <div class="relative bg-slate-950 h-48 sm:h-56 flex items-center justify-center overflow-hidden border-b border-slate-200/80 dark:border-slate-800/80">
+                                <img src="dist/img/portfolio/2.png" alt="GAN Endoscopic Image Enhancement" class="max-h-44 sm:max-h-52 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute top-3 left-3 sm:top-4 sm:left-4">
+                                    <span class="inline-flex items-center gap-1.5 font-mono text-[10px] sm:text-[11px] px-2.5 py-1 rounded bg-emerald-500/90 text-white font-semibold backdrop-blur-md shadow-sm">
                                         <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
                                         MEDICAL VISION
                                     </span>
                                 </div>
-                                <div class="absolute top-4 right-4">
-                                    <span class="font-mono text-[11px] px-2.5 py-1 rounded bg-black/60 text-slate-200 border border-white/10 backdrop-blur-md">
+                                <div class="absolute top-3 right-3 sm:top-4 sm:right-4">
+                                    <span class="font-mono text-[10px] sm:text-[11px] px-2.5 py-1 rounded bg-black/60 text-slate-200 border border-white/10 backdrop-blur-md">
                                         PSNR 26dB · SSIM 0.80
                                     </span>
                                 </div>
                             </div>
 
                             <!-- Card Body -->
-                            <div class="p-6 md:p-7 space-y-4">
-                                <div class="font-mono text-xs text-indigo-600 dark:text-indigo-400 flex flex-wrap items-center gap-1.5 font-medium">
+                            <div class="p-5 sm:p-7 space-y-3.5 sm:space-y-4">
+                                <div class="font-mono text-[11px] sm:text-xs text-indigo-600 dark:text-indigo-400 flex flex-wrap items-center gap-1 sm:gap-1.5 font-medium">
                                     <span>Attention U-Net</span>
                                     <span>→</span>
-                                    <span>PatchGAN Discriminator</span>
+                                    <span>PatchGAN</span>
                                     <span>→</span>
                                     <span>L1 + Adv Loss</span>
                                 </div>
 
-                                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                                     Pix2Pix GAN Endoscopic Image Enhancement
                                 </h3>
 
-                                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                                     Adversarial reconstruction system for endoscopic video frames. Integrates soft self-attention gates in the U-Net skip connections to preserve critical vascular and mucosal textures while denoising glare and motion artifacts.
                                 </p>
 
-                                <div class="grid grid-cols-3 gap-2 pt-2">
-                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
-                                        <div class="text-[10px] text-slate-400 uppercase">PSNR Metric</div>
-                                        <div class="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-0.5">26.0 dB</div>
+                                <div class="grid grid-cols-3 gap-2 pt-1">
+                                    <div class="p-2 sm:p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[9px] sm:text-[10px] text-slate-400 uppercase">PSNR Metric</div>
+                                        <div class="text-xs sm:text-sm font-bold text-emerald-600 dark:text-emerald-400 mt-0.5">26.0 dB</div>
                                     </div>
-                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
-                                        <div class="text-[10px] text-slate-400 uppercase">SSIM Score</div>
-                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">0.80 Struct</div>
+                                    <div class="p-2 sm:p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[9px] sm:text-[10px] text-slate-400 uppercase">SSIM Score</div>
+                                        <div class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 mt-0.5">0.80 Struct</div>
                                     </div>
-                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
-                                        <div class="text-[10px] text-slate-400 uppercase">Framework</div>
-                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">TensorFlow</div>
+                                    <div class="p-2 sm:p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[9px] sm:text-[10px] text-slate-400 uppercase">Framework</div>
+                                        <div class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 mt-0.5">TensorFlow</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="p-6 md:p-7 pt-0 flex items-center justify-between border-t border-slate-100 dark:border-slate-800/60 mt-4">
-                            <div class="flex gap-2">
+                        <div class="p-5 sm:p-7 pt-0 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 dark:border-slate-800/60 mt-3 sm:mt-4">
+                            <div class="flex flex-wrap gap-1.5 sm:gap-2">
                                 <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">GAN</span>
                                 <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">U-Net</span>
                                 <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">TensorFlow</span>
@@ -618,24 +620,24 @@
                     <div data-category="production" class="craft-card flex flex-col justify-between overflow-hidden group">
                         <div>
                             <!-- Card Header -->
-                            <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200/80 dark:border-slate-800/80">
-                                <img src="dist/img/portfolio/4.png" alt="End-to-End MLOps Pipeline" class="max-h-52 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
-                                <div class="absolute top-4 left-4">
-                                    <span class="inline-flex items-center gap-1.5 font-mono text-[11px] px-2.5 py-1 rounded bg-indigo-600 text-white font-semibold backdrop-blur-md shadow-sm">
-                                        <i class="fas fa-industry text-[10px]"></i>
+                            <div class="relative bg-slate-950 h-48 sm:h-56 flex items-center justify-center overflow-hidden border-b border-slate-200/80 dark:border-slate-800/80">
+                                <img src="dist/img/portfolio/4.png" alt="End-to-End MLOps Pipeline" class="max-h-44 sm:max-h-52 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute top-3 left-3 sm:top-4 sm:left-4">
+                                    <span class="inline-flex items-center gap-1.5 font-mono text-[10px] sm:text-[11px] px-2.5 py-1 rounded bg-indigo-600 text-white font-semibold backdrop-blur-md shadow-sm">
+                                        <i class="fas fa-industry text-[9px] sm:text-[10px]"></i>
                                         ENTERPRISE MLOPS
                                     </span>
                                 </div>
-                                <div class="absolute top-4 right-4">
-                                    <span class="font-mono text-[11px] px-2.5 py-1 rounded bg-black/60 text-slate-200 border border-white/10 backdrop-blur-md">
+                                <div class="absolute top-3 right-3 sm:top-4 sm:right-4">
+                                    <span class="font-mono text-[10px] sm:text-[11px] px-2.5 py-1 rounded bg-black/60 text-slate-200 border border-white/10 backdrop-blur-md">
                                         80% Ops Automation
                                     </span>
                                 </div>
                             </div>
 
                             <!-- Card Body -->
-                            <div class="p-6 md:p-7 space-y-4">
-                                <div class="font-mono text-xs text-indigo-600 dark:text-indigo-400 flex flex-wrap items-center gap-1.5 font-medium">
+                            <div class="p-5 sm:p-7 space-y-3.5 sm:space-y-4">
+                                <div class="font-mono text-[11px] sm:text-xs text-indigo-600 dark:text-indigo-400 flex flex-wrap items-center gap-1 sm:gap-1.5 font-medium">
                                     <span>Apache Airflow</span>
                                     <span>→</span>
                                     <span>MLflow Registry</span>
@@ -645,39 +647,39 @@
                                     <span>FastAPI</span>
                                 </div>
 
-                                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                                     End-to-End MLOps Pipeline & Automation
                                 </h3>
 
-                                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                                     Production infrastructure built at PT Hizrian Bersaudara Sukses. Orchestrates automated data validation, scheduled model re-training triggers, experiment tracking, and zero-downtime containerized inference endpoints for medical AI integration.
                                 </p>
 
-                                <div class="grid grid-cols-3 gap-2 pt-2">
-                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
-                                        <div class="text-[10px] text-slate-400 uppercase">Workload Cut</div>
-                                        <div class="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-0.5">~80% Saved</div>
+                                <div class="grid grid-cols-3 gap-2 pt-1">
+                                    <div class="p-2 sm:p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[9px] sm:text-[10px] text-slate-400 uppercase">Workload Cut</div>
+                                        <div class="text-xs sm:text-sm font-bold text-emerald-600 dark:text-emerald-400 mt-0.5">~80% Saved</div>
                                     </div>
-                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
-                                        <div class="text-[10px] text-slate-400 uppercase">Orchestrator</div>
-                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">Airflow DAGs</div>
+                                    <div class="p-2 sm:p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[9px] sm:text-[10px] text-slate-400 uppercase">Orchestrator</div>
+                                        <div class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 mt-0.5">Airflow DAGs</div>
                                     </div>
-                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
-                                        <div class="text-[10px] text-slate-400 uppercase">Tracking</div>
-                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">MLflow</div>
+                                    <div class="p-2 sm:p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[9px] sm:text-[10px] text-slate-400 uppercase">Tracking</div>
+                                        <div class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 mt-0.5">MLflow</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="p-6 md:p-7 pt-0 flex items-center justify-between border-t border-slate-100 dark:border-slate-800/60 mt-4">
-                            <div class="flex gap-2">
+                        <div class="p-5 sm:p-7 pt-0 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 dark:border-slate-800/60 mt-3 sm:mt-4">
+                            <div class="flex flex-wrap gap-1.5 sm:gap-2">
                                 <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">Airflow</span>
                                 <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">Docker</span>
                                 <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">MLflow</span>
                             </div>
                             <span class="inline-flex items-center gap-1.5 font-mono text-xs text-slate-400 dark:text-slate-500">
-                                <i class="fas fa-lock text-[11px]"></i>
+                                <i class="fas fa-lock text-[10px] sm:text-[11px]"></i>
                                 <span>Enterprise Internal</span>
                             </span>
                         </div>
@@ -687,60 +689,60 @@
                     <div data-category="research" class="craft-card flex flex-col justify-between overflow-hidden group">
                         <div>
                             <!-- Card Header -->
-                            <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200/80 dark:border-slate-800/80">
-                                <img src="dist/img/portfolio/6.png" alt="Ollama RAG AI Assistant" class="max-h-52 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
-                                <div class="absolute top-4 left-4">
-                                    <span class="inline-flex items-center gap-1.5 font-mono text-[11px] px-2.5 py-1 rounded bg-slate-800/90 text-white font-semibold backdrop-blur-md border border-slate-700">
-                                        <i class="fas fa-flask text-[10px] text-indigo-400"></i>
+                            <div class="relative bg-slate-950 h-48 sm:h-56 flex items-center justify-center overflow-hidden border-b border-slate-200/80 dark:border-slate-800/80">
+                                <img src="dist/img/portfolio/6.png" alt="Ollama RAG AI Assistant" class="max-h-44 sm:max-h-52 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute top-3 left-3 sm:top-4 sm:left-4">
+                                    <span class="inline-flex items-center gap-1.5 font-mono text-[10px] sm:text-[11px] px-2.5 py-1 rounded bg-slate-800/90 text-white font-semibold backdrop-blur-md border border-slate-700">
+                                        <i class="fas fa-flask text-[9px] sm:text-[10px] text-indigo-400"></i>
                                         R&D / PRIVACY LLM
                                     </span>
                                 </div>
-                                <div class="absolute top-4 right-4">
-                                    <span class="font-mono text-[11px] px-2.5 py-1 rounded bg-black/60 text-slate-200 border border-white/10 backdrop-blur-md">
+                                <div class="absolute top-3 right-3 sm:top-4 sm:right-4">
+                                    <span class="font-mono text-[10px] sm:text-[11px] px-2.5 py-1 rounded bg-black/60 text-slate-200 border border-white/10 backdrop-blur-md">
                                         Zero Cloud Cost
                                     </span>
                                 </div>
                             </div>
 
                             <!-- Card Body -->
-                            <div class="p-6 md:p-7 space-y-4">
-                                <div class="font-mono text-xs text-indigo-600 dark:text-indigo-400 flex flex-wrap items-center gap-1.5 font-medium">
+                            <div class="p-5 sm:p-7 space-y-3.5 sm:space-y-4">
+                                <div class="font-mono text-[11px] sm:text-xs text-indigo-600 dark:text-indigo-400 flex flex-wrap items-center gap-1 sm:gap-1.5 font-medium">
                                     <span>Doc Loader</span>
                                     <span>→</span>
-                                    <span>FAISS Vector Store</span>
+                                    <span>FAISS Vector</span>
                                     <span>→</span>
                                     <span>LangChain</span>
                                     <span>→</span>
-                                    <span>Local Ollama</span>
+                                    <span>Ollama</span>
                                 </div>
 
-                                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                                     Ollama Local RAG Document Intelligence
                                 </h3>
 
-                                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                                     Privacy-first Retrieval-Augmented Generation system with multi-session chat context and dynamic document chunking. Operates entirely on local hardware with zero external API telemetry.
                                 </p>
 
-                                <div class="grid grid-cols-3 gap-2 pt-2">
-                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
-                                        <div class="text-[10px] text-slate-400 uppercase">Vector Index</div>
-                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">FAISS CPU</div>
+                                <div class="grid grid-cols-3 gap-2 pt-1">
+                                    <div class="p-2 sm:p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[9px] sm:text-[10px] text-slate-400 uppercase">Vector Index</div>
+                                        <div class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 mt-0.5">FAISS CPU</div>
                                     </div>
-                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
-                                        <div class="text-[10px] text-slate-400 uppercase">Inference</div>
-                                        <div class="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-0.5">Ollama Local</div>
+                                    <div class="p-2 sm:p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[9px] sm:text-[10px] text-slate-400 uppercase">Inference</div>
+                                        <div class="text-xs sm:text-sm font-bold text-emerald-600 dark:text-emerald-400 mt-0.5">Ollama Local</div>
                                     </div>
-                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
-                                        <div class="text-[10px] text-slate-400 uppercase">Orchestrator</div>
-                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">LangChain</div>
+                                    <div class="p-2 sm:p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[9px] sm:text-[10px] text-slate-400 uppercase">Orchestrator</div>
+                                        <div class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 mt-0.5">LangChain</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="p-6 md:p-7 pt-0 flex items-center justify-between border-t border-slate-100 dark:border-slate-800/60 mt-4">
-                            <div class="flex gap-2">
+                        <div class="p-5 sm:p-7 pt-0 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 dark:border-slate-800/60 mt-3 sm:mt-4">
+                            <div class="flex flex-wrap gap-1.5 sm:gap-2">
                                 <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">FAISS</span>
                                 <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">LangChain</span>
                                 <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">Streamlit</span>
@@ -756,24 +758,24 @@
                     <div data-category="research" class="craft-card flex flex-col justify-between overflow-hidden group">
                         <div>
                             <!-- Card Header -->
-                            <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200/80 dark:border-slate-800/80">
-                                <img src="dist/img/portfolio/1.png" alt="TinyLlama AI Assistant" class="max-h-52 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
-                                <div class="absolute top-4 left-4">
-                                    <span class="inline-flex items-center gap-1.5 font-mono text-[11px] px-2.5 py-1 rounded bg-slate-800/90 text-white font-semibold backdrop-blur-md border border-slate-700">
-                                        <i class="fas fa-microchip text-[10px] text-indigo-400"></i>
+                            <div class="relative bg-slate-950 h-48 sm:h-56 flex items-center justify-center overflow-hidden border-b border-slate-200/80 dark:border-slate-800/80">
+                                <img src="dist/img/portfolio/1.png" alt="TinyLlama AI Assistant" class="max-h-44 sm:max-h-52 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute top-3 left-3 sm:top-4 sm:left-4">
+                                    <span class="inline-flex items-center gap-1.5 font-mono text-[10px] sm:text-[11px] px-2.5 py-1 rounded bg-slate-800/90 text-white font-semibold backdrop-blur-md border border-slate-700">
+                                        <i class="fas fa-microchip text-[9px] sm:text-[10px] text-indigo-400"></i>
                                         R&D / QUANTIZATION
                                     </span>
                                 </div>
-                                <div class="absolute top-4 right-4">
-                                    <span class="font-mono text-[11px] px-2.5 py-1 rounded bg-black/60 text-slate-200 border border-white/10 backdrop-blur-md">
+                                <div class="absolute top-3 right-3 sm:top-4 sm:right-4">
+                                    <span class="font-mono text-[10px] sm:text-[11px] px-2.5 py-1 rounded bg-black/60 text-slate-200 border border-white/10 backdrop-blur-md">
                                         8-bit PEFT LoRA
                                     </span>
                                 </div>
                             </div>
 
                             <!-- Card Body -->
-                            <div class="p-6 md:p-7 space-y-4">
-                                <div class="font-mono text-xs text-indigo-600 dark:text-indigo-400 flex flex-wrap items-center gap-1.5 font-medium">
+                            <div class="p-5 sm:p-7 space-y-3.5 sm:space-y-4">
+                                <div class="font-mono text-[11px] sm:text-xs text-indigo-600 dark:text-indigo-400 flex flex-wrap items-center gap-1 sm:gap-1.5 font-medium">
                                     <span>TinyLlama-1.1B</span>
                                     <span>→</span>
                                     <span>PEFT / LoRA</span>
@@ -783,33 +785,33 @@
                                     <span>FastAPI</span>
                                 </div>
 
-                                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                                     TinyLlama Fine-Tuning & Quantization Pipeline
                                 </h3>
 
-                                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                                     Low-parameter LLM optimization research utilizing parameter-efficient fine-tuning (PEFT) and bitsandbytes 8-bit quantization. Includes stateful conversation history buffering and FastAPI microservice packaging.
                                 </p>
 
-                                <div class="grid grid-cols-3 gap-2 pt-2">
-                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
-                                        <div class="text-[10px] text-slate-400 uppercase">Parameters</div>
-                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">1.1B Weights</div>
+                                <div class="grid grid-cols-3 gap-2 pt-1">
+                                    <div class="p-2 sm:p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[9px] sm:text-[10px] text-slate-400 uppercase">Parameters</div>
+                                        <div class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 mt-0.5">1.1B Weights</div>
                                     </div>
-                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
-                                        <div class="text-[10px] text-slate-400 uppercase">Precision</div>
-                                        <div class="text-xs font-bold text-indigo-600 dark:text-indigo-400 mt-0.5">INT8 Quant</div>
+                                    <div class="p-2 sm:p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[9px] sm:text-[10px] text-slate-400 uppercase">Precision</div>
+                                        <div class="text-xs sm:text-sm font-bold text-indigo-600 dark:text-indigo-400 mt-0.5">INT8 Quant</div>
                                     </div>
-                                    <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
-                                        <div class="text-[10px] text-slate-400 uppercase">Backend</div>
-                                        <div class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">FastAPI Async</div>
+                                    <div class="p-2 sm:p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 text-center font-mono">
+                                        <div class="text-[9px] sm:text-[10px] text-slate-400 uppercase">Backend</div>
+                                        <div class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 mt-0.5">FastAPI Async</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="p-6 md:p-7 pt-0 flex items-center justify-between border-t border-slate-100 dark:border-slate-800/60 mt-4">
-                            <div class="flex gap-2">
+                        <div class="p-5 sm:p-7 pt-0 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 dark:border-slate-800/60 mt-3 sm:mt-4">
+                            <div class="flex flex-wrap gap-1.5 sm:gap-2">
                                 <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">HuggingFace</span>
                                 <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">LoRA</span>
                                 <span class="tech-pill bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700">Docker</span>
@@ -829,48 +831,48 @@
         <!-- ===================================================================
              VERIFIED CREDENTIALS & CERTIFICATIONS LEDGER
              =================================================================== -->
-        <section id="achievements" class="py-24 border-t border-slate-200/80 dark:border-slate-800/80 bg-white/50 dark:bg-[#0c101c]/50">
+        <section id="achievements" class="py-16 sm:py-24 border-t border-slate-200/80 dark:border-slate-800/80 bg-white/50 dark:bg-[#0c101c]/50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <!-- Section Header -->
-                <div class="max-w-3xl mb-16 space-y-3">
+                <div class="max-w-3xl mb-12 sm:mb-16 space-y-2.5 sm:space-y-3">
                     <div class="font-mono text-xs uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-semibold">
                         03 / Verified Qualifications
                     </div>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
                         Credentials & Industry Certifications.
                     </h2>
-                    <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+                    <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
                         Independently verified certifications across deep learning frameworks, specialized LLM fine-tuning, and production system deployment.
                     </p>
                 </div>
 
                 <!-- High-Trust Credential Ledger Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
                     
                     <!-- Credential 1: Google TensorFlow Developer -->
-                    <div class="craft-card p-6 flex flex-col justify-between space-y-6">
-                        <div class="space-y-4">
-                            <div class="flex items-start justify-between">
-                                <div class="w-12 h-12 rounded-xl bg-white p-1.5 flex items-center justify-center border border-slate-200 shadow-sm">
+                    <div class="craft-card p-5 sm:p-6 flex flex-col justify-between space-y-5 sm:space-y-6">
+                        <div class="space-y-3.5 sm:space-y-4">
+                            <div class="flex items-start justify-between gap-3">
+                                <div class="w-12 h-12 rounded-xl bg-white p-1.5 flex items-center justify-center border border-slate-200 shadow-sm flex-shrink-0">
                                     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgekNBpRHJFaIf-oczr-v0d515ii6zSP9hi3lqtKI2UkP_0wF7751u4kJRCug3EhZOSoyt4utFXgtnMDvTZZg9Z_fNWfDhgo-PIJ0H1RdJFf2N7xpT04Q2kbM2Ogql5xbjT4afjNzgDMjc/s1600/tf_badge_cert_tf_certified_developer.png" alt="TensorFlow" class="w-9 h-9 object-contain">
                                 </div>
-                                <span class="inline-flex items-center gap-1 font-mono text-[11px] px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60">
+                                <span class="inline-flex items-center gap-1 font-mono text-[11px] px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60 flex-shrink-0">
                                     <i class="fas fa-check-circle text-[10px]"></i> VERIFIED
                                 </span>
                             </div>
                             <div>
-                                <h3 class="font-bold text-slate-900 dark:text-white text-base">TensorFlow Developer Certificate</h3>
-                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Google / TensorFlow Certificate Program</p>
+                                <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base">TensorFlow Developer Certificate</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Google / TensorFlow Program</p>
                             </div>
-                            <div class="font-mono text-xs bg-slate-50 dark:bg-slate-900/60 p-3 rounded-lg border border-slate-200/60 dark:border-slate-800/60 space-y-1">
-                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
+                            <div class="font-mono text-xs bg-slate-50 dark:bg-slate-900/60 p-3 rounded-lg border border-slate-200/60 dark:border-slate-800/60 space-y-1.5">
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between gap-2">
                                     <span>Issued:</span>
-                                    <span class="text-slate-800 dark:text-slate-200">Jan 2024 (Active to 2027)</span>
+                                    <span class="text-slate-800 dark:text-slate-200">Jan 2024–2027</span>
                                 </div>
-                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
-                                    <span>Credential ID:</span>
-                                    <span class="text-indigo-600 dark:text-indigo-400 font-semibold cursor-pointer hover:underline" onclick="copyCredential('93488980')">93488980 <i class="far fa-copy text-[10px]"></i></span>
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between gap-2">
+                                    <span>ID:</span>
+                                    <span class="text-indigo-600 dark:text-indigo-400 font-semibold cursor-pointer hover:underline truncate" onclick="copyCredential('93488980')">93488980 <i class="far fa-copy text-[10px]"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -881,28 +883,28 @@
                     </div>
 
                     <!-- Credential 2: Machine Learning Terapan -->
-                    <div class="craft-card p-6 flex flex-col justify-between space-y-6">
-                        <div class="space-y-4">
-                            <div class="flex items-start justify-between">
-                                <div class="w-12 h-12 rounded-xl bg-white p-1.5 flex items-center justify-center border border-slate-200 shadow-sm">
+                    <div class="craft-card p-5 sm:p-6 flex flex-col justify-between space-y-5 sm:space-y-6">
+                        <div class="space-y-3.5 sm:space-y-4">
+                            <div class="flex items-start justify-between gap-3">
+                                <div class="w-12 h-12 rounded-xl bg-white p-1.5 flex items-center justify-center border border-slate-200 shadow-sm flex-shrink-0">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFdBNzCwzZYZZLvd6eyst4__z3g4W2EKUaaQ&s" alt="Dicoding" class="w-8 h-8 object-contain">
                                 </div>
-                                <span class="inline-flex items-center gap-1 font-mono text-[11px] px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60">
+                                <span class="inline-flex items-center gap-1 font-mono text-[11px] px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60 flex-shrink-0">
                                     <i class="fas fa-check-circle text-[10px]"></i> VERIFIED
                                 </span>
                             </div>
                             <div>
-                                <h3 class="font-bold text-slate-900 dark:text-white text-base">Applied Machine Learning Specialist</h3>
+                                <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base">Applied Machine Learning Specialist</h3>
                                 <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Dicoding Indonesia</p>
                             </div>
-                            <div class="font-mono text-xs bg-slate-50 dark:bg-slate-900/60 p-3 rounded-lg border border-slate-200/60 dark:border-slate-800/60 space-y-1">
-                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
+                            <div class="font-mono text-xs bg-slate-50 dark:bg-slate-900/60 p-3 rounded-lg border border-slate-200/60 dark:border-slate-800/60 space-y-1.5">
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between gap-2">
                                     <span>Issued:</span>
-                                    <span class="text-slate-800 dark:text-slate-200">Feb 2024 (Active to 2027)</span>
+                                    <span class="text-slate-800 dark:text-slate-200">Feb 2024–2027</span>
                                 </div>
-                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
-                                    <span>Credential ID:</span>
-                                    <span class="text-indigo-600 dark:text-indigo-400 font-semibold cursor-pointer hover:underline" onclick="copyCredential('TRXYT73K9PVM')">TRXYT73K9PVM <i class="far fa-copy text-[10px]"></i></span>
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between gap-2">
+                                    <span>ID:</span>
+                                    <span class="text-indigo-600 dark:text-indigo-400 font-semibold cursor-pointer hover:underline truncate" onclick="copyCredential('TRXYT73K9PVM')">TRXYT73K9PVM <i class="far fa-copy text-[10px]"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -913,28 +915,28 @@
                     </div>
 
                     <!-- Credential 3: DeepLearning.AI TensorFlow Specialization -->
-                    <div class="craft-card p-6 flex flex-col justify-between space-y-6">
-                        <div class="space-y-4">
-                            <div class="flex items-start justify-between">
-                                <div class="w-12 h-12 rounded-xl bg-white p-1.5 flex items-center justify-center border border-slate-200 shadow-sm">
+                    <div class="craft-card p-5 sm:p-6 flex flex-col justify-between space-y-5 sm:space-y-6">
+                        <div class="space-y-3.5 sm:space-y-4">
+                            <div class="flex items-start justify-between gap-3">
+                                <div class="w-12 h-12 rounded-xl bg-white p-1.5 flex items-center justify-center border border-slate-200 shadow-sm flex-shrink-0">
                                     <img src="https://coursera-university-assets.s3.amazonaws.com/b4/5cb90bb92f420b99bf323a0356f451/Icon.png" alt="DeepLearning.AI" class="w-8 h-8 object-contain">
                                 </div>
-                                <span class="inline-flex items-center gap-1 font-mono text-[11px] px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60">
+                                <span class="inline-flex items-center gap-1 font-mono text-[11px] px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60 flex-shrink-0">
                                     <i class="fas fa-check-circle text-[10px]"></i> VERIFIED
                                 </span>
                             </div>
                             <div>
-                                <h3 class="font-bold text-slate-900 dark:text-white text-base">TensorFlow Developer Specialization</h3>
+                                <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base">TensorFlow Specialization</h3>
                                 <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">DeepLearning.AI (Coursera)</p>
                             </div>
-                            <div class="font-mono text-xs bg-slate-50 dark:bg-slate-900/60 p-3 rounded-lg border border-slate-200/60 dark:border-slate-800/60 space-y-1">
-                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
+                            <div class="font-mono text-xs bg-slate-50 dark:bg-slate-900/60 p-3 rounded-lg border border-slate-200/60 dark:border-slate-800/60 space-y-1.5">
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between gap-2">
                                     <span>Issued:</span>
                                     <span class="text-slate-800 dark:text-slate-200">Oct 2023</span>
                                 </div>
-                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
-                                    <span>Credential ID:</span>
-                                    <span class="text-indigo-600 dark:text-indigo-400 font-semibold cursor-pointer hover:underline" onclick="copyCredential('G2AEK2LMNUTE')">G2AEK2LMNUTE <i class="far fa-copy text-[10px]"></i></span>
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between gap-2">
+                                    <span>ID:</span>
+                                    <span class="text-indigo-600 dark:text-indigo-400 font-semibold cursor-pointer hover:underline truncate" onclick="copyCredential('G2AEK2LMNUTE')">G2AEK2LMNUTE <i class="far fa-copy text-[10px]"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -945,28 +947,28 @@
                     </div>
 
                     <!-- Credential 4: Fine-Tuning LLMs with Hugging Face -->
-                    <div class="craft-card p-6 flex flex-col justify-between space-y-6">
-                        <div class="space-y-4">
-                            <div class="flex items-start justify-between">
-                                <div class="w-12 h-12 rounded-xl bg-white p-1.5 flex items-center justify-center border border-slate-200 shadow-sm">
+                    <div class="craft-card p-5 sm:p-6 flex flex-col justify-between space-y-5 sm:space-y-6">
+                        <div class="space-y-3.5 sm:space-y-4">
+                            <div class="flex items-start justify-between gap-3">
+                                <div class="w-12 h-12 rounded-xl bg-white p-1.5 flex items-center justify-center border border-slate-200 shadow-sm flex-shrink-0">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAAiPkyk9wjoPdFW1WXya1UCFsFNw0ZYBDew&s" alt="Udemy" class="w-8 h-8 object-contain">
                                 </div>
-                                <span class="inline-flex items-center gap-1 font-mono text-[11px] px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60">
+                                <span class="inline-flex items-center gap-1 font-mono text-[11px] px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60 flex-shrink-0">
                                     <i class="fas fa-check-circle text-[10px]"></i> VERIFIED
                                 </span>
                             </div>
                             <div>
-                                <h3 class="font-bold text-slate-900 dark:text-white text-base">Fine-Tuning LLMs with Hugging Face</h3>
-                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Udemy / Transformers for NLP</p>
+                                <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base">Fine-Tuning LLMs (Hugging Face)</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Udemy / NLP Transformers</p>
                             </div>
-                            <div class="font-mono text-xs bg-slate-50 dark:bg-slate-900/60 p-3 rounded-lg border border-slate-200/60 dark:border-slate-800/60 space-y-1">
-                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
+                            <div class="font-mono text-xs bg-slate-50 dark:bg-slate-900/60 p-3 rounded-lg border border-slate-200/60 dark:border-slate-800/60 space-y-1.5">
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between gap-2">
                                     <span>Issued:</span>
                                     <span class="text-slate-800 dark:text-slate-200">Sep 2025</span>
                                 </div>
-                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
-                                    <span>Credential ID:</span>
-                                    <span class="text-indigo-600 dark:text-indigo-400 font-semibold cursor-pointer hover:underline" onclick="copyCredential('UC-1f428563-3939-4bde-8def-edb1b75ce3f4')">UC-1f428563... <i class="far fa-copy text-[10px]"></i></span>
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between gap-2">
+                                    <span>ID:</span>
+                                    <span class="text-indigo-600 dark:text-indigo-400 font-semibold cursor-pointer hover:underline truncate" onclick="copyCredential('UC-1f428563-3939-4bde-8def-edb1b75ce3f4')">UC-1f428563... <i class="far fa-copy text-[10px]"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -977,28 +979,28 @@
                     </div>
 
                     <!-- Credential 5: Deploy ML Models in Production with FastAPI & Docker -->
-                    <div class="craft-card p-6 flex flex-col justify-between space-y-6">
-                        <div class="space-y-4">
-                            <div class="flex items-start justify-between">
-                                <div class="w-12 h-12 rounded-xl bg-white p-1.5 flex items-center justify-center border border-slate-200 shadow-sm">
+                    <div class="craft-card p-5 sm:p-6 flex flex-col justify-between space-y-5 sm:space-y-6">
+                        <div class="space-y-3.5 sm:space-y-4">
+                            <div class="flex items-start justify-between gap-3">
+                                <div class="w-12 h-12 rounded-xl bg-white p-1.5 flex items-center justify-center border border-slate-200 shadow-sm flex-shrink-0">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAAiPkyk9wjoPdFW1WXya1UCFsFNw0ZYBDew&s" alt="Udemy" class="w-8 h-8 object-contain">
                                 </div>
-                                <span class="inline-flex items-center gap-1 font-mono text-[11px] px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60">
+                                <span class="inline-flex items-center gap-1 font-mono text-[11px] px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60 flex-shrink-0">
                                     <i class="fas fa-check-circle text-[10px]"></i> VERIFIED
                                 </span>
                             </div>
                             <div>
-                                <h3 class="font-bold text-slate-900 dark:text-white text-base">Deploy ML in Production: FastAPI & Docker</h3>
-                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Udemy / Production MLOps</p>
+                                <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base">Production ML Deployment</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">FastAPI & Docker Containerization</p>
                             </div>
-                            <div class="font-mono text-xs bg-slate-50 dark:bg-slate-900/60 p-3 rounded-lg border border-slate-200/60 dark:border-slate-800/60 space-y-1">
-                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
+                            <div class="font-mono text-xs bg-slate-50 dark:bg-slate-900/60 p-3 rounded-lg border border-slate-200/60 dark:border-slate-800/60 space-y-1.5">
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between gap-2">
                                     <span>Issued:</span>
                                     <span class="text-slate-800 dark:text-slate-200">Jul 2025</span>
                                 </div>
-                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
-                                    <span>Credential ID:</span>
-                                    <span class="text-indigo-600 dark:text-indigo-400 font-semibold cursor-pointer hover:underline" onclick="copyCredential('UC-9c92120c-bb57-4f43-84de-84814efd61e3')">UC-9c92120c... <i class="far fa-copy text-[10px]"></i></span>
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between gap-2">
+                                    <span>ID:</span>
+                                    <span class="text-indigo-600 dark:text-indigo-400 font-semibold cursor-pointer hover:underline truncate" onclick="copyCredential('UC-9c92120c-bb57-4f43-84de-84814efd61e3')">UC-9c92120c... <i class="far fa-copy text-[10px]"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -1009,28 +1011,28 @@
                     </div>
 
                     <!-- Credential 6: Google Data Analytics Professional Certificate -->
-                    <div class="craft-card p-6 flex flex-col justify-between space-y-6">
-                        <div class="space-y-4">
-                            <div class="flex items-start justify-between">
-                                <div class="w-12 h-12 rounded-xl bg-white p-1.5 flex items-center justify-center border border-slate-200 shadow-sm">
+                    <div class="craft-card p-5 sm:p-6 flex flex-col justify-between space-y-5 sm:space-y-6">
+                        <div class="space-y-3.5 sm:space-y-4">
+                            <div class="flex items-start justify-between gap-3">
+                                <div class="w-12 h-12 rounded-xl bg-white p-1.5 flex items-center justify-center border border-slate-200 shadow-sm flex-shrink-0">
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="w-8 h-8 object-contain">
                                 </div>
-                                <span class="inline-flex items-center gap-1 font-mono text-[11px] px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60">
+                                <span class="inline-flex items-center gap-1 font-mono text-[11px] px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60 flex-shrink-0">
                                     <i class="fas fa-check-circle text-[10px]"></i> VERIFIED
                                 </span>
                             </div>
                             <div>
-                                <h3 class="font-bold text-slate-900 dark:text-white text-base">Google Data Analytics Professional</h3>
-                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Google (Coursera)</p>
+                                <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base">Google Data Analytics</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Google Professional Certificate</p>
                             </div>
-                            <div class="font-mono text-xs bg-slate-50 dark:bg-slate-900/60 p-3 rounded-lg border border-slate-200/60 dark:border-slate-800/60 space-y-1">
-                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
+                            <div class="font-mono text-xs bg-slate-50 dark:bg-slate-900/60 p-3 rounded-lg border border-slate-200/60 dark:border-slate-800/60 space-y-1.5">
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between gap-2">
                                     <span>Issued:</span>
                                     <span class="text-slate-800 dark:text-slate-200">Oct 2023</span>
                                 </div>
-                                <div class="text-slate-500 dark:text-slate-400 flex justify-between">
+                                <div class="text-slate-500 dark:text-slate-400 flex justify-between gap-2">
                                     <span>Platform:</span>
-                                    <span class="text-slate-800 dark:text-slate-200">Credly Verified</span>
+                                    <span class="text-slate-800 dark:text-slate-200">Credly Badge</span>
                                 </div>
                             </div>
                         </div>
@@ -1048,50 +1050,50 @@
         <!-- ===================================================================
              CONTACT & COLLABORATION TERMINAL SECTION
              =================================================================== -->
-        <section id="contact" class="py-24 border-t border-slate-200/80 dark:border-slate-800/80">
+        <section id="contact" class="py-16 sm:py-24 border-t border-slate-200/80 dark:border-slate-800/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="craft-card p-8 md:p-12 relative overflow-hidden bg-gradient-to-b from-white to-slate-50 dark:from-[#0f172a] dark:to-[#090d16]">
+                <div class="craft-card p-6 sm:p-8 md:p-12 relative overflow-hidden bg-gradient-to-b from-white to-slate-50 dark:from-[#0f172a] dark:to-[#090d16]">
                     
-                    <div class="max-w-3xl mx-auto text-center space-y-6">
+                    <div class="max-w-3xl mx-auto text-center space-y-5 sm:space-y-6">
                         
                         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-200/60 dark:border-indigo-800/60 text-indigo-600 dark:text-indigo-400 font-mono text-xs font-semibold">
                             <span>INITIATE COLLABORATION</span>
                         </div>
 
-                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                        <h2 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
                             Let's Build Robust ML Systems Together.
                         </h2>
 
-                        <p class="text-slate-600 dark:text-slate-400 text-base max-w-xl mx-auto">
+                        <p class="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-400 max-w-xl mx-auto leading-relaxed">
                             Whether you need production-grade computer vision pipelines, fine-tuned transformer architectures, or automated MLOps infrastructure — let's connect.
                         </p>
 
                         <!-- Copy Email Interaction Box -->
-                        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
-                            <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 font-mono text-sm text-slate-800 dark:text-slate-200 w-full sm:w-auto">
-                                <i class="fas fa-envelope text-indigo-500"></i>
-                                <span class="select-all">maulanasuryanegara123@gmail.com</span>
+                        <div class="pt-2 sm:pt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-3">
+                            <div class="flex items-center gap-2.5 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 font-mono text-xs sm:text-sm text-slate-800 dark:text-slate-200 truncate">
+                                <i class="fas fa-envelope text-indigo-500 flex-shrink-0"></i>
+                                <span class="select-all truncate">maulanasuryanegara123@gmail.com</span>
                             </div>
-                            <button onclick="copyEmail()" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm transition-all shadow-md w-full sm:w-auto">
+                            <button onclick="copyEmail()" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs sm:text-sm transition-all shadow-md">
                                 <i class="far fa-copy"></i>
                                 <span>Copy Email</span>
                             </button>
                         </div>
 
                         <!-- Direct Social Channels -->
-                        <div class="pt-6 flex items-center justify-center gap-4">
-                            <a href="https://github.com/mausneg" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white border border-slate-200 dark:border-slate-700 transition-colors" title="GitHub">
-                                <i class="fab fa-github text-xl"></i>
+                        <div class="pt-4 sm:pt-6 flex items-center justify-center gap-3 sm:gap-4">
+                            <a href="https://github.com/mausneg" target="_blank" rel="noopener noreferrer" class="p-2.5 sm:p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white border border-slate-200 dark:border-slate-700 transition-colors" title="GitHub">
+                                <i class="fab fa-github text-lg sm:text-xl"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/maulana-surya-negara-5b6a6b270/" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white border border-slate-200 dark:border-slate-700 transition-colors" title="LinkedIn">
-                                <i class="fab fa-linkedin text-xl"></i>
+                            <a href="https://www.linkedin.com/in/maulana-surya-negara-5b6a6b270/" target="_blank" rel="noopener noreferrer" class="p-2.5 sm:p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white border border-slate-200 dark:border-slate-700 transition-colors" title="LinkedIn">
+                                <i class="fab fa-linkedin text-lg sm:text-xl"></i>
                             </a>
-                            <a href="https://www.instagram.com/mausneg" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white border border-slate-200 dark:border-slate-700 transition-colors" title="Instagram">
-                                <i class="fab fa-instagram text-xl"></i>
+                            <a href="https://www.instagram.com/mausneg" target="_blank" rel="noopener noreferrer" class="p-2.5 sm:p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white border border-slate-200 dark:border-slate-700 transition-colors" title="Instagram">
+                                <i class="fab fa-instagram text-lg sm:text-xl"></i>
                             </a>
-                            <a href="https://steamcommunity.com/id/surya_1933" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white border border-slate-200 dark:border-slate-700 transition-colors" title="Steam">
-                                <i class="fab fa-steam text-xl"></i>
+                            <a href="https://steamcommunity.com/id/surya_1933" target="_blank" rel="noopener noreferrer" class="p-2.5 sm:p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white border border-slate-200 dark:border-slate-700 transition-colors" title="Steam">
+                                <i class="fab fa-steam text-lg sm:text-xl"></i>
                             </a>
                         </div>
 
@@ -1104,18 +1106,18 @@
     </main>
 
     <!-- Refined Footer with Status Telemetry -->
-    <footer class="border-t border-slate-200 dark:border-slate-800/80 bg-white dark:bg-[#070a12] py-12 font-mono text-xs text-slate-500 dark:text-slate-400">
+    <footer class="border-t border-slate-200 dark:border-slate-800/80 bg-white dark:bg-[#070a12] py-8 sm:py-12 font-mono text-[11px] sm:text-xs text-slate-500 dark:text-slate-400">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 text-center md:text-left">
                 
-                <div class="flex items-center gap-3">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <div class="flex items-center gap-2.5 justify-center">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0"></span>
                     <span class="text-slate-700 dark:text-slate-300 font-semibold">msn.sys/ml</span>
                     <span>·</span>
                     <span>All core models operational</span>
                 </div>
 
-                <div class="flex items-center gap-6">
+                <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
                     <a href="#home" class="hover:text-slate-900 dark:hover:text-white transition-colors">Overview</a>
                     <a href="#about" class="hover:text-slate-900 dark:hover:text-white transition-colors">Stack</a>
                     <a href="#portfolio" class="hover:text-slate-900 dark:hover:text-white transition-colors">Systems</a>
@@ -1123,7 +1125,7 @@
                 </div>
 
                 <div>
-                    © 2026 Maulana Surya Negara. Designed for engineering precision.
+                    © 2026 Maulana Surya Negara. Production ML.
                 </div>
 
             </div>

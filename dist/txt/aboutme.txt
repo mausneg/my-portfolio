@@ -1,1 +1,9 @@
-Machine Learning Engineer specializing in Computer Vision and LLM-based systems with production deployment experience. Improved 10% accuracy (76% to 86%) on ear disease classification with fine tuning Google Vision Transformer Base Model with 200–300 ms/image CPU inference via FastAPI & Docker. Built an on-device TFJS YOLOv5n detector and Ministral-3 (Ollama) LLM extractor, got ~15–27 s/image OCR inference on GPU server with structured Pydantic output and hierarchical region normalization. This system improved accuracy and reliability over contour-based cropping + EasyOCR.Experienced in MLOps automation with Airflow, MLflow, and Docker, reducing manual workload by ~80%. TensorFlow Developer Certified with strong foundations in deep learning, model optimization, and end-to-end ML system design.
+AI Engineer | Python-Driven ML Systems
+
+Associate Technical Consultant at PT. Indonesia Global Solusindo (ISGS) (April 2026 - Present). Previously, Machine Learning Engineer & Python Engineer at PT Hizrian Bersaudara Sukses, Lab Assistant & Web Developer at Universitas Mataram, and Bangkit Academy ML Cohort participant.
+
+B.S. Informatics, Universitas Mataram (graduated April 2025). Key skills: Computer Vision (ViT, YOLOv5n, Pix2Pix GAN); Agentic AI & LLMs (Google Gemini, Model Context Protocol / MCP, Ministral-3 Ollama, RAG); MLOps (Airflow, MLflow, MinIO, Docker, FastAPI); Python, PyTorch, and TensorFlow.
+
+Production highlights: improved ear disease classification accuracy by 10% with ViT-Base, achieving 200-300 ms CPU inference; built an on-device TFJS YOLOv5n detector with Ministral-3 OCR, delivering 15-27 s GPU inference and structured Pydantic output; automated end-to-end MLOps with Airflow, MLflow, MinIO, and Docker, reducing manual operational workload by 80%.
+
+Mataram, NTB, Indonesia | +62 819-1601-1906 | maulanasuryanegara123@gmail.com | linkedin.com/in/maulana-surya-negara
